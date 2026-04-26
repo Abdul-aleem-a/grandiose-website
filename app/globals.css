@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-secondary: #8b5cf6;
+  --color-accent: #ec4899;
+}
+
+@keyframes blob {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+:root {
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Smooth global UI transitions */
+
+* {
+  transition-property: color, background-color, border-color, transform, box-shadow, opacity;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+
+/* Smooth page scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .featured-intro {
+    @apply bg-gradient-to-r from-[#0F3D2E]/5 to-[#C9A24D]/5 border-l-4 border-[#0F3D2E] p-8 mb-8 rounded-r-lg text-lg text-[#2B2B2B] font-medium;
+  }
+
+  .cta-section {
+    @apply bg-gradient-to-r from-[#0F3D2E] to-[#0F3D2E]/90 text-white p-8 rounded-lg mt-10;
+  }
+}
+
+@layer components {
+
+  .blog-content p {
+    @apply text-gray-700 leading-8 text-[17px] mb-6;
+  }
+
+  .blog-content strong {
+    @apply text-[#2B2B2B] font-semibold;
+  }
+
+  .blog-content a {
+    @apply text-[#0F3D2E] font-medium hover:text-[#C9A24D];
+  }
+
+}
+
+@layer components {
+
+  .cta-section {
+    @apply bg-gradient-to-r from-[#0F3D2E] to-[#0F3D2E]/90 text-white p-8 rounded-lg mt-10;
+  }
+
+  .cta-section p {
+    @apply text-white leading-8 text-[17px] mb-6 italic;
+  }
+
+}
+
+@layer components {
+
+  .footer-link {
+    @apply relative inline-block text-[#8A8A8A] transition-all duration-300;
+  }
+
+  .footer-link:hover {
+    @apply text-[#C9A24D] scale-[1.04];
+  }
+
+  .footer-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background: #C9A24D;
+    transition: width 0.3s ease;
+  }
+
+  .footer-link:hover::after {
+    width: 100%;
+  }
+
+}
+
+/* .luxury-green {
+  background-color: #0F3D2E;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 3px 3px;
+} */
+
+/* .luxury-green {
+  background:
+    radial-gradient(circle at top right, rgba(201, 162, 77, 0.10), transparent 60%),
+    radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(135deg, #0F3D2E, #0b2c22);
+
+  background-size:
+    auto,
+    3px 3px,
+    auto;
+} */
+
+/* .luxury-green {
+  background:
+    radial-gradient(circle at top right, rgba(201, 162, 77, 0.10), transparent 60%),
+    radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(135deg, #0F3D2E, #0b2c22);
+  background-size: auto, 3px 3px, auto;
+} */
+
+.luxury-bg {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(201, 162, 77, 0.08), transparent 50%),
+    radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(135deg, #0F3D2E, #0b2c22);
+  background-size: auto, 3px 3px, auto;
+}
