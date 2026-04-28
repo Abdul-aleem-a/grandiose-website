@@ -97,6 +97,226 @@ export const recentProjects: RecentProject[] = [
         },
     },
     {
+        slug: "matri-webcity-2bhk",
+        title: "Matri Webcity",
+        subtitle: "2BHK Apartment Transformation",
+        heroImage: "/sofa.jpg",
+        stats: [
+            { label: "Location", value: "Matri Webcity, Bangalore" },
+            { label: "Property Type", value: "2BHK Apartment" },
+            { label: "Project Size", value: "1,200 sq.ft." },
+            { label: "Total Cost", value: "₹ 20 Lakh" },
+            { label: "Duration", value: "2 months" },
+        ],
+        clientBrief: {
+            summary:
+                "The family wanted a modern yet warm home that balanced luxury aesthetics with everyday functionality. Clean lines, premium finishes, and smart storage were key priorities.",
+            requirements: [
+                "Seamless open-plan living, dining, and kitchen layout.",
+                "An elegant modular kitchen with premium quartz countertops.",
+                "A serene master bedroom with full-wall panel work.",
+                "Maximized storage without compromising on aesthetics.",
+                "A dedicated study nook with rich wood accents.",
+                "Warm ambient lighting throughout all rooms.",
+                "Child-friendly yet sophisticated design approach.",
+            ],
+        },
+        beforeImage: "/sofa.jpg",
+        afterImage: "/sofa.jpg",
+        executionSteps: [
+            { label: "Structural modifications and false ceiling work", image: "/sofa.jpg" },
+            { label: "Modular kitchen with quartz countertops and sleek cabinetry", image: "/sofa.jpg" },
+            { label: "Bespoke wardrobes and full-wall paneling", image: "/sofa.jpg" },
+        ],
+        beforeAfterExecution: {
+            before: "/sofa.jpg",
+            after: "/sofa.jpg",
+        },
+        finalTransformation: {
+            description:
+                "The result is a refined, cohesive home where every corner reflects intentional design. Premium materials and bespoke furniture elevate the everyday living experience.",
+            rooms: [
+                { label: "Living Room", image: "/sofa.jpg" },
+                { label: "Modular Kitchen", image: "/sofa.jpg" },
+                { label: "Master Bedroom", image: "/sofa.jpg" },
+            ],
+        },
+        projectOverview: {
+            clientBriefImage: "/sofa.jpg",
+            executionImages: [
+                { img: "/sofa.jpg", label: "Structural modifications and false ceiling work" },
+                { img: "/sofa.jpg", label: "Modular kitchen installation with quartz countertops" },
+                { img: "/sofa.jpg", label: "Bespoke wardrobes and paneling" },
+                { img: "/sofa.jpg", label: "Custom furniture fit-out and decor styling" },
+            ],
+        },
+    },
+    {
+        slug: "prestige-falcon-city",
+        title: "Prestige Falcon City",
+        subtitle: "2BHK Apartment",
+        heroImage: "/sofa.jpg",
+        stats: [
+            { label: "Location", value: "Prestige Falcon City, Bangalore" },
+            { label: "Property Type", value: "3BHK Apartment" },
+            { label: "Project Size", value: "1,650 sq.ft." },
+            { label: "Total Cost", value: "₹ 28 Lakh" },
+            { label: "Duration", value: "2.5 months" },
+        ],
+        clientBrief: {
+            summary:
+                "The family wanted a modern yet warm home that balanced luxury aesthetics with everyday functionality. Clean lines, premium finishes, and smart storage were key priorities.",
+            requirements: [
+                "Seamless open-plan living, dining, and kitchen layout.",
+                "An elegant modular kitchen with premium quartz countertops.",
+                "A serene master bedroom with full-wall panel work.",
+                "Maximized storage without compromising on aesthetics.",
+                "A dedicated study nook with rich wood accents.",
+                "Warm ambient lighting throughout all rooms.",
+                "Child-friendly yet sophisticated design approach.",
+            ],
+        },
+        beforeImage: "/sofa.jpg",
+        afterImage: "/sofa.jpg",
+        executionSteps: [
+            { label: "Structural modifications and false ceiling work", image: "/sofa.jpg" },
+            { label: "Modular kitchen with quartz countertops and sleek cabinetry", image: "/sofa.jpg" },
+            { label: "Bespoke wardrobes and full-wall paneling", image: "/sofa.jpg" },
+        ],
+        beforeAfterExecution: {
+            before: "/sofa.jpg",
+            after: "/sofa.jpg",
+        },
+        finalTransformation: {
+            description:
+                "The result is a refined, cohesive home where every corner reflects intentional design. Premium materials and bespoke furniture elevate the everyday living experience.",
+            rooms: [
+                { label: "Living Room", image: "/sofa.jpg" },
+                { label: "Modular Kitchen", image: "/sofa.jpg" },
+                { label: "Master Bedroom", image: "/sofa.jpg" },
+            ],
+        },
+        projectOverview: {
+            clientBriefImage: "/sofa.jpg",
+            executionImages: [
+                { img: "/sofa.jpg", label: "Structural modifications and false ceiling work" },
+                { img: "/sofa.jpg", label: "Modular kitchen installation with quartz countertops" },
+                { img: "/sofa.jpg", label: "Bespoke wardrobes and paneling" },
+                { img: "/sofa.jpg", label: "Custom furniture fit-out and decor styling" },
+            ],
+        },
+    },
+    {
+        slug: "birla-apple-spire",
+        title: "Birla Apple Spire",
+        subtitle: "2BHK Apartment",
+        heroImage: "/sofa.jpg",
+        stats: [
+            { label: "Location", value: "Birla Apple Spire, Bangalore" },
+            { label: "Property Type", value: "3BHK Apartment" },
+            { label: "Project Size", value: "1,650 sq.ft." },
+            { label: "Total Cost", value: "₹ 28 Lakh" },
+            { label: "Duration", value: "2.5 months" },
+        ],
+        clientBrief: {
+            summary:
+                "The family wanted a modern yet warm home that balanced luxury aesthetics with everyday functionality. Clean lines, premium finishes, and smart storage were key priorities.",
+            requirements: [
+                "Seamless open-plan living, dining, and kitchen layout.",
+                "An elegant modular kitchen with premium quartz countertops.",
+                "A serene master bedroom with full-wall panel work.",
+                "Maximized storage without compromising on aesthetics.",
+                "A dedicated study nook with rich wood accents.",
+                "Warm ambient lighting throughout all rooms.",
+                "Child-friendly yet sophisticated design approach.",
+            ],
+        },
+        beforeImage: "/sofa.jpg",
+        afterImage: "/sofa.jpg",
+        executionSteps: [
+            { label: "Structural modifications and false ceiling work", image: "/sofa.jpg" },
+            { label: "Modular kitchen with quartz countertops and sleek cabinetry", image: "/sofa.jpg" },
+            { label: "Bespoke wardrobes and full-wall paneling", image: "/sofa.jpg" },
+        ],
+        beforeAfterExecution: {
+            before: "/sofa.jpg",
+            after: "/sofa.jpg",
+        },
+        finalTransformation: {
+            description:
+                "The result is a refined, cohesive home where every corner reflects intentional design. Premium materials and bespoke furniture elevate the everyday living experience.",
+            rooms: [
+                { label: "Living Room", image: "/sofa.jpg" },
+                { label: "Modular Kitchen", image: "/sofa.jpg" },
+                { label: "Master Bedroom", image: "/sofa.jpg" },
+            ],
+        },
+        projectOverview: {
+            clientBriefImage: "/sofa.jpg",
+            executionImages: [
+                { img: "/sofa.jpg", label: "Structural modifications and false ceiling work" },
+                { img: "/sofa.jpg", label: "Modular kitchen installation with quartz countertops" },
+                { img: "/sofa.jpg", label: "Bespoke wardrobes and paneling" },
+                { img: "/sofa.jpg", label: "Custom furniture fit-out and decor styling" },
+            ],
+        },
+    },
+    {
+        slug: "vishnu-krishna-enclave",
+        title: "Vishnu Krishna Enclave",
+        subtitle: "2BHK Apartment",
+        heroImage: "/sofa.jpg",
+        stats: [
+            { label: "Location", value: "Vishnu Krishna Enclave, Bangalore" },
+            { label: "Property Type", value: "3BHK Apartment" },
+            { label: "Project Size", value: "1,650 sq.ft." },
+            { label: "Total Cost", value: "₹ 28 Lakh" },
+            { label: "Duration", value: "2.5 months" },
+        ],
+        clientBrief: {
+            summary:
+                "The family wanted a modern yet warm home that balanced luxury aesthetics with everyday functionality. Clean lines, premium finishes, and smart storage were key priorities.",
+            requirements: [
+                "Seamless open-plan living, dining, and kitchen layout.",
+                "An elegant modular kitchen with premium quartz countertops.",
+                "A serene master bedroom with full-wall panel work.",
+                "Maximized storage without compromising on aesthetics.",
+                "A dedicated study nook with rich wood accents.",
+                "Warm ambient lighting throughout all rooms.",
+                "Child-friendly yet sophisticated design approach.",
+            ],
+        },
+        beforeImage: "/sofa.jpg",
+        afterImage: "/sofa.jpg",
+        executionSteps: [
+            { label: "Structural modifications and false ceiling work", image: "/sofa.jpg" },
+            { label: "Modular kitchen with quartz countertops and sleek cabinetry", image: "/sofa.jpg" },
+            { label: "Bespoke wardrobes and full-wall paneling", image: "/sofa.jpg" },
+        ],
+        beforeAfterExecution: {
+            before: "/sofa.jpg",
+            after: "/sofa.jpg",
+        },
+        finalTransformation: {
+            description:
+                "The result is a refined, cohesive home where every corner reflects intentional design. Premium materials and bespoke furniture elevate the everyday living experience.",
+            rooms: [
+                { label: "Living Room", image: "/sofa.jpg" },
+                { label: "Modular Kitchen", image: "/sofa.jpg" },
+                { label: "Master Bedroom", image: "/sofa.jpg" },
+            ],
+        },
+        projectOverview: {
+            clientBriefImage: "/sofa.jpg",
+            executionImages: [
+                { img: "/sofa.jpg", label: "Structural modifications and false ceiling work" },
+                { img: "/sofa.jpg", label: "Modular kitchen installation with quartz countertops" },
+                { img: "/sofa.jpg", label: "Bespoke wardrobes and paneling" },
+                { img: "/sofa.jpg", label: "Custom furniture fit-out and decor styling" },
+            ],
+        },
+    },
+    {
         slug: "oceanus-greendale",
         title: "Oceanus Greendale",
         subtitle: "2BHK Apartment",
