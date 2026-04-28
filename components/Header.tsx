@@ -24,13 +24,13 @@ export default function Header() {
   const moreLinks = [
     { label: "Gallery", href: "/gallery" },
     { label: "Blogs", href: "/blogs" },
-      { label: "About Us", href: "/about-us" },
-      { label: "Why Us", href: "/why-us" },
+    { label: "About Us", href: "/about-us" },
+    { label: "Why Us", href: "/why-us" },
     { label: "FAQs", href: "/faq" },
   ];
 
   return (
-    <header className="w-full bg-white shadow-sm sticky top-0 z-50">
+    <header className="w-full bg-[#1B4D3E] shadow-sm sticky top-0 z-50">
       {/* TOP HEADER */}
       <div className="luxury-green py-4">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -38,17 +38,17 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3">
             <div className="text-[#C9A24D] text-3xl font-bold">G</div>
             <div>
-              <p className="text-lg font-semibold tracking-wide">
+              <p className="text-white text-lg font-semibold tracking-wide">
                 THE GRANDIOSE
               </p>
-              <p className="text-xs text-gray-700 tracking-widest">
+              <p className="text-xs text-white tracking-widest">
                 Crafting Grandeur
               </p>
             </div>
           </Link>
 
           {/* DESKTOP NAV */}
-          <nav className="hidden lg:flex items-center gap-1 text-sm font-medium">
+          <nav className="hidden text-white lg:flex items-center gap-1 text-sm font-medium">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -86,7 +86,7 @@ export default function Header() {
               href="/cart"
               className="relative flex items-center justify-center"
             >
-              <ShoppingCart size={22} className="text-black" />
+              <ShoppingCart size={22} className="text-white" />
 
               {cart.length > 0 && (
                 <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center">
@@ -98,7 +98,7 @@ export default function Header() {
             {/* MOBILE MENU BUTTON */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden text-black"
+              className="lg:hidden text-white"
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -108,7 +108,7 @@ export default function Header() {
 
       {/* MOBILE MENU */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-white z-50 overflow-y-auto">
+        <div className="lg:hidden fixed inset-0 bg-[#1B4D3E] z-50 overflow-y-auto">
           {/* HEADER (optional but better UX) */}
           <div className="flex justify-between items-center px-6 py-4 border-b">
             <p className="font-semibold">Menu</p>

@@ -6,7 +6,7 @@ import { FaInstagram, FaFacebookF, FaPinterestP, FaBehance, FaYoutube } from "re
 
 export default function Footer() {
     return (
-        <footer className="bg-[#F7F6F2] text-[#2B2B2B] pt-20 pb-10">
+        <footer className="bg-[#1B4D3E] text-white pt-20 pb-10 border-t border-gray-200">
             <div className="max-w-7xl mx-auto px-6">
 
                 {/* Top Brand Section */}
@@ -28,7 +28,7 @@ export default function Footer() {
                 <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-10">
 
                     {/* About Card */}
-                    <div className="bg-white rounded-xl shadow-sm p-8 border border-gray-100">
+                    <div className="bg-[#1B4D3E] rounded-xl shadow-sm p-8 border border-gray-100">
                         <h3 className="text-lg font-semibold mb-4">About Us</h3>
 
                         <p className="text-[#8A8A8A] text-sm leading-relaxed mb-4">
@@ -53,7 +53,7 @@ export default function Footer() {
 
 
                     {/* Quick Links Card */}
-                    <div className="bg-white rounded-xl shadow-sm p-8 border border-gray-100">
+                    <div className="bg-[#1B4D3E] rounded-xl shadow-sm p-8 border border-gray-100">
                         <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
 
                         <ul className="space-y-3 text-sm">
@@ -67,7 +67,7 @@ export default function Footer() {
 
 
                     {/* Services Card */}
-                    <div className="bg-white rounded-xl shadow-sm p-8 border border-gray-100">
+                    <div className="bg-[#1B4D3E] rounded-xl shadow-sm p-8 border border-gray-100">
                         <h3 className="text-lg font-semibold mb-6">Services</h3>
 
                         <ul className="space-y-3 text-sm text-[#8A8A8A]">
@@ -82,7 +82,7 @@ export default function Footer() {
 
 
                     {/* Instagram Card */}
-                    <div className="bg-white rounded-xl shadow-sm p-8 border border-gray-100">
+                    <div className="bg-[#1B4D3E] rounded-xl shadow-sm p-8 border border-gray-100">
                         <h3 className="text-lg font-semibold mb-6">Instagram</h3>
 
                         <div className="grid grid-cols-3 gap-2">
