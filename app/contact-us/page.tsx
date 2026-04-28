@@ -58,7 +58,7 @@ export default function ContactPage() {
                 </motion.p>
                 <motion.h1
                     initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-                    className="font-serif text-4xl md:text-5xl font-bold text-white tracking-wider"
+                    className="font-serif text-4xl md:text-5xl font-bold tracking-wider text-[#D4AF37]"
                     style={{ fontVariant: "small-caps", letterSpacing: "0.08em" }}
                 >
                     Contact Us
