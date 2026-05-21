@@ -259,31 +259,6 @@ export default function Header() {
               Services
             </span>
           </Link>
-
-          <Link
-            href="/contact-us"
-            onClick={() => setMobileMenuOpen(false)}
-            className="flex flex-col items-center gap-1 px-3 py-1 group"
-          >
-            <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#D4AF37"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-              </svg>
-            </div>
-            <span className="text-[9px] tracking-[0.1em] uppercase text-[#D4AF37]/70 group-hover:text-[#D4AF37]">
-              Contact
-            </span>
-          </Link>
         </div>
       </nav>
     </header>

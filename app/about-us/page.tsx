@@ -25,9 +25,7 @@ const team = [
   { name: "Asviya Imran", role: "Interior Architect", initials: "AI" },
   { name: "Shaikh Sulaiman", role: "Site Manager", initials: "SS" },
   { name: "Nagesh", role: "Interior Designer", initials: "N" },
-  { name: "Amir Khan", role: "Senior Project Manager", initials: "AK" },
-  { name: "Habeeb Pasha", role: "Project Manager - Construction", initials: "HP" },
-  { name: "Yaseen Arafath", role: "Civil Engineer (Consultant)", initials: "YA" },
+  { name: "Yaseen Arafath", role: "Civil Engineer", initials: "YA" },
 ];
 
 const signatureProjects = [
