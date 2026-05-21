@@ -161,3 +161,31 @@ html {
     linear-gradient(135deg, #0F3D2E, #0b2c22);
   background-size: auto, 3px 3px, auto;
 }
+
+
+.gradient-heading {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  background: linear-gradient(270deg, #fff6d5, #f7d774, #CC9008, #fff1b8, #b67a00, #fff6d5);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: goldGradient 20s ease infinite;
+}
+
+@keyframes goldGradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+@media (max-width: 1024px) {
+  body {
+    padding-bottom: 72px;
+  }
+}

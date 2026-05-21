@@ -42,11 +42,11 @@ function page() {
     <div>
       {/* TESTIMONIALS */}
 
-      <section className="md: px-6 md:px-10 bg-[#1B4D3E]">
+      <section className="md: px-6 md:px-10 bg-[#051711]">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
 
-          <section className="relative h-[52vh] min-h-[380px] overflow-hidden flex items-center justify-center">
+          <section className="relative h-[52vh] min-h-[380px] overflow-hidden flex items-center justify-center mb-5">
             {/* Background image with Next.js Image */}
             <div className="absolute inset-0 w-full h-full">
               <Image
@@ -60,8 +60,8 @@ function page() {
               />
             </div>
             {/* Layered overlays with royal green */}
-            <div className="absolute inset-0 bg-[#1B4D3E]/90" />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#1B4D3E]/30 via-[#1B4D3E]/70 to-[#1B4D3E]" />
+            <div className="absolute inset-0 bg-[#051711]/90" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#051711]/30 via-[#051711]/70 to-[#051711]" />
 
             {/* CENTER TEXT */}
             <div className="relative z-10 text-center px-6">
@@ -77,12 +77,9 @@ function page() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35, type: "spring", stiffness: 60 }}
-                className="font-serif text-5xl md:text-7xl font-bold text-white leading-[1.05] mb-5"
+                className="gradient-heading text-4xl md:text-5xl leading-[1.1]"
               >
-                Our Clients{" "}
-                <span className="italic font-normal text-[#D4AF37]">
-                  Review
-                </span>
+                Our Clients Review
               </motion.h1>
 
               {/* Breadcrumb */}
@@ -114,7 +111,7 @@ function page() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="group relative p-8 md:p-10 bg-[#0F3D2E] rounded-sm border border-golden/20 hover:border-golden/50 hover:shadow-xl transition-all duration-500 overflow-hidden"
+                className="group relative p-8 md:p-10 bg-[#051711] rounded-sm border border-golden/20 hover:border-golden/50 hover:shadow-xl transition-all duration-500 overflow-hidden"
               >
                 {/* Gold top bar */}
 

@@ -17,6 +17,7 @@ import step3Img from "../../public/sofa.jpg";
 import step4Img from "../../public/sofa.jpg";
 import step5Img from "../../public/sofa.jpg";
 import step6Img from "../../public/sofa.jpg";
+import { link } from "fs";
 
 const processData = [
   {
@@ -36,6 +37,7 @@ const processData = [
       "Showroom visit to experience materials",
       "Initial design discussion",
     ],
+    link:'@/work-process',
   },
   {
     id: "step2",
@@ -131,7 +133,7 @@ const processData = [
 
 const WorkProcess = () => {
   return (
-    <div className="min-h-screen bg-[#1B4D3E] font-sans">
+    <div className="min-h-screen bg-[#051711] font-sans">
       {/* ── CINEMATIC HERO HEADER ── */}
       <section className="relative h-[52vh] min-h-[380px] overflow-hidden flex items-center justify-center">
         {/* Background image */}
@@ -147,8 +149,8 @@ const WorkProcess = () => {
           />
         </div>
         {/* Layered overlays with royal green */}
-        <div className="absolute inset-0 bg-[#1B4D3E]/90" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1B4D3E]/30 via-[#1B4D3E]/70 to-[#1B4D3E]" />
+        <div className="absolute inset-0 bg-[#051711]/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#051711]/30 via-[#051711]/70 to-[#051711]" />
         {/* Decorative gold line */}
         <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-60" />
 
@@ -166,18 +168,15 @@ const WorkProcess = () => {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, type: "spring", stiffness: 60 }}
-            className="font-serif text-5xl md:text-7xl font-bold text-white leading-[1.05] mb-5"
+            className="gradient-heading text-5xl md:text-5xl mb-5"
           >
-            Our{" "}
-            <span className="italic font-normal text-[#D4AF37]">
-              Work Process
-            </span>
+            Our Work Process
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="text-white/70 text-sm md:text-base font-sans max-w-md mx-auto leading-relaxed"
+            className="text-white/70 text-sm md:text-base font-palegoldenrod max-w-md mx-auto leading-relaxed"
           >
             A seamless journey from concept to completion, crafted with precision and care.
           </motion.p>
@@ -248,7 +247,7 @@ const WorkProcess = () => {
                     
                     {/* Animated overlay gradient */}
                     <motion.div 
-                      className="absolute inset-0 bg-gradient-to-t from-[#1B4D3E]/90 via-[#1B4D3E]/20 to-transparent"
+                      className="absolute inset-0 bg-gradient-to-t from-[#051711]/90 via-[#051711]/20 to-transparent"
                       initial={{ opacity: 0.6 }}
                       whileHover={{ opacity: 0.8 }}
                       transition={{ duration: 0.3 }}
@@ -256,7 +255,7 @@ const WorkProcess = () => {
                     
                     {/* Step Number Badge with hover animation */}
                     <motion.div 
-                      className="absolute top-4 left-4 w-12 h-12 rounded-full bg-[#D4AF37] text-[#1B4D3E] flex items-center justify-center font-bold text-xl font-serif shadow-lg"
+                      className="absolute top-4 left-4 w-12 h-12 rounded-full bg-[#D4AF37] text-[#051711] flex items-center justify-center font-bold text-xl font-serif shadow-lg"
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       transition={{ duration: 0.2 }}
                     >
@@ -295,7 +294,7 @@ const WorkProcess = () => {
                   </div>
 
                   {/* Heading */}
-                  <h2 className="font-serif text-3xl md:text-4xl font-bold text-white leading-[1.15]">
+                  <h2 className="gradient-heading text-2xl md:text-2xl">
                     {step.label}
                   </h2>
 

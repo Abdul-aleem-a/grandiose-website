@@ -28,10 +28,10 @@ export default function BlogsPage() {
   });
 
   return (
-    <div className="min-h-screen bg-[#1B4D3E]">
+    <div className="min-h-screen bg-[#051711]">
       {/* Hero Section */}
       <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-[#1B4D3E]" />
+        <div className="absolute inset-0 bg-[#051711]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px]  border-golden/10" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px]  border-golden/5" />
         <div className="relative z-10 text-center px-6">
@@ -40,12 +40,11 @@ export default function BlogsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="inline-block text-[10px] tracking-[0.4em] uppercase text-golden mb-4 font-sans">
+            <span className="inline-block text-[10px] tracking-[0.4em] uppercase text-white mb-4 font-sans">
               Insights & Inspiration
             </span>
-            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
-              Our{" "}
-              <span className="italic font-normal text-[#D4AF37]">Blogs</span>
+            <h1 className="gradient-heading text-5xl md:text-5xl mb-5">
+              Our Blogs
             </h1>
             <nav className="flex items-center justify-center gap-2 text-[11px] tracking-[0.15em] uppercase text-white/50 font-sans">
               <Link href="/" className="hover:text-golden transition-colors">
@@ -59,9 +58,9 @@ export default function BlogsPage() {
       </section>
 
       {/* Search + Filter */}
-      <section className="bg-[#1B4D3E]/90 py-10 border-b border-white/10">
+      <section className="bg-[#051711]/90 py-10 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col gap-6">
             {/* Search */}
             <div className="relative w-full md:w-80">
               <Search
@@ -73,25 +72,27 @@ export default function BlogsPage() {
                 placeholder="Search articles..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-11 pr-4 py-3 rounded-lg border border-white/10 bg-white/5 text-white text-sm font-sans placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-golden/30 transition-all"
+                className="w-full pl-11 pr-4 py-3 rounded-lg border border-white/10 bg-white/5 text-white text-sm font-sans placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/30 transition-all"
               />
             </div>
 
-            {/* Categories */}
-            <div className="flex items-center gap-2 overflow-x-auto scrollbar-none pb-1">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`px-4 py-2 rounded-full text-[11px] tracking-[0.1em] uppercase font-sans font-medium whitespace-nowrap transition-all duration-300 ${
-                    activeCategory === cat
-                      ? "bg-golden text-[#1B4D3E] shadow-md"
-                      : "bg-white/10 text-white/70 hover:bg-white/20 border border-white/10"
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
+            {/* Categories — horizontally scrollable on mobile */}
+            <div className="w-full overflow-x-auto scrollbar-none -mx 6 px-6">
+              <div className="flex items-center gap-2 w-max">
+                {categories.map((cat) => (
+                  <button
+                    key={cat}
+                    onClick={() => setActiveCategory(cat)}
+                    className={`px-4 py-2 rounded-full text-[11px] tracking-[0.1em] uppercase font-sans font-medium whitespace-nowrap transition-all duration-300 ${
+                      activeCategory === cat
+                        ? "bg-[#D4AF37] text-[#051711] shadow-md"
+                        : "bg-white/10 text-white/70 hover:bg-white/20 border border-white/10"
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -130,7 +131,7 @@ export default function BlogsPage() {
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      <span className="absolute top-3 left-3 px-3 py-1 bg-golden/90 backdrop-blur-sm text-[#1B4D3E] text-[9px] tracking-[0.15em] uppercase font-sans font-medium rounded-full">
+                      <span className="absolute top-3 left-3 px-3 py-1 bg-golden/90 backdrop-blur-sm text-[#051711] text-[9px] tracking-[0.15em] uppercase font-sans font-medium rounded-full">
                         {post.category}
                       </span>
                     </div>
@@ -144,10 +145,10 @@ export default function BlogsPage() {
                           <Clock size={10} /> {post.readTime}
                         </span>
                       </div>
-                      <h3 className="font-serif text-lg font-bold text-white mb-3 group-hover:text-golden transition-colors duration-300 leading-snug line-clamp-2">
+                      <h3 className="gradient-heading text-1xl md:text-1xl mb-5">
                         {post.title}
                       </h3>
-                      <p className="text-white/60 font-sans text-[13px] leading-relaxed mb-4 flex-1 line-clamp-3">
+                      <p className="text-white/60 font-palegoldenrod text-[13px] leading-relaxed mb-4 flex-1 line-clamp-3">
                         {post.excerpt}
                       </p>
                       <span className="inline-flex items-center gap-2 text-yellow-500 text-[11px] tracking-[0.12em] uppercase font-sans font-semibold group-hover:gap-3 transition-all duration-300 mt-auto">
@@ -174,13 +175,13 @@ export default function BlogsPage() {
       {/* Newsletter CTA - Simple Version */}
       <section className="bg-golden/5 py-20 border-t border-golden/20">
         <div className="max-w-3xl mx-auto text-center px-6">
-          <span className="text-[10px] tracking-[0.4em] uppercase text-golden font-sans mb-4 block">
+          <span className="text-[10px] tracking-[0.4em] uppercase text-white font-sans mb-4 block">
             Stay Inspired
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="gradient-heading text-3xl md:text-3xl mb-5">
             Get Design Tips Delivered
           </h2>
-          <p className="text-white/70 font-sans text-sm mb-10 max-w-lg mx-auto">
+          <p className="text-white/70 font-palegoldenrod text-sm mb-10 max-w-lg mx-auto">
             Join our community of design enthusiasts and receive expert interior
             design tips, project showcases, and exclusive offers.
           </p>

@@ -5,8 +5,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import {
-  Home, Building2, Utensils, PenTool, Lightbulb, Ruler, Briefcase,
-  ChevronRight, Check, ArrowRight, Phone, MessageCircle, X, ChevronLeft
+  Home,
+  Building2,
+  Utensils,
+  PenTool,
+  Lightbulb,
+  Ruler,
+  Briefcase,
+  ChevronRight,
+  Check,
+  ArrowRight,
+  Phone,
+  MessageCircle,
+  X,
+  ChevronLeft,
 } from "lucide-react";
 
 // Import images with Next.js Image optimization
@@ -39,7 +51,12 @@ const serviceData = [
     label: "Residential Interiors",
     tagline: "Where Every Room Tells Your Story",
     heroImage: serviceResidential,
-    gallery: [serviceResidential, serviceResidential2, serviceResidential3, serviceResidential4],
+    gallery: [
+      serviceResidential,
+      serviceResidential2,
+      serviceResidential3,
+      serviceResidential4,
+    ],
     description:
       "Residential interiors are the canvas upon which inhabitants express their personalities, lifestyles, and preferences. Through the careful selection of furniture, color palettes, and decor, each room tells a unique story, evoking emotions and creating a sense of belonging.",
     longDescription:
@@ -58,7 +75,12 @@ const serviceData = [
     label: "Commercial Interiors",
     tagline: "Spaces That Inspire Productivity & Prestige",
     heroImage: serviceCommercial,
-    gallery: [serviceCommercial, serviceCommercial2, serviceCommercial3, serviceCommercial4],
+    gallery: [
+      serviceCommercial,
+      serviceCommercial2,
+      serviceCommercial3,
+      serviceCommercial4,
+    ],
     description:
       "Creating captivating commercial interiors is an artful fusion of functionality, aesthetics, and brand identity. From sleek corporate offices to vibrant retail spaces, every design choice plays a pivotal role in enhancing productivity, attracting clientele, and fostering a memorable brand experience.",
     longDescription:
@@ -77,7 +99,12 @@ const serviceData = [
     label: "Corporate Interiors",
     tagline: "Environments That Inspire Innovation",
     heroImage: serviceCorporate,
-    gallery: [serviceCorporate, serviceCorporate2, serviceCorporate3, serviceCorporate4],
+    gallery: [
+      serviceCorporate,
+      serviceCorporate2,
+      serviceCorporate3,
+      serviceCorporate4,
+    ],
     description:
       "Corporate interiors are the embodiment of a company's ethos and vision, seamlessly blending functionality with sophistication to cultivate an environment conducive to productivity and innovation.",
     longDescription:
@@ -96,7 +123,12 @@ const serviceData = [
     label: "Modular Kitchen",
     tagline: "Where Efficiency Meets Elegance",
     heroImage: serviceKitchen,
-    gallery: [serviceKitchen, serviceKitchen2, serviceKitchen3, serviceKitchen4],
+    gallery: [
+      serviceKitchen,
+      serviceKitchen2,
+      serviceKitchen3,
+      serviceKitchen4,
+    ],
     description:
       "Modular kitchens revolutionize culinary spaces, seamlessly blending efficiency with elegance to redefine the heart of the home.",
     longDescription:
@@ -115,7 +147,12 @@ const serviceData = [
     label: "Architectural Plan & Elevation",
     tagline: "Blueprints Built for Grandeur",
     heroImage: serviceArchitecture,
-    gallery: [serviceArchitecture, serviceArchitecture2, serviceArchitecture3, serviceArchitecture4],
+    gallery: [
+      serviceArchitecture,
+      serviceArchitecture2,
+      serviceArchitecture3,
+      serviceArchitecture4,
+    ],
     description:
       "Architectural plan and elevation services revolutionize spatial design, seamlessly blending efficiency with elegance to redefine the essence of built environments.",
     longDescription:
@@ -133,7 +170,12 @@ const serviceData = [
 const Services = () => {
   const [active, setActive] = useState("residential");
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState<{ src: any; alt: string; index: number; gallery: any[] } | null>(null);
+  const [currentImage, setCurrentImage] = useState<{
+    src: any;
+    alt: string;
+    index: number;
+    gallery: any[];
+  } | null>(null);
   const sectionRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   const handleNavClick = (id: string) => {
@@ -146,7 +188,12 @@ const Services = () => {
     }
   };
 
-  const openLightbox = (img: any, alt: string, index: number, gallery: any[]) => {
+  const openLightbox = (
+    img: any,
+    alt: string,
+    index: number,
+    gallery: any[],
+  ) => {
     setCurrentImage({ src: img, alt, index, gallery });
     setLightboxOpen(true);
     document.body.style.overflow = "hidden";
@@ -171,7 +218,9 @@ const Services = () => {
 
   const prevImage = () => {
     if (currentImage) {
-      const prevIndex = (currentImage.index - 1 + currentImage.gallery.length) % currentImage.gallery.length;
+      const prevIndex =
+        (currentImage.index - 1 + currentImage.gallery.length) %
+        currentImage.gallery.length;
       setCurrentImage({
         ...currentImage,
         src: currentImage.gallery[prevIndex],
@@ -188,7 +237,7 @@ const Services = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#1B4D3E] font-sans">
+    <div className="min-h-screen bg-[#051711] font-sans">
       {/* ── CINEMATIC HERO HEADER ── */}
       <section className="relative h-[52vh] min-h-[380px] overflow-hidden flex items-center justify-center">
         {/* Background image with Next.js Image */}
@@ -204,8 +253,8 @@ const Services = () => {
           />
         </div>
         {/* Layered overlays with royal green */}
-        <div className="absolute inset-0 bg-[#1B4D3E]/90" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1B4D3E]/30 via-[#1B4D3E]/70 to-[#1B4D3E]" />
+        <div className="absolute inset-0 bg-[#051711]/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#051711]/30 via-[#051711]/70 to-[#051711]" />
         {/* Decorative gold line */}
         <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-60" />
 
@@ -223,20 +272,18 @@ const Services = () => {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, type: "spring", stiffness: 60 }}
-            className="font-serif text-5xl md:text-7xl font-bold text-white leading-[1.05] mb-5"
+            className="gradient-heading text-3xl md:text-5xl mb-5"
           >
-            Our{" "}
-            <span className="italic font-normal text-[#D4AF37]">
-              Services
-            </span>
+            Our Services
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="text-white/70 text-sm md:text-base font-sans max-w-md mx-auto leading-relaxed"
+            className="text-white/70 text-sm md:text-base font-palegoldenrod max-w-md mx-auto leading-relaxed"
           >
-            Crafting refined, functional interiors tailored to your lifestyle — from concept to completion.
+            Crafting refined, functional interiors tailored to your lifestyle —
+            from concept to completion.
           </motion.p>
 
           {/* Breadcrumb */}
@@ -246,7 +293,10 @@ const Services = () => {
             transition={{ delay: 0.65 }}
             className="flex items-center justify-center gap-2 mt-6 text-[11px] tracking-[0.15em] uppercase"
           >
-            <Link href="/" className="text-white/40 hover:text-[#D4AF37] transition-colors duration-300">
+            <Link
+              href="/"
+              className="text-white/40 hover:text-[#D4AF37] transition-colors duration-300"
+            >
               Home
             </Link>
             <ChevronRight size={12} className="text-[#D4AF37]/50" />
@@ -266,7 +316,7 @@ const Services = () => {
       </section>
 
       {/* ── STICKY SERVICE CATEGORY NAV ── */}
-      <div className="sticky top-[64px] z-40 bg-[#1B4D3E]/95 backdrop-blur-lg border-b border-[#D4AF37]/20 shadow-sm">
+      <div className="sticky top-[64px] z-40 bg-[#051711]/95 backdrop-blur-lg border-b border-[#D4AF37]/20 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 md:px-10">
           <div className="flex overflow-x-auto scrollbar-none gap-0">
             {serviceData.map((s) => {
@@ -277,9 +327,10 @@ const Services = () => {
                   key={s.id}
                   onClick={() => handleNavClick(s.id)}
                   className={`relative flex items-center gap-2 px-4 md:px-6 py-4 text-[10px] md:text-[11px] tracking-[0.15em] uppercase font-medium whitespace-nowrap transition-all duration-300 border-b-2 font-sans
-                    ${isActive
-                      ? "border-[#D4AF37] text-[#D4AF37]"
-                      : "border-transparent text-white/60 hover:text-white hover:border-white/20"
+                    ${
+                      isActive
+                        ? "border-[#D4AF37] text-[#D4AF37]"
+                        : "border-transparent text-white/60 hover:text-white hover:border-white/20"
                     }`}
                 >
                   <Icon size={13} className="shrink-0" />
@@ -301,7 +352,9 @@ const Services = () => {
             <div
               key={service.id}
               id={service.id}
-              ref={(el) => { sectionRefs.current[service.id] = el; }}
+              ref={(el) => {
+                sectionRefs.current[service.id] = el;
+              }}
             >
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
@@ -313,7 +366,7 @@ const Services = () => {
                 }`}
               >
                 {/* ── IMAGE SIDE WITH SMOOTH HOVER EFFECTS ── */}
-                <motion.div 
+                <motion.div
                   className="relative group"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
@@ -336,7 +389,7 @@ const Services = () => {
                   </div>
 
                   {/* Decorative gold corner accent with hover animation */}
-                  <motion.div 
+                  <motion.div
                     className={`absolute -top-3 ${isEven ? "-left-3" : "-right-3"} w-12 h-12 border-t-2 border-l-2 ${isEven ? "" : "border-l-0 border-r-2"} border-[#D4AF37]/50 rounded-tl-sm pointer-events-none`}
                     whileHover={{ scale: 1.1, borderColor: "#D4AF37" }}
                     transition={{ duration: 0.2 }}
@@ -344,7 +397,7 @@ const Services = () => {
                 </motion.div>
 
                 {/* ── CONTENT SIDE ── */}
-                <motion.div 
+                <motion.div
                   className="flex flex-col gap-6"
                   initial={{ opacity: 0, x: isEven ? 20 : -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -353,12 +406,16 @@ const Services = () => {
                 >
                   {/* Service label */}
                   <div className="flex items-center gap-3">
-                    <motion.div 
+                    <motion.div
                       className="w-10 h-10 rounded-full bg-[#D4AF37]/20 flex items-center justify-center shrink-0"
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <Icon size={18} className="text-[#D4AF37]" strokeWidth={1.4} />
+                      <Icon
+                        size={18}
+                        className="text-[#D4AF37]"
+                        strokeWidth={1.4}
+                      />
                     </motion.div>
                     <p className="text-[10px] tracking-[0.4em] uppercase text-[#D4AF37] font-medium font-sans">
                       {service.label}
@@ -366,7 +423,7 @@ const Services = () => {
                   </div>
 
                   {/* Heading */}
-                  <h2 className="font-serif text-3xl md:text-4xl font-bold text-white leading-[1.15]">
+                  <h2 className="gradient-heading text-2xl md:text-2xl">
                     {service.tagline}
                   </h2>
 
@@ -384,8 +441,8 @@ const Services = () => {
                   {/* Features list */}
                   <ul className="space-y-2.5">
                     {service.features.map((f, fi) => (
-                      <motion.li 
-                        key={fi} 
+                      <motion.li
+                        key={fi}
                         className="flex items-start gap-3 text-sm text-white/80 font-sans"
                         initial={{ opacity: 0, x: -10 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -393,13 +450,16 @@ const Services = () => {
                         transition={{ delay: 0.3 + fi * 0.1 }}
                       >
                         <span className="mt-0.5 w-4 h-4 rounded-full bg-[#D4AF37]/20 flex items-center justify-center shrink-0">
-                          <Check size={9} className="text-[#D4AF37]" strokeWidth={2.5} />
+                          <Check
+                            size={9}
+                            className="text-[#D4AF37]"
+                            strokeWidth={2.5}
+                          />
                         </span>
                         {f}
                       </motion.li>
                     ))}
                   </ul>
-
                 </motion.div>
               </motion.div>
 
@@ -413,7 +473,9 @@ const Services = () => {
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-5 h-[1px] bg-[#D4AF37]/50" />
-                  <p className="text-[10px] tracking-[0.4em] uppercase text-white/50 font-sans">Gallery</p>
+                  <p className="text-[10px] tracking-[0.4em] uppercase text-white/50 font-sans">
+                    Gallery
+                  </p>
                   <div className="flex-1 h-[1px] bg-white/20" />
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
@@ -425,7 +487,14 @@ const Services = () => {
                       viewport={{ once: true }}
                       transition={{ delay: gi * 0.1, duration: 0.4 }}
                       className="relative overflow-hidden rounded-lg aspect-[4/3] group cursor-pointer"
-                      onClick={() => openLightbox(img, `${service.label} ${gi + 1}`, gi, service.gallery)}
+                      onClick={() =>
+                        openLightbox(
+                          img,
+                          `${service.label} ${gi + 1}`,
+                          gi,
+                          service.gallery,
+                        )
+                      }
                       whileHover={{ scale: 1.05 }}
                     >
                       <Image
@@ -436,7 +505,7 @@ const Services = () => {
                         sizes="(max-width: 768px) 50vw, 25vw"
                         quality={80}
                       />
-                      <div className="absolute inset-0 bg-[#1B4D3E]/0 group-hover:bg-[#1B4D3E]/50 transition-all duration-300 flex items-center justify-center">
+                      <div className="absolute inset-0 bg-[#051711]/0 group-hover:bg-[#051711]/50 transition-all duration-300 flex items-center justify-center">
                         <ArrowRight
                           size={24}
                           className="text-white opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-2 group-hover:translate-x-0"
@@ -449,7 +518,7 @@ const Services = () => {
 
               {/* Divider between services */}
               {idx < serviceData.length - 1 && (
-                <motion.div 
+                <motion.div
                   className="mt-20 flex items-center gap-6"
                   initial={{ opacity: 0, scaleX: 0 }}
                   whileInView={{ opacity: 1, scaleX: 1 }}
@@ -457,7 +526,7 @@ const Services = () => {
                   transition={{ duration: 0.5 }}
                 >
                   <div className="flex-1 h-[1px] bg-white/20" />
-                  <motion.div 
+                  <motion.div
                     className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40"
                     whileHover={{ scale: 1.5, backgroundColor: "#D4AF37" }}
                   />
@@ -525,7 +594,7 @@ const Services = () => {
                 quality={95}
                 priority
               />
-              
+
               {/* Image counter */}
               <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/60 text-white px-4 py-2 rounded-full text-sm font-sans">
                 {currentImage.index + 1} / {currentImage.gallery.length}

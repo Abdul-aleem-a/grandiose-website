@@ -25,6 +25,7 @@ import {
 } from "lucide-react";
 
 import heroImage from "@/public/sofa.jpg";
+import link  from "next/link";
 
 export default function Home() {
   const slides = [
@@ -107,13 +108,6 @@ export default function Home() {
       title: "Architectural Planning",
       description:
         "Comprehensive architectural plans and 3D elevations for new builds and full renovations.",
-      tag: null,
-    },
-    {
-      icon: Lightbulb,
-      title: "Lighting Design",
-      description:
-        "Bespoke lighting plans that enhance mood, highlight features, and create perfect ambiance.",
       tag: null,
     },
     {
@@ -260,7 +254,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -30 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] mb-4"
+              className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] mb-4 animate-gradient"
             >
               {slide.heading}
               <br />
@@ -319,19 +313,19 @@ export default function Home() {
       </section>
 
       {/* USP BANNER */}
-      <section className="relative -mt-14 z-20 px-6 md:px-10">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative -mt-14 z-20 w-full">
+        <div className="w-full">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="grid grid-cols-2 lg:grid-cols-4 bg-[#0F3D2E] shadow-2xl rounded-sm overflow-hidden border border-[#D4AF37]/20"
+            className="grid grid-cols-2 lg:grid-cols-4 bg-[#051711] shadow-2xl overflow-hidden border-y border-[#D4AF37]/20 w-full"
           >
             {usps.map((usp, i) => (
               <div
                 key={usp.label}
-                className={`group flex flex-col items-center text-center gap-3 p-7 md:p-9 hover:bg-[#0B2F24] transition-colors duration-400 ${
+                className={`group flex flex-col items-center text-center gap-3 p-7 md:p-9 hover:bg-[#0A1C17] transition-colors duration-400 ${
                   i < usps.length - 1 ? "border-r border-[#D4AF37]/15" : ""
                 }`}
               >
@@ -359,7 +353,7 @@ export default function Home() {
       {/* SERVICES SECTION */}
       <section
         id="services"
-        className="py-24 md:py-36 px-6 md:px-10 bg-[#F8F5EF]"
+        className="py-24 md:py-36 px-6 md:px-10 bg-[#051711]"
       >
         <div className="max-w-7xl mx-auto">
           {/* Header */}
@@ -374,17 +368,14 @@ export default function Home() {
               What We Offer
             </p>
 
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#0F3D2E] leading-[1.1]">
-              Our{" "}
-              <span className="italic font-normal text-[#D4AF37]">
-                Services
-              </span>
+            <h2 className="gradient-heading text-3xl md:text-4xl leading-[1.1]">
+              Our Services
             </h2>
           </motion.div>
 
           {/* Services Grid */}
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4">
             {services.map((service, i) => (
               <motion.div
                 key={service.title}
@@ -392,37 +383,32 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="group relative p-8 md:p-10 bg-white rounded-sm hover:shadow-2xl transition-all duration-500 cursor-pointer overflow-hidden border border-gray-200 hover:border-[#D4AF37]/40"
+                className="group relative p-8 md:p-10 bg-[#051711] rounded-sm hover:shadow-2xl transition-all duration-500 cursor-pointer overflow-hidden border border-[#D4AF37]/20 hover:border-[#D4AF37]/60"
               >
                 {/* Gold Top Line */}
-
                 <div className="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-[#D4AF37] to-[#C9A227] group-hover:w-full transition-all duration-500" />
 
                 {/* Icon */}
-
                 <service.icon
                   size={30}
                   strokeWidth={1.2}
-                  className="text-[#0F3D2E] mb-6 group-hover:text-[#D4AF37] group-hover:scale-110 transition-all duration-300"
+                  className="text-[#D4AF37] mb-6 group-hover:text-[#D4AF37]/80 group-hover:scale-110 transition-all duration-300"
                 />
 
-                {/* Title */}
-
-                <h3 className="font-serif text-xl font-semibold text-[#0F3D2E] mb-3">
+                {/* Title - Changed to white */}
+                <h3 className="font-serif text-xl font-semibold text-white mb-3">
                   {service.title}
                 </h3>
 
-                {/* Description */}
-
-                <p className="text-gray-600 text-sm leading-relaxed">
+                {/* Description - Changed to light gray/white */}
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {service.description}
                 </p>
 
-                {/* Learn More */}
-
+                {/* Learn More - Changed to white/gold */}
                 <a
                   href="#contact"
-                  className="inline-block mt-6 text-[10px] tracking-[0.2em] uppercase text-[#0F3D2E] font-medium opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 hover:text-[#D4AF37]"
+                  className="inline-block mt-6 text-[10px] tracking-[0.2em] uppercase text-gray-300 font-medium opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 hover:text-[#D4AF37]"
                 >
                   Learn More →
                 </a>
@@ -446,7 +432,7 @@ export default function Home() {
 
       <section
         id="process"
-        className="py-24 md:py-36 px-6 md:px-10 bg-[#0F3D2E] overflow-hidden"
+        className="py-24 md:py-36 px-6 md:px-10 bg-[#051711] overflow-hidden"
       >
         <div className="max-w-7xl mx-auto">
           {/* Header */}
@@ -461,9 +447,18 @@ export default function Home() {
               How We Work
             </p>
 
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-white leading-[1.1]">
-              Our Work{" "}
-              <span className="italic font-normal text-[#D4AF37]">Process</span>
+            <h2
+              className="gradient-heading text-3xl md:text-4xl leading-[1.1]"
+              style={{
+                background:
+                  "linear-gradient(270deg, #fff6d5, #f7d774, #CC9008, #fff1b8, #b67a00, #fff6d5)",
+                backgroundSize: "400% 400%",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Our Work Process
             </h2>
           </motion.div>
 
@@ -516,11 +511,19 @@ export default function Home() {
             ))}
           </div>
         </div>
+         <div className="mt-16 flex justify-center">
+          <Link
+            href="/work-process"
+            className="px-12 py-3 text-xs tracking-[0.25em] uppercase bg-[#D4AF37] text-black hover:bg-[#C9A227] transition-all duration-300 rounded-sm shadow-lg"
+          >
+            View More
+          </Link>
+        </div>
       </section>
 
       {/* PROJECTS SECTION */}
 
-      <section className="py-24 md:py-32 px-6 md:px-10 bg-[#0F3D2E]">
+      <section className="py-24 md:py-32 px-6 md:px-10 bg-[#051711]">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
 
@@ -534,11 +537,8 @@ export default function Home() {
               Our Portfolio
             </p>
 
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-white leading-[1.1]">
-              Our{" "}
-              <span className="italic font-normal text-[#D4AF37]">
-                Projects
-              </span>
+            <h2 className="gradient-heading text-3xl md:text-4xl leading-[1.1]">
+              Our Projects
             </h2>
           </motion.div>
 
@@ -552,16 +552,19 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <p className="text-[11px] tracking-[0.45em] uppercase text-[#D4AF37] mb-4">
+              <p className="text-[11px] tracking-[0.45em] uppercase text-[#D4AF37] mb-4 ">
                 Recent Projects
               </p>
 
-              <h2 className="font-serif text-4xl md:text-5xl text-white mb-6 leading-tight">
-                Crafted to{" "}
-                <span className="italic text-[#D4AF37]">Perfection</span>
+              <br />
+
+              <h2 className="gradient-heading text-3xl md:text-3xl leading-[1.1]">
+                Crafted to Perfection
               </h2>
 
-              <div className="flex gap-1 mb-6 text-[#D4AF37] text-lg">
+              <br />
+
+              <div className="flex gap-1 mb-6 text-[#D4AF37] text-lg text-center">
                 ★ ★ ★ ★ ★
               </div>
 
@@ -617,10 +620,9 @@ export default function Home() {
 
       {/* TESTIMONIALS */}
 
-      <section className="py-24 md:py-36 px-6 md:px-10 bg-[#F8F5EF]">
+      <section className="py-24 md:py-36 px-6 md:px-10 bg-[#051711]">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -631,14 +633,12 @@ export default function Home() {
               Client Stories
             </p>
 
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#0F3D2E] leading-[1.1]">
-              What Our Clients{" "}
-              <span className="italic font-normal text-[#D4AF37]">Say</span>
+            <h2 className="gradient-heading text-3xl md:text-4xl leading-[1.1]">
+              What Our Clients Say
             </h2>
           </motion.div>
 
           {/* Testimonials Grid */}
-
           <div className="grid md:grid-cols-2 gap-6">
             {testimonials.map((t, i) => (
               <motion.div
@@ -647,22 +647,19 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="group relative p-8 md:p-10 bg-white rounded-sm border border-gray-200 hover:border-[#D4AF37]/30 hover:shadow-xl transition-all duration-500 overflow-hidden"
+                className="group relative p-8 md:p-10 bg-[#0A1C17] rounded-sm border border-[#D4AF37]/20 hover:border-[#D4AF37]/60 hover:shadow-xl transition-all duration-500 overflow-hidden"
               >
                 {/* Gold top bar */}
-
                 <div className="absolute top-0 left-0 h-[3px] w-0 bg-[#D4AF37] group-hover:w-full transition-all duration-500" />
 
                 {/* Quote icon */}
-
                 <Quote
                   size={40}
                   strokeWidth={0.8}
-                  className="text-[#D4AF37]/30 mb-4"
+                  className="text-[#D4AF37]/40 mb-4"
                 />
 
                 {/* Stars */}
-
                 <div className="flex gap-1 mb-5">
                   {[...Array(t.rating)].map((_, j) => (
                     <Star
@@ -673,28 +670,28 @@ export default function Home() {
                   ))}
                 </div>
 
-                {/* Quote */}
-
-                <p className="font-serif text-base md:text-lg italic text-[#0F3D2E] leading-relaxed mb-8">
+                {/* Quote - Changed to white */}
+                <p className="font-serif text-base md:text-lg italic text-white leading-relaxed mb-8">
                   "{t.quote}"
                 </p>
 
                 {/* Author */}
-
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[#0F3D2E]/10 flex items-center justify-center">
-                      <span className="font-serif text-[#0F3D2E] font-bold text-sm">
+                    <div className="w-10 h-10 rounded-full bg-[#D4AF37]/20 flex items-center justify-center">
+                      <span className="font-serif text-[#D4AF37] font-bold text-sm">
                         {t.author[0]}
                       </span>
                     </div>
 
                     <div>
-                      <p className="text-[#0F3D2E] text-sm font-semibold">
+                      {/* Author name - Changed to white */}
+                      <p className="text-white text-sm font-semibold">
                         {t.author}
                       </p>
 
-                      <p className="text-gray-500 text-xs mt-0.5">{t.role}</p>
+                      {/* Role - Changed to light gray */}
+                      <p className="text-gray-400 text-xs mt-0.5">{t.role}</p>
                     </div>
                   </div>
                 </div>
@@ -702,6 +699,7 @@ export default function Home() {
             ))}
           </div>
         </div>
+
         <div className="mt-16 flex justify-center">
           <Link
             href="/reviews"
@@ -730,9 +728,9 @@ export default function Home() {
 
           {/* Green overlay */}
 
-          <div className="absolute inset-0 bg-[#0F3D2E]/85" />
+          <div className="absolute inset-0 bg-[#051711]/85" />
 
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0F3D2E]/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#051711]/40" />
         </div>
 
         {/* Content */}
@@ -754,17 +752,18 @@ export default function Home() {
 
           {/* Heading */}
 
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
+          <h2 className="gradient-heading text-3xl md:text-4xl leading-[1.1]">
             Need Creafting Grandeur
             <br />
-            <span className="italic font-normal text-[#D4AF37]">
+            <span className="italic gradient-heading text-3xl md:text-4xl leading-[1.1]">
               Service...?
             </span>
           </h2>
+          <br />
 
           {/* Description */}
 
-          <p className="text-white/70 text-sm md:text-base max-w-md mx-auto mb-12 leading-relaxed">
+          <p className="text-white/70 text-sm md:text-base max-w-md mx-auto mb-12 leading-relaxed font-palegoldenrod">
             Every customer receives personal attention from our team of experts
             in home interior design. Based on the project value, location of the
             site, and client specifications, the company assigns a client to an

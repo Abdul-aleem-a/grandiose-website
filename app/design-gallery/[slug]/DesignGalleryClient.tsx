@@ -74,7 +74,7 @@ export default function DesignGalleryClient({
   };
 
   return (
-    <div className="min-h-screen bg-[#1B4D3E] font-sans overflow-x-hidden">
+    <div className="min-h-screen bg-[#051711] font-sans overflow-x-hidden">
       {/* ── BREADCRUMB ── */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 pt-6 sm:pt-8">
         <motion.div
@@ -103,28 +103,43 @@ export default function DesignGalleryClient({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-8 sm:py-10 space-y-12 sm:space-y-16">
         {/* ── HERO SPLIT: Title left, Image right ── */}
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 items-center">
-          {/* Left */}
+          {/* LEFT */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             className="space-y-5 sm:space-y-6 text-center lg:text-left"
           >
+            {/* Title */}
             <div>
-              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#D4AF37] uppercase tracking-wide leading-[1.1] sm:leading-[1.05]">
+              <h1
+                className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wide leading-[1.1] sm:leading-[1.05] animate-gradient"
+                style={{
+                  background:
+                    "linear-gradient(270deg, #fff6d5, #f7d774, #CC9008, #fff1b8, #b67a00, #fff6d5)",
+                  backgroundSize: "400% 400%",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
                 {category.title}
               </h1>
-              <p className="font-serif italic text-white/60 text-base sm:text-lg mt-2">
+              <p className="font-palegoldenrod text-white/60 text-base sm:text-lg mt-2">
                 {category.tagline}
               </p>
             </div>
 
-            {/* Stats - responsive stacking */}
-            <div className="flex flex-wrap justify-center lg:justify-start items-stretch gap-0 border border-[#D4AF37]/20 rounded-sm overflow-hidden w-fit mx-auto lg:mx-0">
+            {/* Stats */}
+            <div className="flex flex-wrap justify-center lg:justify-start items-stretch gap-0 border border-[#D4AF37]/30 rounded-sm overflow-hidden w-fit mx-auto lg:mx-0">
               {category.stats.map((stat, i) => (
                 <div
                   key={i}
-                  className={`px-4 sm:px-6 py-3 sm:py-4 text-center ${i < category.stats.length - 1 ? "border-r border-[#D4AF37]/20" : ""}`}
+                  className={`px-4 sm:px-6 py-3 sm:py-4 text-center ${
+                    i < category.stats.length - 1
+                      ? "border-r border-[#D4AF37]/30"
+                      : ""
+                  }`}
                 >
                   <p className="font-serif text-xl sm:text-2xl font-bold text-[#D4AF37]">
                     {stat.value}
@@ -136,91 +151,113 @@ export default function DesignGalleryClient({
               ))}
             </div>
 
-            {/* Project Overview */}
-            <div className="border border-[#D4AF37]/15 rounded-sm p-4 sm:p-5 space-y-3 sm:space-y-4 bg-white/[0.02]">
-              <p className="text-[10px] tracking-[0.35em] uppercase text-[#D4AF37]/70 font-semibold flex items-center justify-center lg:justify-start gap-2">
-                <svg width="8" height="8" viewBox="0 0 8 8">
-                  <polygon
-                    points="4,0 8,4 4,8 0,4"
-                    fill="#D4AF37"
-                    fillOpacity="0.7"
-                  />
-                </svg>
-                Project Overview
-                <svg width="8" height="8" viewBox="0 0 8 8">
-                  <polygon
-                    points="4,0 8,4 4,8 0,4"
-                    fill="#D4AF37"
-                    fillOpacity="0.7"
-                  />
-                </svg>
-              </p>
-              <ul className="space-y-2">
-                {category.projectOverview.points.map((pt, i) => (
-                  <li
-                    key={i}
-                    className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2 text-sm text-center sm:text-left"
+            {/* Project Overview + Small Image side by side */}
+            <div className="flex items-stretch gap-3">
+              {/* Overview Box — gold outline like the image */}
+              <div
+                className="flex-1 rounded-sm p-4 sm:p-5 space-y-3"
+                style={{
+                  border: "1px solid rgba(212,175,55,0.5)",
+                  boxShadow:
+                    "inset 0 0 0 1px rgba(212,175,55,0.08), 0 0 20px -5px rgba(212,175,55,0.15)",
+                  background: "rgba(255,255,255,0.02)",
+                }}
+              >
+                {/* Overview Header */}
+                <p className="text-[10px] tracking-[0.35em] uppercase text-[#D4AF37]/80 font-semibold flex items-center justify-center lg:justify-start gap-2">
+                  <svg width="8" height="8" viewBox="0 0 8 8">
+                    <polygon
+                      points="4,0 8,4 4,8 0,4"
+                      fill="#D4AF37"
+                      fillOpacity="0.8"
+                    />
+                  </svg>
+                  Project Overview
+                  <svg width="8" height="8" viewBox="0 0 8 8">
+                    <polygon
+                      points="4,0 8,4 4,8 0,4"
+                      fill="#D4AF37"
+                      fillOpacity="0.8"
+                    />
+                  </svg>
+                </p>
+
+                {/* Points */}
+                <ul className="space-y-2">
+                  {category.projectOverview.points.map((pt, i) => (
+                    <li
+                      key={i}
+                      className="flex items-baseline gap-2 text-sm text-left"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]/60 shrink-0 mt-1.5" />
+                      <span className="text-white/50 text-xs sm:text-sm">
+                        {pt.label}:
+                      </span>
+                      <span className="text-white/80 text-xs sm:text-sm">
+                        {pt.value}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Contact Button — brochure commented for future */}
+                {/* <Link href="/contact" className="...">Download Brochure</Link> */}
+                <div className="flex justify-start pt-1">
+                  <Link
+                    href="/contact-us"
+                    className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] tracking-[0.3em] uppercase text-[#D4AF37] border border-[#D4AF37]/40 px-4 sm:px-5 py-2 sm:py-2.5 hover:bg-[#D4AF37] hover:text-[#111009] transition-all duration-300"
                   >
-                    <span className="hidden sm:inline w-1.5 h-1.5 rounded-full bg-[#D4AF37]/60 shrink-0 mt-1.5" />
-                    <span className="text-white/40 text-xs sm:text-sm">
-                      {pt.label}:
-                    </span>
-                    <span className="text-white/70 sm:text-white/80 text-xs sm:text-sm break-words">
-                      {pt.value}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <div className="flex justify-center lg:justify-start">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] tracking-[0.3em] uppercase text-[#D4AF37] border border-[#D4AF37]/40 px-4 sm:px-5 py-2 sm:py-2.5 hover:bg-[#D4AF37] hover:text-[#111009] transition-all duration-300"
+                    Contact Us <ChevronRight size={12} />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Small floor plan / moodboard image beside overview */}
+              <div
+                className="hidden sm:block w-[130px] shrink-0 rounded-sm overflow-hidden border border-[#D4AF37]/30 relative"
+                style={{ minHeight: "160px" }}
+              >
+                <motion.div
+                  key={activeMoodboard}
+                  initial={{ opacity: 0, scale: 0.97 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4 }}
+                  className="w-full h-full"
                 >
-                  Download Brochure <ChevronRight size={12} />
-                </Link>
+                  <Image
+                    src={activeMoodboard}
+                    alt="Moodboard"
+                    fill
+                    className="object-cover"
+                    quality={85}
+                  />
+                  <div className="absolute inset-0 bg-black/25" />
+                  <div className="absolute bottom-2 left-2 text-[7px] tracking-[0.25em] uppercase text-[#D4AF37]/70">
+                    {activeFilter}
+                  </div>
+                </motion.div>
               </div>
             </div>
           </motion.div>
 
-          {/* Right: Hero image + moodboard that changes with filter */}
+          {/* RIGHT — full height hero image */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="space-y-3 sm:space-y-4"
+            className="relative overflow-hidden rounded-sm border border-[#D4AF37]/10 shadow-[0_20px_60px_-10px_rgba(0,0,0,0.7)]"
+            style={{ minHeight: "480px" }}
           >
-            <div className="relative overflow-hidden rounded-sm aspect-video border border-[#D4AF37]/10 shadow-[0_20px_60px_-10px_rgba(0,0,0,0.7)]">
-              <Image
-                src={category.heroImage}
-                alt={category.title}
-                fill
-                className="object-cover"
-                priority
-                quality={90}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-            </div>
-
-            {/* Moodboard — updates when filter changes */}
-            <motion.div
-              key={activeMoodboard}
-              initial={{ opacity: 0, scale: 0.97 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4 }}
-              className="relative overflow-hidden rounded-sm aspect-[16/5] border border-[#D4AF37]/10"
-            >
-              <Image
-                src={activeMoodboard}
-                alt="Moodboard"
-                fill
-                className="object-cover"
-                quality={85}
-              />
-              <div className="absolute inset-0 bg-black/30" />
-              <div className="absolute top-2 left-2 sm:left-3 text-[8px] sm:text-[9px] tracking-[0.3em] uppercase text-[#D4AF37]/60">
-                {activeFilter} Moodboard
-              </div>
-            </motion.div>
+            <Image
+              src={category.heroImage}
+              alt={category.title}
+              fill
+              className="object-cover"
+              priority
+              quality={90}
+            />
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/30" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           </motion.div>
         </div>
 

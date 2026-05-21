@@ -25,7 +25,7 @@ const SectionDivider = ({ title }: { title: string }) => (
     >
         <div className="flex-1 h-[1px] bg-gradient-to-r from-transparent to-[#D4AF37]/40" />
         <h2 className="font-serif text-xl md:text-2xl font-bold text-white whitespace-nowrap">
-            <span className="italic font-normal text-[#D4AF37]">{title}</span>
+            <span className="gradient-heading text-2xl md:text-2xl leading-[1.1]">{title}</span>
         </h2>
         <div className="flex-1 h-[1px] bg-gradient-to-l from-transparent to-[#D4AF37]/40" />
     </motion.div>
@@ -63,27 +63,27 @@ const BeforeAfterSlider = ({ before, after }: { before: string; after: string })
             </div>
             <div className="absolute top-0 bottom-0 w-[2px] bg-[#D4AF37]" style={{ left: `${sliderPos}%` }}>
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#D4AF37] shadow-lg flex items-center justify-center gap-0.5">
-                    <ChevronRight size={12} className="text-[#1B4D3E] rotate-180" strokeWidth={2.5} />
-                    <ChevronRight size={12} className="text-[#1B4D3E]" strokeWidth={2.5} />
+                    <ChevronRight size={12} className="text-[#051711] rotate-180" strokeWidth={2.5} />
+                    <ChevronRight size={12} className="text-[#051711]" strokeWidth={2.5} />
                 </div>
             </div>
-            <div className="absolute bottom-3 left-4 text-[10px] tracking-[0.25em] uppercase text-white/70 font-medium bg-[#1B4D3E]/60 px-2 py-1 rounded">Before</div>
-            <div className="absolute bottom-3 right-4 text-[10px] tracking-[0.25em] uppercase text-white/70 font-medium bg-[#1B4D3E]/60 px-2 py-1 rounded">After</div>
+            <div className="absolute bottom-3 left-4 text-[10px] tracking-[0.25em] uppercase text-white/70 font-medium bg-[#051711]/60 px-2 py-1 rounded">Before</div>
+            <div className="absolute bottom-3 right-4 text-[10px] tracking-[0.25em] uppercase text-white/70 font-medium bg-[#051711]/60 px-2 py-1 rounded">After</div>
         </div>
     );
 };
 
 export default function CaseStudyClient({ project }: { project: RecentProject }) {
     return (
-        <div className="min-h-screen bg-[#1B4D3E] font-sans overflow-x-hidden">
+        <div className="min-h-screen bg-[#051711] font-sans overflow-x-hidden">
 
             {/* ── HERO ── */}
             <section className="relative h-[52vh] min-h-[380px] overflow-hidden flex items-center justify-center">
                 <div className="absolute inset-0">
                     <Image src={project.heroImage} alt={project.title} fill className="object-cover object-center scale-105 opacity-30" priority sizes="100vw" quality={90} />
                 </div>
-                <div className="absolute inset-0 bg-[#1B4D3E]/90" />
-                <div className="absolute inset-0 bg-gradient-to-b from-[#1B4D3E]/30 via-[#1B4D3E]/70 to-[#1B4D3E]" />
+                <div className="absolute inset-0 bg-[#051711]/90" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#051711]/30 via-[#051711]/70 to-[#051711]" />
                 <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-60" />
 
                 <div className="relative z-10 text-center px-4 sm:px-6">
@@ -92,9 +92,10 @@ export default function CaseStudyClient({ project }: { project: RecentProject })
                         The Grandiose · Bangalore
                     </motion.p>
                     <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35, type: "spring", stiffness: 60 }}
-                        className="font-serif text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-[1.05] mb-4 sm:mb-5 px-2">
+                        className="gradient-heading text-4xl md:text-4xl leading-[1.1]">
                         {project.title}{" "}
-                        <span className="italic font-normal text-[#D4AF37]">{project.subtitle}</span>
+                        <br />
+                        <span className="italic font-palegoldenrod text-[#D4AF37]">{project.subtitle}</span>
                     </motion.h1>
                     <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}
                         className="text-white/70 text-xs sm:text-sm md:text-base max-w-md mx-auto leading-relaxed px-3">
@@ -125,7 +126,7 @@ export default function CaseStudyClient({ project }: { project: RecentProject })
                     {project.stats.map((stat, i) => {
                         const Icon = statIcons[stat.label] ?? MapPin;
                         return (
-                            <div key={i} className="bg-[#162E27] px-3 sm:px-5 py-4 sm:py-5 flex flex-col gap-2">
+                            <div key={i} className="bg-[#051711] px-3 sm:px-5 py-4 sm:py-5 flex flex-col gap-2">
                                 <div className="flex items-center gap-2 text-[#D4AF37]/60">
                                     <Icon size={12} strokeWidth={1.5} />
                                     <span className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase font-medium">{stat.label}</span>
@@ -140,7 +141,7 @@ export default function CaseStudyClient({ project }: { project: RecentProject })
                 <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
                     className="relative overflow-hidden rounded-lg aspect-video shadow-[0_20px_60px_-10px_rgba(0,0,0,0.5)] group">
                     <Image src={project.heroImage} alt={project.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" quality={90} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1B4D3E]/60 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#051711]/60 to-transparent" />
                 </motion.div>
 
                 {/* ── PROJECT OVERVIEW ── */}
@@ -149,27 +150,27 @@ export default function CaseStudyClient({ project }: { project: RecentProject })
                 <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
                     className="grid lg:grid-cols-2 gap-6">
                     {/* Client Brief Card */}
-                    <div className="bg-[#162E27] border border-[#D4AF37]/15 rounded-lg p-5 sm:p-6 space-y-4">
+                    <div className="bg-[#051711] border border-[#D4AF37]/15 rounded-lg p-5 sm:p-6 space-y-4">
                         <div className="flex items-start gap-3">
                             <span className="w-7 h-7 rounded-full bg-[#D4AF37]/20 flex items-center justify-center shrink-0 mt-0.5">
                                 <span className="text-[#D4AF37] text-xs font-bold font-serif">1</span>
                             </span>
-                            <h3 className="font-serif text-base sm:text-lg font-bold text-white">Client Brief & Requirements</h3>
+                            <h3 className="gradient-heading text-1xl md:text-1xl leading-[1.1]">Client Brief & Requirements</h3>
                         </div>
                         <p className="text-white/60 text-xs sm:text-sm leading-relaxed pl-10">{project.clientBrief.summary}</p>
                         <div className="pl-10 relative overflow-hidden rounded-md aspect-video">
                             <Image src={project.projectOverview.clientBriefImage} alt="Client brief" fill className="object-cover" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#1B4D3E]/60 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#051711]/60 to-transparent" />
                         </div>
                     </div>
 
                     {/* Execution Card */}
-                    <div className="bg-[#162E27] border border-[#D4AF37]/15 rounded-lg p-5 sm:p-6 space-y-4">
+                    <div className="bg-[#051711] border border-[#D4AF37]/15 rounded-lg p-5 sm:p-6 space-y-4">
                         <div className="flex items-start gap-3">
                             <span className="w-7 h-7 rounded-full bg-[#D4AF37]/20 flex items-center justify-center shrink-0 mt-0.5">
                                 <span className="text-[#D4AF37] text-xs font-bold font-serif">2</span>
                             </span>
-                            <h3 className="font-serif text-base sm:text-lg font-bold text-white">Design & Execution Phase</h3>
+                            <h3 className="gradient-heading text-1xl md:text-1xl leading-[1.1]">Design & Execution Phase</h3>
                         </div>
                         <div className="pl-10 grid grid-cols-2 gap-3">
                             {project.projectOverview.executionImages.map((item, i) => (
@@ -185,7 +186,7 @@ export default function CaseStudyClient({ project }: { project: RecentProject })
                 </motion.div>
 
                 {/* ── CLIENT BRIEF ── */}
-                <SectionDivider title="Client Brief & Requirements" />
+                <SectionDivider title="Client Brief & Requirements"/>
 
                 <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
                     className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-start">
@@ -233,7 +234,7 @@ export default function CaseStudyClient({ project }: { project: RecentProject })
                                 className="group">
                                 <div className="relative overflow-hidden rounded-lg aspect-[3/4]">
                                     <Image src={room.image} alt={room.label} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#1B4D3E]/70 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#051711]/70 to-transparent" />
                                 </div>
                                 <p className="mt-2 sm:mt-3 text-center text-[10px] sm:text-xs tracking-[0.2em] uppercase text-white/60 font-medium">{room.label}</p>
                             </motion.div>
@@ -245,7 +246,7 @@ export default function CaseStudyClient({ project }: { project: RecentProject })
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
                     className="flex justify-center pt-4">
                     <Link href="/contact-us"
-                        className="px-6 sm:px-10 py-3 sm:py-4 border border-[#D4AF37]/60 text-[#D4AF37] text-[10px] sm:text-xs tracking-[0.35em] uppercase font-medium hover:bg-[#D4AF37] hover:text-[#1B4D3E] transition-all duration-300 rounded-sm">
+                        className="px-6 sm:px-10 py-3 sm:py-4 border border-[#D4AF37]/60 text-[#D4AF37] text-[10px] sm:text-xs tracking-[0.35em] uppercase font-medium hover:bg-[#D4AF37] hover:text-[#051711] transition-all duration-300 rounded-sm">
                         Get a Free Consultation
                     </Link>
                 </motion.div>

@@ -31,7 +31,7 @@ export default function DesignGalleryPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#1B4D3E] font-sans">
+    <div className="min-h-screen bg-[#051711] font-sans">
       <div className="max-w-7xl mx-auto px-0">
         {/* ── GRID ── */}
         <div className="flex flex-col">

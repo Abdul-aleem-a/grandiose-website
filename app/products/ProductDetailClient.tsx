@@ -41,7 +41,7 @@ export default function ProductDetailClient({ product }: { product: SignaturePro
 
     const isAdded = cart.includes(product.slug)
     return (
-        <div className="min-h-screen bg-[#1B4D3E] font-sans">
+        <div className="min-h-screen bg-[#051711] font-sans">
             {/* Subtle dark texture overlay */}
             <div className="fixed inset-0 pointer-events-none opacity-[0.04] bg-[url('/noise.png')] z-0" />
 
@@ -72,8 +72,8 @@ export default function ProductDetailClient({ product }: { product: SignaturePro
                     initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }}
                     className="text-center space-y-2"
                 >
-                    <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#D4AF37] leading-tight">{product.name}</h1>
-                    <p className="font-serif italic text-white/60 text-base md:text-lg">{product.tagline}</p>
+                    <h1 className="gradient-heading text-3xl md:text-4xl">{product.name}</h1>
+                    <p className="font-palegoldenrod text-white/60 text-base md:text-lg">{product.tagline}</p>
                 </motion.div>
 
                 {/* ── MAIN PRODUCT SECTION ── */}

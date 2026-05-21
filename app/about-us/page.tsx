@@ -53,7 +53,7 @@ const fadeUp = {
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-[#1B4D3E]">
+    <div className="min-h-screen bg-[#051711]">
       {/* ─── HERO ─── */}
       <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
@@ -67,8 +67,8 @@ const About = () => {
             quality={90}
           />
         </div>
-        <div className="absolute inset-0 bg-[#1B4D3E]/90" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1B4D3E]/40 via-transparent to-[#1B4D3E]/90" />
+        <div className="absolute inset-0 bg-[#051711]/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#051711]/40 via-transparent to-[#051711]/90" />
 
         <div className="relative z-10 text-center px-6">
           {/* Breadcrumb */}
@@ -87,10 +87,9 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] mb-5"
+            className="gradient-heading text-5xl md:text-5xl mb-5"
           >
-            About{" "}
-            <span className="text-[#D4AF37] italic font-normal">Us</span>
+            About Us
           </motion.h1>
 
           <motion.div
@@ -116,7 +115,7 @@ const About = () => {
       </section>
 
       {/* ─── OUR STORY ─── */}
-      <section className="py-24 md:py-36 px-6 md:px-10 bg-[#1B4D3E]">
+      <section className="py-24 md:py-36 px-6 md:px-10 bg-[#051711]">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             {/* Image side */}
@@ -138,8 +137,8 @@ const About = () => {
                   quality={85}
                 />
               </div>
-              <div className="absolute -bottom-5 left-6 bg-[#1B4D3E] text-white px-6 py-4 rounded-sm shadow-xl border border-[#D4AF37]/30">
-                <span className="font-serif text-3xl font-bold text-[#D4AF37] block">7+</span>
+              <div className="absolute -bottom-5 left-6 bg-[#051711] text-white px-6 py-4 rounded-sm shadow-xl border border-[#D4AF37]/30">
+                <span className="font-serif text-3xl font-bold text-[#D4AF37] block">8+</span>
                 <span className="text-[10px] tracking-[0.25em] uppercase text-white/60 font-sans">
                   Years of Excellence
                 </span>
@@ -156,10 +155,10 @@ const About = () => {
               <p className="text-[11px] tracking-[0.45em] uppercase text-[#D4AF37] mb-4 font-sans font-medium">
                 About Our Studio
               </p>
-              <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
+              <h2 className="gradient-heading text-5xl md:text-5xl mb-5">
                 The Grandiose
                 <br />
-                <span className="italic font-normal text-[#D4AF37]">Home Interiors</span>
+                <span className="italic gradient-heading text-5xl md:text-5xl mb-5">Home Interiors</span>
               </h2>
               <div className="w-12 h-[2px] bg-[#D4AF37] mb-7" />
 
@@ -184,7 +183,7 @@ const About = () => {
                 href="https://wa.me/919876543210"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-3.5 bg-[#D4AF37] text-[#1B4D3E] hover:bg-[#D4AF37]/85 text-[11px] tracking-[0.2em] uppercase rounded-sm transition-all duration-300 font-medium font-sans"
+                className="inline-flex items-center gap-3 px-8 py-3.5 bg-[#D4AF37] text-[#051711] hover:bg-[#D4AF37]/85 text-[11px] tracking-[0.2em] uppercase rounded-sm transition-all duration-300 font-medium font-sans"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -207,7 +206,7 @@ const About = () => {
             quality={85}
           />
         </div>
-        <div className="absolute inset-0 bg-[#1B4D3E]/85" />
+        <div className="absolute inset-0 bg-[#051711]/85" />
         <div className="relative z-10 max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {stats.map((stat, i) => (
@@ -234,7 +233,7 @@ const About = () => {
       </section>
 
       {/* ─── OUR TEAM ─── */}
-      <section className="py-24 md:py-32 px-6 md:px-10 bg-[#1B4D3E]">
+      <section className="py-24 md:py-32 px-6 md:px-10 bg-[#051711]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -246,7 +245,7 @@ const About = () => {
             <p className="text-[11px] tracking-[0.45em] uppercase text-[#D4AF37] mb-4 font-sans font-medium">
               The People Behind
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="gradient-heading text-3xl md:text-3xl mb-5">
               Our Team
             </h2>
             <div className="w-16 h-[2px] bg-[#D4AF37] mx-auto" />
@@ -286,7 +285,7 @@ const About = () => {
       </section>
 
       {/* ─── SIGNATURE PROJECTS ─── */}
-      <section className="py-24 md:py-32 px-6 md:px-10 bg-[#1B4D3E] border-t border-[#D4AF37]/20">
+      <section className="py-24 md:py-32 px-6 md:px-10 bg-[#051711] border-t border-[#D4AF37]/20">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -298,7 +297,7 @@ const About = () => {
             <p className="text-[11px] tracking-[0.45em] uppercase text-[#D4AF37] mb-4 font-sans font-medium">
               Trusted By The Best
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="gradient-heading text-3xl md:text-3xl mb-5">
               Our Signature Projects
             </h2>
             <div className="w-16 h-[2px] bg-[#D4AF37] mx-auto" />
@@ -337,7 +336,7 @@ const About = () => {
       </section>
 
       {/* ─── CTA ─── */}
-      <section className="py-20 px-6 bg-[#1B4D3E] border-t border-[#D4AF37]/20">
+      <section className="py-20 px-6 bg-[#051711] border-t border-[#D4AF37]/20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -348,10 +347,10 @@ const About = () => {
           <p className="text-[11px] tracking-[0.45em] uppercase text-[#D4AF37] mb-4 font-sans font-medium">
             Ready to Transform Your Space?
           </p>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-white mb-6 leading-[1.1]">
+          <h2 className="gradient-heading text-3xl md:text-3xl mb-5">
             Let's Craft Your
             <br />
-            <span className="italic font-normal text-[#D4AF37]">Dream Home</span>
+            <span className="italic gradient-heading text-2xl md:text-2xl mb-5">Dream Home</span>
           </h2>
           <p className="text-white/60 mb-10 text-sm md:text-base font-sans max-w-lg mx-auto">
             Every great space starts with a conversation. Reach out to our team and let's begin
@@ -362,7 +361,7 @@ const About = () => {
               href="https://wa.me/919876543210"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-3.5 bg-[#D4AF37] text-[#1B4D3E] hover:bg-[#D4AF37]/85 text-[11px] tracking-[0.2em] uppercase rounded-sm transition-all duration-300 font-medium font-sans"
+              className="inline-flex items-center gap-3 px-8 py-3.5 bg-[#D4AF37] text-[#051711] hover:bg-[#D4AF37]/85 text-[11px] tracking-[0.2em] uppercase rounded-sm transition-all duration-300 font-medium font-sans"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

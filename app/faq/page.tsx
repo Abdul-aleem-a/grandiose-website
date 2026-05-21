@@ -72,7 +72,7 @@ const FAQItem = ({
   isOpen: boolean;
   onClick: () => void;
 }) => (
-  <div className="border border-golden/20 rounded-lg overflow-hidden transition-all duration-300 hover:border-golden/40 bg-[#0F3D2E]">
+  <div className="border border-golden/20 rounded-lg overflow-hidden transition-all duration-300 hover:border-golden/40 bg-[#051711]">
     <button
       onClick={onClick}
       className="w-full flex items-center justify-between px-6 py-5 text-left font-sans text-sm md:text-base font-medium text-white hover:text-golden transition-colors duration-300"
@@ -112,9 +112,9 @@ export default function FAQ() {
   };
 
   return (
-    <div className="min-h-screen bg-[#1B4D3E]">
+    <div className="min-h-screen bg-[#051711]">
       {/* Hero Section */}
-      <section className="relative bg-[#1B4D3E] pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
+      <section className="relative bg-[#051711] pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-12 left-12 w-32 h-32" />
         <div className="absolute bottom-8 right-16 w-24 h-24" />
@@ -127,12 +127,12 @@ export default function FAQ() {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="h-px w-12 bg-golden/40" />
-              <HelpCircle size={20} className="text-golden" />
+              <div className="h-px w-12 caret-amber-400" />
+              <HelpCircle size={50} className="gradient-heading text-2xl md:text-2xl mb-5" />
               <div className="h-px w-12 bg-golden/40" />
             </div>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-[#D4AF37] mb-6">
-              Frequently Asked <span className="text-[#D4AF37]">Questions</span>
+            <h1 className="gradient-heading text-5xl md:text-5xl mb-5">
+              Frequently Asked Questions
             </h1>
             <nav className="flex items-center justify-center gap-2 text-sm font-sans">
               <Link
@@ -162,7 +162,7 @@ export default function FAQ() {
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-1 h-6 bg-golden rounded-full" />
-                <h2 className="font-serif text-xl md:text-2xl font-semibold text-[#D4AF37]">
+                <h2 className="gradient-heading text-2xl md:text-2xl mb-5">
                   {category.category}
                 </h2>
               </div>
@@ -186,7 +186,7 @@ export default function FAQ() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-[#0F3D2E] py-16 md:py-20 border-t border-golden/20">
+      <section className="bg-[#051711] py-16 md:py-20 border-t border-golden/20">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -194,7 +194,7 @@ export default function FAQ() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-white mb-4">
+            <h2 className="gradient-heading text-3xl md:text-3xl mb-5">
               Still Have Questions?
             </h2>
             <p className="text-white/50 font-sans text-sm md:text-base mb-8 max-w-xl mx-auto">
@@ -213,7 +213,7 @@ export default function FAQ() {
               </a>
               <a
                 href="tel:+919876543210"
-                className="inline-flex items-center gap-2 px-8 py-3 border border-golden text-golden text-sm font-medium tracking-wider uppercase rounded-lg hover:bg-golden hover:text-[#1B4D3E] transition-all duration-300 font-sans"
+                className="inline-flex items-center gap-2 px-8 py-3 border border-golden text-golden text-sm font-medium tracking-wider uppercase rounded-lg hover:bg-golden hover:text-[#051711] transition-all duration-300 font-sans"
               >
                 <Phone size={16} />
                 Call Us

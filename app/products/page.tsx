@@ -43,7 +43,7 @@ export default function ProductsPage() {
       : signatureProducts.filter((p) => p.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-[#1B4D3E] font-sans overflow-x-hidden">
+    <div className="min-h-screen bg-[#051711] font-sans overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-center">
         {/* Top divider */}
         <motion.div
@@ -59,16 +59,16 @@ export default function ProductsPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-widest uppercase text-[#D4AF37] mt-6 mb-2 px-2"
+          className="gradient-heading text-3xl md:text-4xl leading-[1.1] mt-5"
           style={{ letterSpacing: "0.1em" }}
         >
-          Signature Collection
+          Signature Collections
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="font-serif italic text-white/70 sm:text-white/80 text-sm sm:text-base md:text-lg mb-8 sm:mb-10 px-4"
+          className="font-palegoldenrod text-white/70 sm:text-white/80 text-sm sm:text-base md:text-lg mb-8 sm:mb-10 px-4 mt-5"
         >
           Exquisite Pieces for Luxurious Living
         </motion.p>
@@ -119,17 +119,17 @@ export default function ProductsPage() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     quality={85}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1B4D3E]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#051711]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
                 {/* Label + CTA */}
                 <div className="flex flex-col items-start gap-1.5 sm:gap-2 px-1">
-                  <h3 className="font-serif text-white text-sm sm:text-base font-semibold leading-snug line-clamp-2">
+                  <h3 className="font-palegoldenrod text-white text-sm sm:text-base font-semibold leading-snug line-clamp-2">
                     {product.name}
                   </h3>
                   <Link
                     href={`/products/${product.slug}`}
-                    className="text-[9px] sm:text-[10px] tracking-[0.25em] uppercase text-[#D4AF37] border border-[#D4AF37]/40 px-3 sm:px-4 py-1.5 sm:py-2 hover:bg-[#D4AF37] hover:text-[#1B4D3E] transition-all duration-300 rounded-sm inline-block"
+                    className="text-[9px] sm:text-[10px] tracking-[0.25em] uppercase text-[#D4AF37] border border-[#D4AF37]/40 px-3 sm:px-4 py-1.5 sm:py-2 hover:bg-[#D4AF37] hover:text-[#051711] transition-all duration-300 rounded-sm inline-block"
                   >
                     Enquire Now
                   </Link>

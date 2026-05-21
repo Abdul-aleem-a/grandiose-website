@@ -207,9 +207,9 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#1B4D3E] font-sans">
+    <div className="min-h-screen bg-[#051711] font-sans">
       {/* Hero Section with Royal Green */}
-      <section className="relative bg-[#1B4D3E] pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+      <section className="relative bg-[#051711] pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-40 h-40 border border-[#D4AF37]/30 rounded-full" />
           <div className="absolute bottom-10 right-10 w-64 h-64 border border-[#D4AF37]/20 rounded-full" />
@@ -236,10 +236,10 @@ const Gallery = () => {
             <span className="text-[10px] tracking-[0.5em] uppercase text-[#D4AF37] font-sans block mb-4">
               Interior Design Portfolio
             </span>
-            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-              Our <span className="text-[#D4AF37]">Gallery</span>
+            <h1 className="gradient-heading text-5xl md:text-5xl mb-5">
+              Our Gallery
             </h1>
-            <p className="text-white/60 font-sans text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+            <p className="text-white/60 font-palegoldenrod text-sm md:text-base max-w-xl mx-auto leading-relaxed">
               Explore our curated collection of premium interior designs — from
               modular kitchens to luxury living spaces, crafted for Bangalore's
               finest homes.
@@ -267,7 +267,7 @@ const Gallery = () => {
       </section>
 
       {/* Category Filter Buttons - Original Scroll Type (Horizontal Scroll) */}
-      <div className="border-b border-[#D4AF37]/20 bg-[#1B4D3E]/50">
+      <div className="border-b border-[#D4AF37]/20 bg-[#051711]/50">
         <div
           ref={scrollRef}
           className="flex items-center gap-2 px-4 md:px-8 py-4 overflow-x-auto scrollbar-none max-w-7xl mx-auto"
@@ -278,7 +278,7 @@ const Gallery = () => {
               onClick={() => setActiveCategory(cat)}
               className={`relative whitespace-nowrap px-5 py-2.5 rounded-full text-[11px] tracking-[0.1em] uppercase font-sans font-medium transition-all duration-300 ${
                 activeCategory === cat
-                  ? "bg-[#D4AF37] text-[#1B4D3E] shadow-lg"
+                  ? "bg-[#D4AF37] text-[#051711] shadow-lg"
                   : "bg-white/10 text-white/70 hover:bg-[#D4AF37]/20 hover:text-[#D4AF37]"
               }`}
             >
@@ -329,11 +329,11 @@ const Gallery = () => {
                   </div>
 
                   {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1B4D3E]/90 via-[#1B4D3E]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-5">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#051711]/90 via-[#051711]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-5">
                     <span className="text-[9px] tracking-[0.3em] uppercase text-[#D4AF37] font-sans mb-1">
                       {item.category}
                     </span>
-                    <h3 className="font-serif text-lg text-white font-semibold">
+                    <h3 className="font-palegoldenrod text-lg text-white font-semibold">
                       {item.title}
                     </h3>
                     <span className="text-[11px] text-white/50 font-sans mt-1">
@@ -363,7 +363,7 @@ const Gallery = () => {
       </section>
 
       {/* CTA Band */}
-      <section className="bg-[#1B4D3E] py-16 md:py-20 border-t border-[#D4AF37]/20">
+      <section className="bg-[#051711] py-16 md:py-20 border-t border-[#D4AF37]/20">
         <div className="max-w-3xl mx-auto text-center px-6">
           <span className="text-[10px] tracking-[0.5em] uppercase text-[#D4AF37] font-sans block mb-4">
             Ready to Transform Your Space?
@@ -381,7 +381,7 @@ const Gallery = () => {
               href="https://wa.me/919876543210"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3.5 bg-[#D4AF37] text-[#1B4D3E] rounded-lg text-[12px] tracking-[0.15em] uppercase font-sans font-medium shadow-lg"
+              className="px-8 py-3.5 bg-[#D4AF37] text-[#051711] rounded-lg text-[12px] tracking-[0.15em] uppercase font-sans font-medium shadow-lg"
               whileHover={{ scale: 1.05, backgroundColor: "#C5A028" }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
