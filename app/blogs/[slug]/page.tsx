@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { Calendar, Clock, ChevronRight } from "lucide-react";
-import { getBlogPost, getAllBlogPosts } from "@/lib/blogsData";
+import { getBlogPost } from "@/lib/blogsData";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -55,12 +55,21 @@ export default function BlogPostPage({ params }: PageProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="inline-block text-[10px] tracking-[0.4em] uppercase text-golden mb-4 font-sans">
+            <span className="inline-block text-white/50 tracking-[0.4em] uppercase mb-4 font-sans text-xs">
               {post.category}
             </span>
             <h1 className="gradient-heading text-3xl md:text-3xl mb-5">
               {post.title}
             </h1>
+
+            {/* Introduction - Dynamic from blogsData */}
+            {post.introduction && (
+              <div
+                className="max-w-3xl mx-auto text-center mb-8 text-white/60 text-xs leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: post.introduction }}
+              />
+            )}
+
             <div className="flex items-center justify-center gap-4 text-[11px] tracking-[0.1em] text-white/60 font-sans">
               <span className="flex items-center gap-1.5">
                 <Calendar size={12} /> {post.date}
@@ -90,8 +99,9 @@ export default function BlogPostPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Alternating Content & Images - Side by Side - DYNAMIC NOW */}
+      {/* Blog Content */}
       <article className="max-w-6xl mx-auto px-6 py-8">
+        {/* Alternating Content & Images Sections */}
         {post.sections &&
           post.sections.map((section: any, index: number) => {
             const isContentLeft = section.type === "content-left";
@@ -105,9 +115,7 @@ export default function BlogPostPage({ params }: PageProps) {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="my-16"
               >
-                {/* Two column layout - side by side */}
-                <div className="flex flex-col md:flex-row gap-12 items-center">
-                  {/* Content Column */}
+                <div className="flex flex-col md:flex-row gap-12 items-start">
                   <div
                     className={`w-full md:w-1/2 ${isContentLeft ? "" : "md:order-2"}`}
                   >
@@ -115,14 +123,10 @@ export default function BlogPostPage({ params }: PageProps) {
                       {section.title}
                     </h2>
                     <div
-                      className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-golden prose-p:text-white/80 prose-strong:text-golden"
-                      dangerouslySetInnerHTML={{
-                        __html: `<p class="text-white/80 leading-relaxed text-lg">${section.content}</p>`,
-                      }}
+                      className="blog-content"
+                      dangerouslySetInnerHTML={{ __html: section.content }}
                     />
                   </div>
-
-                  {/* Image Column */}
                   <div
                     className={`w-full md:w-1/2 ${isContentLeft ? "" : "md:order-1"}`}
                   >
@@ -139,14 +143,24 @@ export default function BlogPostPage({ params }: PageProps) {
                     </div>
                   </div>
                 </div>
-
-                {/* Divider between sections */}
                 {index < post.sections.length - 1 && (
                   <div className="mt-16 pt-8 border-t border-white/10" />
                 )}
               </motion.div>
             );
           })}
+
+        {/* Conclusion Section - Full Width, No Image */}
+        {post.conclusion && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="blog-content mt-16"
+            dangerouslySetInnerHTML={{ __html: post.conclusion }}
+          />
+        )}
 
         {/* Tags */}
         <motion.div
@@ -160,14 +174,16 @@ export default function BlogPostPage({ params }: PageProps) {
             <span className="text-[10px] tracking-[0.15em] uppercase font-sans font-semibold text-white/50">
               Tags:
             </span>
-            {[post.category, "Interior Design", "Luxury"].map((tag) => (
-              <span
-                key={tag}
-                className="px-3 py-1.5 bg-[#D4AF37]/10 text-[#D4AF37] text-[10px] tracking-[0.1em] uppercase font-sans rounded-full border border-[#D4AF37]/40"
-              >
-                {tag}
-              </span>
-            ))}
+            {[...new Set([post.category, "Interior Design", "Luxury"])].map(
+              (tag, index) => (
+                <span
+                  key={`${tag}-${index}`}
+                  className="px-3 py-1.5 bg-[#D4AF37]/10 text-[#D4AF37] text-[10px] tracking-[0.1em] uppercase font-sans rounded-full border border-[#D4AF37]/40"
+                >
+                  {tag}
+                </span>
+              ),
+            )}
           </div>
         </motion.div>
       </article>
@@ -181,13 +197,13 @@ export default function BlogPostPage({ params }: PageProps) {
         className="bg-golden/10 py-20 border-t border-golden/20 mt-16"
       >
         <div className="max-w-3xl mx-auto text-center px-6">
-          <span className="text-[#D4AF37] tracking-[0.4em] uppercase text-golden font-sans mb-4 block">
+          <span className="text-[#D4AF37] tracking-[0.4em] uppercase font-sans mb-4 block text-xs">
             Ready to Transform Your Space?
           </span>
           <h2 className="gradient-heading text-2xl md:text-2xl mb-5">
             Get in touch with our design experts
           </h2>
-          <p className="text-white/60 font-palegoldenrod text-sm mb-8 max-w-lg mx-auto">
+          <p className="text-white/60 text-sm mb-8 max-w-lg mx-auto">
             Book a free consultation and let us help you create the home of your
             dreams.
           </p>
@@ -209,6 +225,38 @@ export default function BlogPostPage({ params }: PageProps) {
           </div>
         </div>
       </motion.section>
+
+      <style jsx global>{`
+        .blog-content p {
+          color: rgba(255, 255, 255, 0.9);
+          line-height: 1.7;
+          margin-bottom: 1.25rem;
+          font-size: 1.05rem;
+        }
+        .blog-content ul {
+          list-style-type: none;
+          padding-left: 0;
+          margin: 1.25rem 0;
+        }
+        .blog-content ul li {
+          color: rgba(255, 255, 255, 0.9);
+          padding-left: 1.5rem;
+          position: relative;
+          margin-bottom: 0.75rem;
+          line-height: 1.6;
+          list-style-type: none;
+        }
+        .blog-content strong {
+          color: #d4af37;
+          font-weight: 600;
+        }
+        .gradient-heading {
+          background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 100%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+        }
+      `}</style>
     </div>
   );
 }

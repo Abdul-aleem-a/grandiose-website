@@ -189,3 +189,98 @@ html {
     padding-bottom: 72px;
   }
 }
+
+
+
+/* ── Blog post styles ─────────────────────────────────────────────── */
+/* Add these rules to your existing globals.css                        */
+
+.blog-content p {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.75;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content p:last-child {
+  margin-bottom: 0;
+}
+
+.blog-content h2 {
+  color: #D4AF37;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.blog-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0;
+}
+
+.blog-list li {
+  position: relative;
+  padding-left: 1.35rem;
+  margin-bottom: 0.75rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+.blog-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.58em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #D4AF37;
+  flex-shrink: 0;
+}
+
+/* Introduction block */
+.intro-text {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.intro-text p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.intro-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Conclusion block */
+.conclusion-section {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(212, 175, 55, 0.04);
+  border-radius: 1rem;
+  border-left: 3px solid #D4AF37;
+}
+
+.conclusion-section h2 {
+  color: #D4AF37;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.conclusion-section p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+}
+
+.conclusion-section p:last-child {
+  margin-bottom: 0;
+}
