@@ -4,157 +4,155 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import {
-  Shield,
-  Maximize2,
-  IndianRupee,
-  Headphones,
-  Building2,
-  Utensils,
-  PenTool,
-  Lightbulb,
-  Ruler,
-  MessageCircle,
-  FileText,
-  CreditCard,
-  Boxes,
-  Wrench,
-  HeartHandshake,
-  Star,
-  Quote,
-} from "lucide-react";
+import { PenTool, Star, Quote, Sofa, Settings, Award } from "lucide-react";
+import ctabannerimg from "../public/images/cta-banner.jpg";
 
-import heroImage from "@/public/sofa.jpg";
-import link  from "next/link";
+import slide1img from "../public/images/slide1.webp";
+import slide2img from "../public/images/slide2.webp";
+import slide3img from "../public/images/slide3.webp";
+import slide4img from "../public/images/slide4.webp";
+import slide5img from "../public/images/slide5.webp";
+
 
 export default function Home() {
   const slides = [
     {
-      image: heroImage,
-      tagline: "Premium Interior Design Studio",
-      heading: "Crafting",
-      italic: "Grandeur",
-      sub: "We transform ordinary spaces into extraordinary living experiences through thoughtful design and meticulous craftsmanship.",
+      image: slide1img,
+      tagline: "Bangalore",
+      heading: "Elevating Luxuary Living",
+      italic: "in Bangalore",
+      sub: "Delivering bespoke luxury interiors that blend elegance, comfort, and functionality for discerning homeowners across Whitefield, Koramangala, Indiranagar, HSR Layout, and Bangalore's premier locations.",
     },
     {
-      image: heroImage,
-      tagline: "Bedroom Sanctuaries",
-      heading: "Serene",
-      italic: "Retreats",
-      sub: "Master bedrooms designed for rest, elegance and personal expression — tailored to your lifestyle.",
+      image: slide2img,
+      tagline: "Bangalore",
+      heading: "Luxury Design Experts",
+      italic: "in Bangalore",
+      sub: "Luxury interior design for homes, villas, and apartments across Whitefield, HSR Layout, Koramangala, Indiranagar, and Bangalore's finest communities.",
     },
     {
-      image: heroImage,
-      tagline: "Modular Kitchens",
-      heading: "Marble &",
-      italic: "Brass",
-      sub: "Precision-crafted modular kitchens that blend luxury materials with intelligent storage solutions.",
+      image: slide3img,
+      tagline: "Bangalore",
+      heading: "Premium Interior Designers",
+      italic: "in Bangalore",
+      sub: "Creating elegant and personalized interiors for homes, villas, and apartments across Bangalore, including Whitefield, Indiranagar, Koramangala, HSR Layout, Sarjapur Road, Hebbal, and Yelahanka.",
     },
     {
-      image: heroImage,
-      tagline: "Dining Spaces",
-      heading: "Grand",
-      italic: "Gatherings",
-      sub: "Dining rooms conceived for family celebrations — where every detail invites warmth and conversation.",
+      image: slide4img,
+      tagline: "Bangalore",
+      heading: "Elegant Interiors for Modern Homes",
+      italic: "in Bangalore",
+      sub: "Elevating everyday living through thoughtfully designed luxury interiors in Whitefield, Indiranagar, Koramangala, Sarjapur Road, and across Bangalore.",
     },
     {
-      image: heroImage,
-      tagline: "Outdoor Living",
-      heading: "Sunset",
-      italic: "Terraces",
-      sub: "Outdoor sanctuaries that blend architecture with nature for unforgettable open-air living.",
+      image: slide5img,
+      tagline: "Bangalore",
+      heading: "Crafting Luxury Living Experiences Across",
+      italic: "in Bangalore",
+      sub: "Designing refined interiors that reflect your lifestyle, with premium solutions for residences across Whitefield, HSR Layout, Koramangala, Indiranagar, and Bangalore.",
     },
   ];
 
   const usps = [
-    { icon: Shield, value: "10 Years Service Warranty", label: "Quality Work" },
-    {
-      icon: Maximize2,
-      value: "20% Extra Storage",
-      label: "We Care Your Space",
-    },
-    {
-      icon: IndianRupee,
-      value: "Affordable and Efficient",
-      label: "Cost Effective",
-    },
-    { icon: Headphones, value: "24/7 SUPPORT", label: "Support every time" },
-  ];
-
-  const services = [
-    {
-      icon: Building2,
-      title: "Residential I nteriors",
-      description:
-        "Complete home transformations from concept to completion — creating personalised luxury living spaces.",
-      tag: "Most Popular",
-    },
-    {
-      icon: Building2,
-      title: "Commercial Interiors",
-      description:
-        "Professional spaces that inspire productivity and reflect your brand's identity with precision.",
-      tag: null,
-    },
-    {
-      icon: Utensils,
-      title: "Modular Kitchen",
-      description:
-        "Custom modular kitchens with premium finishes, smart storage, and elegant German hardware.",
-      tag: "Trending",
-    },
     {
       icon: PenTool,
-      title: "Architectural Planning",
-      description:
-        "Comprehensive architectural plans and 3D elevations for new builds and full renovations.",
-      tag: null,
+      value: "Bespoke Interiors",
+      label: "Refined designs customized to your lifestyle and preferences.",
     },
     {
-      icon: Ruler,
-      title: "Space Planning",
-      description:
-        "Intelligent layouts that optimise flow, function, and comfort for every room.",
-      tag: null,
+      icon: Sofa,
+      value: "Signature Collection",
+      label:
+        "Exclusive luxury furniture and decor items available for immediate.",
+    },
+    {
+      icon: Settings,
+      value: "Turnkey Solutions",
+      label: "End-to-end execution, transparent BOQ, and site supervision.",
+    },
+    {
+      icon: Award,
+      value: "Trusted Expertise",
+      label: "100+ elite homes crafted in Bangalore by our experienced team.",
     },
   ];
 
-  const steps = [
+  const expertiseItems = [
     {
-      num: "01",
-      icon: MessageCircle,
+      title: "Living Spaces",
+      image: "/images/living-space.webp",
+      alt: "Bare living room shell with natural light",
+    },
+    {
+      title: "Modular Kitchens",
+      image: "/images/moduler-kitchen.webp",
+      alt: "Modern modular kitchen with marble island",
+    },
+    {
+      title: "Bedroom Designs",
+      image: "/images/bedroom-design.webp",
+      alt: "Luxury bedroom with emerald velvet bed",
+    },
+  ];
+
+  const ouServices = [
+    {
+      title: "Residential Interiors",
+      image: "/images/residential.jpg",
+      alt: "Bare living room shell with natural light",
+    },
+    {
+      title: "Commercial Interiors",
+      image: "/images/commercial.jpg",
+      alt: "Modern modular kitchen with marble island",
+    },
+    {
+      title: "Corporate Interiors",
+      image: "/images/corporate.jpg",
+      alt: "Modern modular kitchen with marble island",
+    },
+    {
+      title: "Modular Kitchen",
+      image: "/images/modular.jpg",
+      alt: "Luxury bedroom with emerald velvet bed",
+    },
+    {
+      title: "Architectural Planning",
+      image: "/images/architectural.jpg",
+      alt: "Luxury bedroom with emerald velvet bed",
+    },
+  ];
+
+  const workProcess = [
+    {
       title: "Customer Contacts Us",
-      desc: "Share your vision and requirements with our expert design consultants.",
+      image: "/images/work-process.jpg",
+      alt: "Bare living room shell with natural light",
     },
     {
-      num: "02",
-      icon: FileText,
       title: "Requirement & Estimate",
-      desc: "We analyse your space and provide a detailed, transparent cost estimate.",
+      image: "/images/rough.jpg",
+      alt: "Modern modular kitchen with marble island",
     },
     {
-      num: "03",
-      icon: CreditCard,
       title: "Token & Measurement",
-      desc: "Secure your project with a booking and precise on-site measurement.",
+      image: "/images/token-payment.jpg",
+      alt: "Luxury bedroom with emerald velvet bed",
     },
     {
-      num: "04",
-      icon: Boxes,
       title: "Personalised 3D Designs",
-      desc: "Experience your dream space in photo-realistic 3D before we begin.",
+      image: "/images/3d-design.jpg",
+      alt: "Luxury bedroom with emerald velvet bed",
     },
     {
-      num: "05",
-      icon: Wrench,
       title: "Installation & Handover",
-      desc: "Expert installation with rigorous quality checks at every stage.",
+      image: "/images/installation.jpg",
+      alt: "Luxury bedroom with emerald velvet bed",
     },
     {
-      num: "06",
-      icon: HeartHandshake,
       title: "After-Sales Service",
-      desc: "Ongoing support and maintenance for lasting satisfaction.",
+      image: "/images/sale-services.jpg",
+      alt: "Luxury bedroom with emerald velvet bed",
     },
   ];
 
@@ -254,11 +252,11 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -30 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] mb-4 animate-gradient"
+              className="font-serif text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.05] mb-4 animate-gradient"
             >
               {slide.heading}
               <br />
-              <span className="italic font-normal text-[#D4AF37]">
+              <span className="italic font-normal text-white">
                 {slide.italic}
               </span>
             </motion.h1>
@@ -311,7 +309,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* USP BANNER */}
       <section className="relative -mt-14 z-20 w-full">
         <div className="w-full">
@@ -350,14 +347,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICES SECTION */}
+      {/* expertise SECTION */}
       <section
-        id="services"
+        id="expertise"
         className="py-24 md:py-36 px-6 md:px-10 bg-[#051711]"
       >
         <div className="max-w-7xl mx-auto">
           {/* Header */}
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -365,78 +361,139 @@ export default function Home() {
             className="text-center mb-16"
           >
             <p className="text-[11px] tracking-[0.45em] uppercase text-[#D4AF37] mb-4 font-medium">
-              What We Offer
+              Our Expertise
             </p>
 
-            <h2 className="gradient-heading text-3xl md:text-4xl leading-[1.1]">
-              Our Services
+            <h2 className="gradient-heading text-3xl md:text-4xl leading-[1.1] mb-5">
+              Luxury Meets Discipline
             </h2>
+
+            <p className="text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+              At The Grandiose, we blend exquisite design with structured
+              project management. Every detail is meticulously planned and
+              executed, delivering sophisticated interiors on time, within
+              budget.
+            </p>
           </motion.div>
 
-          {/* Services Grid */}
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4">
-            {services.map((service, i) => (
+          {/* Expertise Grid */}
+          <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto px-4">
+            {expertiseItems.map((item, i) => (
               <motion.div
-                key={service.title}
+                key={item.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="group relative p-8 md:p-10 bg-[#051711] rounded-sm hover:shadow-2xl transition-all duration-500 cursor-pointer overflow-hidden border border-[#D4AF37]/20 hover:border-[#D4AF37]/60"
+                className="group relative rounded-sm overflow-hidden transition-all duration-500"
               >
                 {/* Gold Top Line */}
-                <div className="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-[#D4AF37] to-[#C9A227] group-hover:w-full transition-all duration-500" />
+                <div className="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-[#D4AF37] to-[#C9A227] group-hover:w-full transition-all duration-500 z-10" />
 
-                {/* Icon */}
-                <service.icon
-                  size={30}
-                  strokeWidth={1.2}
-                  className="text-[#D4AF37] mb-6 group-hover:text-[#D4AF37]/80 group-hover:scale-110 transition-all duration-300"
-                />
+                {/* Image */}
+                <div className="relative w-full h-[260px] overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#051711]/40 via-transparent to-transparent" />
+                </div>
 
-                {/* Title - Changed to white */}
-                <h3 className="font-serif text-xl font-semibold text-white mb-3">
-                  {service.title}
-                </h3>
+                {/* Content */}
+                <div className="p-6 md:p-7 bg-[#051711]">
+                  <h3 className="font-serif text-[25px] font-semibold text-white mb-4 text-center">
+                    {item.title}
+                  </h3>
 
-                {/* Description - Changed to light gray/white */}
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {service.description}
-                </p>
-
-                {/* Learn More - Changed to white/gold */}
-                <a
-                  href="#contact"
-                  className="inline-block mt-6 text-[10px] tracking-[0.2em] uppercase text-gray-300 font-medium opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 hover:text-[#D4AF37]"
-                >
-                  Learn More →
-                </a>
+                  <div className="flex justify-center">
+                    <a
+                      href="/services"
+                      className="inline-flex items-center justify-center px-6 py-2.5 text-[10px] tracking-[0.2em] uppercase text-[#D4AF37] font-medium border border-[#D4AF37]/40 rounded-sm hover:bg-[#D4AF37] hover:text-black transition-all duration-300"
+                    >
+                      Enquire Now
+                    </a>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
-        {/* View More Button */}
+      </section>
 
-        <div className="mt-16 flex justify-center">
-          <Link
-            href="/services"
-            className="px-12 py-3 text-xs tracking-[0.25em] uppercase bg-[#D4AF37] text-black hover:bg-[#C9A227] transition-all duration-300 rounded-sm shadow-lg"
+      {/* our services SECTION */}
+      <section id="ouServices" className="bg-[#051711]">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            View More
-          </Link>
+            <p className="text-[11px] tracking-[0.45em] uppercase text-[#D4AF37] mb-4 font-medium">
+              What we offer
+            </p>
+
+            <h2 className="gradient-heading text-3xl md:text-4xl leading-[1.1] mb-5">
+              Our Services
+            </h2>
+          </motion.div>
+
+          {/* Expertise Grid */}
+          <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto px-4">
+            {ouServices.map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="group relative rounded-sm overflow-hidden transition-all duration-500"
+              >
+                {/* Gold Top Line */}
+                <div className="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-[#D4AF37] to-[#C9A227] group-hover:w-full transition-all duration-500 z-10" />
+
+                {/* Image */}
+                <div className="relative w-full h-[260px] overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#051711]/40 via-transparent to-transparent" />
+                </div>
+
+                {/* Content */}
+                <div className="p-6 md:p-7 bg-[#051711]">
+                  <h3 className="font-serif text-[25px] font-semibold text-white mb-4 text-center">
+                    {item.title}
+                  </h3>
+
+                  <div className="flex justify-center">
+                    <a
+                      href="/services"
+                      className="inline-flex items-center justify-center px-6 py-2.5 text-[10px] tracking-[0.2em] uppercase text-[#D4AF37] font-medium border border-[#D4AF37]/40 rounded-sm hover:bg-[#D4AF37] hover:text-black transition-all duration-300"
+                    >
+                      Enquire Now
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* WORK PROCESS */}
-
+      {/* workProcess SECTION */}
       <section
-        id="process"
-        className="py-24 md:py-36 px-6 md:px-10 bg-[#051711] overflow-hidden"
+        id="workProcess"
+        className="bg-[#051711] py-24 md:py-32 px-6 md:px-10"
       >
         <div className="max-w-7xl mx-auto">
           {/* Header */}
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -447,83 +504,59 @@ export default function Home() {
               How We Work
             </p>
 
-            <h2
-              className="gradient-heading text-3xl md:text-4xl leading-[1.1]"
-              style={{
-                background:
-                  "linear-gradient(270deg, #fff6d5, #f7d774, #CC9008, #fff1b8, #b67a00, #fff6d5)",
-                backgroundSize: "400% 400%",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
+            <h2 className="gradient-heading text-3xl md:text-4xl leading-[1.1] mb-5">
               Our Work Process
             </h2>
           </motion.div>
 
-          {/* Steps Grid */}
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {steps.map((step, i) => (
+          {/* Expertise Grid */}
+          <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto px-4">
+            {workProcess.map((item, i) => (
               <motion.div
-                key={step.num}
+                key={item.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group relative p-8 md:p-10 border border-white/10 hover:border-[#D4AF37]/50 hover:bg-white/5 rounded-sm transition-all duration-500 overflow-hidden"
+                transition={{ delay: i * 0.08 }}
+                className="group relative rounded-sm overflow-hidden transition-all duration-500"
               >
-                {/* Background Number */}
+                {/* Gold Top Line */}
+                <div className="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-[#D4AF37] to-[#C9A227] group-hover:w-full transition-all duration-500 z-10" />
 
-                <span className="absolute top-3 right-5 font-serif text-7xl font-bold text-white/5 group-hover:text-[#D4AF37]/10 transition-colors duration-500 select-none">
-                  {step.num}
-                </span>
-
-                {/* Icon + Step */}
-
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-8 h-8 rounded-full bg-[#D4AF37]/15 flex items-center justify-center group-hover:bg-[#D4AF37]/25 transition-colors duration-300">
-                    <step.icon
-                      size={16}
-                      strokeWidth={1.5}
-                      className="text-[#D4AF37]"
-                    />
-                  </div>
-
-                  <span className="text-[10px] tracking-[0.25em] uppercase text-[#D4AF37]/70 font-medium">
-                    Step {step.num}
-                  </span>
+                {/* Image */}
+                <div className="relative w-full h-[260px] overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#051711]/40 via-transparent to-transparent" />
                 </div>
 
-                {/* Title */}
+                {/* Content */}
+                <div className="p-6 md:p-7 bg-[#051711]">
+                  <h3 className="font-serif text-[25px] font-semibold text-white mb-4 text-center">
+                    {item.title}
+                  </h3>
 
-                <h3 className="font-serif text-lg font-semibold text-white mb-3">
-                  {step.title}
-                </h3>
-
-                {/* Description */}
-
-                <p className="text-white/60 text-sm leading-relaxed">
-                  {step.desc}
-                </p>
+                  <div className="flex justify-center">
+                    <a
+                      href="/work-process"
+                      className="inline-flex items-center justify-center px-6 py-2.5 text-[10px] tracking-[0.2em] uppercase text-[#D4AF37] font-medium border border-[#D4AF37]/40 rounded-sm hover:bg-[#D4AF37] hover:text-black transition-all duration-300"
+                    >
+                      Enquire Now
+                    </a>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
-         <div className="mt-16 flex justify-center">
-          <Link
-            href="/work-process"
-            className="px-12 py-3 text-xs tracking-[0.25em] uppercase bg-[#D4AF37] text-black hover:bg-[#C9A227] transition-all duration-300 rounded-sm shadow-lg"
-          >
-            View More
-          </Link>
-        </div>
       </section>
 
       {/* PROJECTS SECTION */}
-
-      <section className="py-24 md:py-32 px-6 md:px-10 bg-[#051711]">
+      <section className="bg-[#051711]">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
 
@@ -587,24 +620,17 @@ export default function Home() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="relative border border-[#D4AF37]/40">
-                <Image
-                  src={heroImage}
-                  alt="Project"
-                  className="w-full h-[360px] object-cover"
+              <div className="relative border border-[#D4AF37]/40 overflow-hidden">
+                <iframe
+                  className="w-full h-[360px]"
+                  src="https://www.youtube.com/embed/8l0UUevU75I?autoplay=1&mute=1&loop=1&playlist=8l0UUevU75I"
+                  title="The Grandiose Interior Design"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
                 />
-
-                {/* Play Button */}
-
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full border border-[#D4AF37] flex items-center justify-center backdrop-blur-md cursor-pointer hover:scale-110 transition">
-                    <span className="text-[#D4AF37] text-xl">▶</span>
-                  </div>
-                </div>
               </div>
 
               {/* Button */}
-
               <div className="flex justify-center mt-6">
                 <Link
                   href="/recent-projects"
@@ -619,8 +645,7 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-
-      <section className="py-24 md:py-36 px-6 md:px-10 bg-[#051711]">
+      <section className="bg-[#051711] py-24 px-6 md:px-10">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <motion.div
@@ -711,7 +736,6 @@ export default function Home() {
       </section>
 
       {/* FINAL CTA SECTION */}
-
       <section
         id="contact"
         className="relative py-32 md:py-44 px-6 md:px-10 overflow-hidden"
@@ -720,7 +744,7 @@ export default function Home() {
 
         <div className="absolute inset-0">
           <Image
-            src={heroImage}
+            src={ctabannerimg}
             alt="Luxury interior consultation"
             fill
             className="object-cover"

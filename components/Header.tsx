@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Menu, X, ShoppingCart, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { useCart } from "./CartProvider";
+import Image from "next/image";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -35,16 +36,14 @@ export default function Header() {
       <div className="luxury-green py-4">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* LOGO */}
-          <Link href="/" className="flex items-center gap-3">
-            <div className="text-[#C9A24D] text-3xl font-bold">G</div>
-            <div>
-              <p className="text-[#C9A24D] text-lg font-semibold tracking-wide">
-                THE GRANDIOSE
-              </p>
-              <p className="text-xs text-[#C9A24D] tracking-widest">
-                Crafting Grandeur
-              </p>
-            </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="The Grandiose"
+              width={180}
+              height={60}
+              priority
+            />
           </Link>
 
           {/* DESKTOP NAV */}
