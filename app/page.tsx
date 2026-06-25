@@ -13,7 +13,6 @@ import slide3img from "../public/images/slide3.webp";
 import slide4img from "../public/images/slide4.webp";
 import slide5img from "../public/images/slide5.webp";
 
-
 export default function Home() {
   const slides = [
     {
@@ -159,30 +158,26 @@ export default function Home() {
   const testimonials = [
     {
       quote:
-        "The Grandiose transformed our home beyond imagination. Every detail was thoughtfully considered, and the craftsmanship is impeccable.",
-      author: "Reshma Parveen",
-      role: "Homeowner, Bangalore",
+        "Overall, excellent work from The Grandiose. We sent all the designs we had in mind to Mr. Noor and he implemented them all upto the mark. He understood our requirements and delivered well. Will recommend Grandiose to everyone for interior work.",
+      author: "Payel Das",
       rating: 5,
     },
     {
       quote:
-        "Mr. Noor gave us plenty of options and designed our home as if it were his own. Transparent pricing and stunning results.",
-      author: "Gafur Mohammed",
-      role: "Homeowner, Hyderabad",
+        "Noor is quite professional and competitive in terms providing the timely delivery and agreed quality. As we were not in town during the work, he was always approachable and being transparent about the progress of the work. It has been a flawless experience for us where we got the basic interior done without any hassles and delays.",
+      author: "Deepak Sikri",
       rating: 5,
     },
     {
       quote:
-        "Excellent execution and on-time completion. The 3D designs were exactly what we received.",
-      author: "Ashutosh Mitra",
-      role: "Homeowner, Mumbai",
+        "Mr Noor, has always been responsive on time and great quality has always been delivered as promised.",
+      author: "Bhakti Bhosale",
       rating: 5,
     },
     {
       quote:
-        "Overall a wonderful experience. Really grateful for the services provided.",
-      author: "Naveen Pareek",
-      role: "Homeowner, Delhi",
+        "We got our interiors done from them which includes TV cabinet, false ceiling, hall partition and cupboards. Noor who is the head of Grandiose, first met with us to understand our likes and dislikes before starting the project. Based on our discussion the designs he provided were liked by us. Even the finish we got was exactly same as the design. They were very transparent about the materials they are gonna use and the quality of materials is pretty good which has been used.",
+      author: "Ravi kumar",
       rating: 5,
     },
   ];
@@ -714,9 +709,6 @@ export default function Home() {
                       <p className="text-white text-sm font-semibold">
                         {t.author}
                       </p>
-
-                      {/* Role - Changed to light gray */}
-                      <p className="text-gray-400 text-xs mt-0.5">{t.role}</p>
                     </div>
                   </div>
                 </div>

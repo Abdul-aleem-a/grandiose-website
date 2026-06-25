@@ -3,11 +3,19 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { Award, Users, Calendar, Shield, ChevronRight, Phone, ArrowRight } from "lucide-react";
+import {
+  Award,
+  Users,
+  Calendar,
+  Shield,
+  ChevronRight,
+  Phone,
+  ArrowRight,
+} from "lucide-react";
 
 // Import images with Next.js Image optimization
-import aboutHeroBg from "../../public/sofa.jpg";
-import aboutStudio from "../../public/sofa.jpg";
+import aboutHeroBg from "../../public/images/about-bg.jpg";
+import aboutStudio from "../../public/images/about.jpg";
 import aboutTeam from "../../public/sofa.jpg";
 import aboutProject1 from "../../public/sofa.jpg";
 import aboutProject2 from "../../public/sofa.jpg";
@@ -21,11 +29,36 @@ const stats = [
 ];
 
 const team = [
-  { name: "Noor Alam", role: "Founder", initials: "NA" },
-  { name: "Asviya Imran", role: "Interior Architect", initials: "AI" },
-  { name: "Shaikh Sulaiman", role: "Site Manager", initials: "SS" },
-  { name: "Nagesh", role: "Interior Designer", initials: "N" },
-  { name: "Yaseen Arafath", role: "Civil Engineer", initials: "YA" },
+  {
+    name: "Noor Alam",
+    role: "Founder",
+    initials: "NA",
+    // img: "/images/team/noor-alam.jpg",
+  },
+  {
+    name: "Asviya Imran",
+    role: "Interior Architect",
+    initials: "AI",
+    img: "/images/Asviya-img.jpg",
+  },
+  {
+    name: "Shaikh Sulaiman",
+    role: "Site Manager",
+    initials: "SS",
+    img: "/images/Sulaiman-img.jpg",
+  },
+  {
+    name: "Nagesh",
+    role: "Interior Designer",
+    initials: "N",
+    // img: "/images/team/nagesh.jpg",
+  },
+  {
+    name: "Yaseen Arafath",
+    role: "Civil Engineer",
+    initials: "YA",
+    // img: "/images/team/yaseen-arafath.jpg",
+  },
 ];
 
 const signatureProjects = [
@@ -76,7 +109,9 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="flex items-center justify-center gap-2 text-white/50 text-[11px] tracking-[0.25em] uppercase font-sans mb-6"
           >
-            <Link href="/" className="hover:text-[#D4AF37] transition-colors">Home</Link>
+            <Link href="/" className="hover:text-[#D4AF37] transition-colors">
+              Home
+            </Link>
             <ChevronRight size={12} className="text-[#D4AF37]" />
             <span className="text-[#D4AF37]">About Us</span>
           </motion.div>
@@ -103,7 +138,8 @@ const About = () => {
             transition={{ duration: 0.7, delay: 0.5 }}
             className="text-white/60 text-sm md:text-base max-w-xl mx-auto font-sans tracking-wide"
           >
-            Bangalore's premier interior design studio — crafting grandeur since 2018
+            Bangalore's premier interior design studio — crafting grandeur since
+            2018
           </motion.p>
         </div>
 
@@ -136,7 +172,9 @@ const About = () => {
                 />
               </div>
               <div className="absolute -bottom-5 left-6 bg-[#051711] text-white px-6 py-4 rounded-sm shadow-xl border border-[#D4AF37]/30">
-                <span className="font-serif text-3xl font-bold text-[#D4AF37] block">8+</span>
+                <span className="font-serif text-3xl font-bold text-[#D4AF37] block">
+                  8+
+                </span>
                 <span className="text-[10px] tracking-[0.25em] uppercase text-white/60 font-sans">
                   Years of Excellence
                 </span>
@@ -156,25 +194,31 @@ const About = () => {
               <h2 className="gradient-heading text-5xl md:text-5xl mb-5">
                 The Grandiose
                 <br />
-                <span className="italic gradient-heading text-5xl md:text-5xl mb-5">Home Interiors</span>
+                <span className="italic gradient-heading text-5xl md:text-5xl mb-5">
+                  Home Interiors
+                </span>
               </h2>
               <div className="w-12 h-[2px] bg-[#D4AF37] mb-7" />
 
               <p className="text-white/70 leading-relaxed mb-4 text-sm md:text-base font-sans">
-                Professional interior designers can help you bring your ideas to life. Need assistance
-                choosing the right interior components and design for your new home or renovating an old
-                one? Investing in a professional interior designer will increase your home's value over
-                time.
+                Professional interior designers can help you bring your ideas to
+                life. Need assistance choosing the right interior components and
+                design for your new home or renovating an old one? Investing in
+                a professional interior designer will increase your home's value
+                over time.
               </p>
               <p className="text-white/70 leading-relaxed mb-4 text-sm md:text-base font-sans">
-                Adding new ideas to your home is part of the creative journey you are embarking upon.
-                Different experiences may lead to different ideas.
+                Adding new ideas to your home is part of the creative journey
+                you are embarking upon. Different experiences may lead to
+                different ideas.
               </p>
               <p className="text-white/70 leading-relaxed mb-10 text-sm md:text-base font-sans">
-                As a team, we recognize that each client, site, and location has a unique personality. Our
-                mission is to design contemporary, inspiring, and customized environments and spaces for
-                each of our clients. Collaboration with the client ensures that no two projects are
-                identical, highlighting diversity in creativeness and knowledge.
+                As a team, we recognize that each client, site, and location has
+                a unique personality. Our mission is to design contemporary,
+                inspiring, and customized environments and spaces for each of
+                our clients. Collaboration with the client ensures that no two
+                projects are identical, highlighting diversity in creativeness
+                and knowledge.
               </p>
 
               <motion.a
@@ -249,7 +293,7 @@ const About = () => {
             <div className="w-16 h-[2px] bg-[#D4AF37] mx-auto" />
           </motion.div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 md:gap-16">
             {team.map((member, i) => (
               <motion.div
                 key={member.name}
@@ -261,19 +305,32 @@ const About = () => {
                 className="group text-center"
               >
                 {/* Avatar circle */}
-                <div className="relative w-28 h-28 mx-auto mb-5">
-                  <div className="absolute inset-0 rounded-full border-2 border-[#D4AF37]/30 group-hover:border-[#D4AF37]/60 transition-colors duration-500" />
-                  <div className="absolute inset-[3px] rounded-full border border-white/10" />
-                  <div className="absolute inset-0 rounded-full bg-white/5 flex items-center justify-center">
-                    <span className="font-serif text-2xl font-bold text-[#D4AF37]">
-                      {member.initials}
-                    </span>
+                <div className="relative w-44 h-44 md:w-52 md:h-52 mx-auto mb-7">
+                  <div className="absolute inset-0 rounded-full border-2 border-[#D4AF37]/30 group-hover:border-[#D4AF37]/60 transition-colors duration-500 z-10" />
+                  <div className="absolute inset-[4px] rounded-full border border-white/10 z-10" />
+                  <div className="absolute inset-[4px] rounded-full overflow-hidden bg-white/5">
+                    {member.img ? (
+                      <Image
+                        src={member.img}
+                        alt={member.name}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-700"
+                        sizes="208px"
+                        quality={85}
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <span className="font-serif text-5xl md:text-6xl font-bold text-[#D4AF37]">
+                          {member.initials}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </div>
-                <h3 className="font-serif text-lg font-semibold text-white mb-1">
+                <h3 className="font-serif text-2xl md:text-3xl font-semibold text-white mb-2">
                   {member.name}
                 </h3>
-                <p className="text-[11px] tracking-[0.15em] uppercase text-white/50 font-sans">
+                <p className="text-[13px] tracking-[0.15em] uppercase text-white/50 font-sans">
                   {member.role}
                 </p>
               </motion.div>
@@ -283,7 +340,7 @@ const About = () => {
       </section>
 
       {/* ─── SIGNATURE PROJECTS ─── */}
-      <section className="py-24 md:py-32 px-6 md:px-10 bg-[#051711] border-t border-[#D4AF37]/20">
+      <section className="py-24 md:py-32 px-6 md:px-10 bg-[#051711] border-t border-[#D4AF37]/20 overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -300,34 +357,37 @@ const About = () => {
             </h2>
             <div className="w-16 h-[2px] bg-[#D4AF37] mx-auto" />
           </motion.div>
+        </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-            {signatureProjects.map((project, i) => (
-              <motion.div
+        {/* Infinite scroll track */}
+        <div className="relative w-full">
+          {/* Edge fades */}
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-16 md:w-32 bg-gradient-to-r from-[#051711] to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-16 md:w-32 bg-gradient-to-l from-[#051711] to-transparent z-10" />
+
+          <div className="flex w-max animate-projects-scroll hover:[animation-play-state:paused]">
+            {/* Render the projects list twice for a seamless loop */}
+            {[...signatureProjects, ...signatureProjects].map((project, i) => (
+              <div
                 key={`${project.name}-${i}`}
-                custom={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="group"
+                className="group flex-shrink-0 w-[180px] md:w-[220px] px-4"
               >
-                <div className="aspect-square rounded-full overflow-hidden border-2 border-[#D4AF37]/20 group-hover:border-[#D4AF37]/60 transition-all duration-500 mx-auto w-28 h-28 md:w-32 md:h-32">
+                <div className="aspect-square rounded-full overflow-hidden border-2 border-[#D4AF37]/20 group-hover:border-[#D4AF37]/60 transition-all duration-500 mx-auto w-36 h-36 md:w-44 md:h-44">
                   <div className="relative w-full h-full">
                     <Image
                       src={project.img}
                       alt={project.name}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
-                      sizes="128px"
+                      sizes="176px"
                       quality={85}
                     />
                   </div>
                 </div>
-                <p className="text-center mt-3 text-[10px] tracking-[0.15em] uppercase text-white/60 font-sans group-hover:text-[#D4AF37] transition-colors duration-300">
+                <p className="text-center mt-4 text-[12px] tracking-[0.15em] uppercase text-white/60 font-sans group-hover:text-[#D4AF37] transition-colors duration-300">
                   {project.name}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -348,11 +408,13 @@ const About = () => {
           <h2 className="gradient-heading text-3xl md:text-3xl mb-5">
             Let's Craft Your
             <br />
-            <span className="italic gradient-heading text-2xl md:text-2xl mb-5">Dream Home</span>
+            <span className="italic gradient-heading text-2xl md:text-2xl mb-5">
+              Dream Home
+            </span>
           </h2>
           <p className="text-white/60 mb-10 text-sm md:text-base font-sans max-w-lg mx-auto">
-            Every great space starts with a conversation. Reach out to our team and let's begin
-            your journey towards a beautifully crafted interior.
+            Every great space starts with a conversation. Reach out to our team
+            and let's begin your journey towards a beautifully crafted interior.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <motion.a

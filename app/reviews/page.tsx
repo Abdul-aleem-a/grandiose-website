@@ -10,29 +10,78 @@ function page() {
   const testimonials = [
     {
       quote:
-        "Overall, excellent work from The Grandiose. We sent all the designs we had in mind to Mr. Noor and he implemented them all upto the mark. He understood our requirements and delivered well. Will recommend Grandiose to everyone for interior work.",
-      author: "Payel Das",
+        "Excellent execution and online completion of entire project with part payment facilities. Satisfied with the service.",
+      author: "Ashutosh Mitra",
       rating: 5,
       reviewLink: "https://maps.app.goo.gl/example1", // Replace with actual Google review link
     },
     {
       quote:
-        "Mr. Noor gave us plenty of options and designed our home as if it were his own. Transparent pricing and stunning results.",
-      author: "Gafur Mohammed",
+        "Noor has a hold on his craftsmanship and have a positive attitude that brings out creativity in his work His attention to detail is commendable and his finishing reflects the same.",
+      author: "Aritra Desarkar",
       rating: 5,
       reviewLink: "https://maps.app.goo.gl/example2", // Replace with actual Google review link
     },
     {
       quote:
-        "Excellent execution and on-time completion. The 3D designs were exactly what we received.",
-      author: "Ashutosh Mitra",
+        "Absolutely loved the interior, The attention to detail and finish is really good. The little details and cool designs make it cosy and welcoming place.",
+      author: "Nishi Agrawal",
       rating: 5,
       reviewLink: "https://maps.app.goo.gl/example3", // Replace with actual Google review link
     },
     {
       quote:
-        "Overall a wonderful experience. Really grateful for the services provided.",
+        "Overall It was a wonderful experience dealing with Noor, really grateful for the services provided by The Grandiose, highly recommend to all the customers looking for their dream home interiors.",
       author: "Naveen Pareek",
+      rating: 5,
+      reviewLink: "https://maps.app.goo.gl/example4", // Replace with actual Google review link
+    },
+    {
+      quote:
+        "I highly recommend the Grandiose interior design company. They did an excellent job, they used high quality material and the final product came out much better than what they showed in the design. Noor is the contact whio did the interior for our apartment and he was very responsive and explained through the whole process.",
+      author: "Srikanth Madugundi",
+      rating: 5,
+      reviewLink: "https://maps.app.goo.gl/example4", // Replace with actual Google review link
+    },
+    {
+      quote:
+        "We got our flat renovated from Grandiose and had a pleasant experience working with them. Although there are few improvements areas such as quality of work, attention to detail. This is a essential part which adds the value to the customer was missed. However, we had a very good experience with Noor. He is very professional and responsive. There is no single time of the day he hasn't received our call or not responded. He has a good listening skills and tries to solve the issues with limited time. We are very satisfied with him and his professionalism.",
+      author: "Gagan Kris",
+      rating: 5,
+      reviewLink: "https://maps.app.goo.gl/example4", // Replace with actual Google review link
+    },
+    {
+      quote:
+        "very friendly and kind person and customises the design as per customers' choice and requirements. Additionally, he would also suggest good design ideas. His immense knowledge with respect to interior design is mindblowing. We had no hassles and the project was done at a quick pace. We also got to view a glimpse of processing of woodwork at the factory. Mr. Noor was available for a quick chat and clarified any doubts immediately on a call . His entire team was helpful. Thanks a lot The Grandiose team for the impeccable work.",
+      author: "Janakikanth Ravi",
+      rating: 5,
+      reviewLink: "https://maps.app.goo.gl/example4", // Replace with actual Google review link
+    },
+    {
+      quote:
+        "Mr. Noor Alam the founder and the head of The Grandiose is an instrumental in bringing my thoughts to live. My home looks stunning with his ability of work. Mr.Noor gave us plenty of options to explore and designed our home as if, one of his own.",
+      author: "Gafur Mohammed",
+      rating: 5,
+      reviewLink: "https://maps.app.goo.gl/example4", // Replace with actual Google review link
+    },
+    {
+      quote:
+        "A quality work was delivered at an affordable price on time . Highly recommended for home interiors. Thank you The Grandiose !!!",
+      author: "GAURAV KUMAR",
+      rating: 5,
+      reviewLink: "https://maps.app.goo.gl/example4", // Replace with actual Google review link
+    },
+    {
+      quote:
+        "Very convenient place with several amenities close by.. like 3 minutes walk to Mtr and bus stop. Beautiful shopping mall, restaurants downstairs. Lots of schools and parks for kids. Cycling lanes all around.. big sports ground n sports facilities near by. Big government hospital at 20 minutes walk. Beautiful promenade and sea view from this building. The building clubhouse is great and building is very open place to live in. 24 hour security",
+      author: "Madhu Mertia",
+      rating: 5,
+      reviewLink: "https://maps.app.goo.gl/example4", // Replace with actual Google review link
+    },
+    {
+      quote:
+        "Noor - I wanted to take a moment to express my utmost satisfaction with your interior design company - Grandiose. From start to finish, the experience has been exceptional. First and foremost, I commend your team specially Asfiya for her dedication on this project with number of 3D iterations. Despite the complexities of our project, everything was handled promptly and efficiently. Moreover, the level of your patience demonstrated throughout the process was truly commendable. Your willingness to accommodate numerous iterations of 3D designs until we achieved complete satisfaction speaks volumes about your commitment to customer service. I was particularly impressed by how you managed to stay within our budget without compromising on quality. The economic approach coupled with the use of high-quality materials ensured that our vision was realised without breaking the bank:) Furthermore, every interaction with your team was met with utmost professionalism and politeness. It was a pleasure to work with such a courteous and respectful group of individuals. Lastly, I must commend your team's exceptional teamwork, which was evident in the flawless execution of the project. From conception to completion, every detail was handled with care and precision. Overall, I very happy with the outcome. Thank you for your dedication, expertise, and unwavering commitment to excellence. I would highly recommend your services to anyone in need of top-notch interior design solutions.",
+      author: "Reshma Parveen",
       rating: 5,
       reviewLink: "https://maps.app.goo.gl/example4", // Replace with actual Google review link
     },

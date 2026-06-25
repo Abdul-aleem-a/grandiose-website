@@ -7,21 +7,58 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, Eye } from "lucide-react";
 
 // Import images with Next.js Image optimization
-import galleryKitchen1 from "../../public/sofa.jpg";
-import galleryKitchen2 from "../../public/sofa.jpg";
-import galleryWardrobe1 from "../../public/sofa.jpg";
-import galleryBedroom1 from "../../public/sofa.jpg";
-import galleryKids1 from "../../public/sofa.jpg";
-import galleryLiving1 from "../../public/sofa.jpg";
-import galleryLiving2 from "../../public/sofa.jpg";
-import galleryDining1 from "../../public/sofa.jpg";
-import galleryOffice1 from "../../public/sofa.jpg";
-import galleryBathroom1 from "../../public/sofa.jpg";
-import gallerySpace1 from "../../public/sofa.jpg";
-import gallery2bhk from "../../public/sofa.jpg";
-import gallery3bhk from "../../public/sofa.jpg";
-import gallery1bhk from "../../public/sofa.jpg";
-import galleryCustomize from "../../public/sofa.jpg";
+import galleryKitchen1 from "../../public/images/gallery/galleryKitchen1.jpg";
+import galleryKitchen2 from "../../public/images/gallery/galleryKitchen2.jpg";
+import galleryKitchen3 from "../../public/images/gallery/galleryKitchen3.jpg";
+import galleryKitchen4 from "../../public/images/gallery/galleryKitchen4.jpg";
+import galleryWardrobe1 from "../../public/images/gallery/galleryWardrobe1.jpg";
+import galleryWardrobe2 from "../../public/images/gallery/galleryWardrobe2.jpg";
+import galleryWardrobe3 from "../../public/images/gallery/galleryWardrobe3.jpg";
+import galleryWardrobe4 from "../../public/images/gallery/galleryWardrobe4.jpg";
+import galleryBedroom1 from "../../public/images/gallery/galleryBedroom1.jpg";
+import galleryBedroom2 from "../../public/images/gallery/galleryBedroom2.jpg";
+import galleryBedroom3 from "../../public/images/gallery/galleryBedroom3.jpg";
+import galleryBedroom4 from "../../public/images/gallery/galleryBedroom4.jpg";
+import galleryKids1 from "../../public/images/gallery/galleryKids1.jpg";
+import galleryKids2 from "../../public/images/gallery/galleryKids2.jpg";
+import galleryKids3 from "../../public/images/gallery/galleryKids3.jpg";
+import galleryKids4 from "../../public/images/gallery/galleryKids3.jpg";
+import galleryLiving1 from "../../public/images/gallery/galleryLiving1.jpg";
+import galleryLiving2 from "../../public/images/gallery/galleryLiving2.jpg";
+import galleryLiving3 from "../../public/images/gallery/galleryLiving3.jpg";
+import galleryLiving4 from "../../public/images/gallery/galleryLiving4.jpg";
+import galleryDining1 from "../../public/images/gallery/galleryDining1.jpg";
+import galleryDining2 from "../../public/images/gallery/galleryDining2.jpg";
+import galleryDining3 from "../../public/images/gallery/galleryDining3.jpg";
+import galleryDining4 from "../../public/images/gallery/galleryDining4.jpg";
+import galleryOffice1 from "../../public/images/gallery/galleryOffice1.jpg";
+import galleryOffice2 from "../../public/images/gallery/galleryOffice2.jpg";
+import galleryOffice3 from "../../public/images/gallery/galleryOffice3.jpg";
+import galleryOffice4 from "../../public/images/gallery/galleryOffice4.jpg";
+import galleryBathroom1 from "../../public/images/gallery/galleryBathroom1.jpg";
+import galleryBathroom2 from "../../public/images/gallery/galleryBathroom2.jpg";
+import galleryBathroom3 from "../../public/images/gallery/galleryBathroom3.jpg";
+import galleryBathroom4 from "../../public/images/gallery/galleryBathroom4.jpg";
+import gallerySpace1 from "../../public/images/gallery/gallerySpace1.jpg";
+import gallerySpace2 from "../../public/images/gallery/gallerySpace2.jpg";
+import gallerySpace3 from "../../public/images/gallery/gallerySpace3.jpg";
+import gallerySpace4 from "../../public/images/gallery/gallerySpace4.jpg";
+import gallery2bhk from "../../public/images/gallery/gallery2bhk.jpg";
+import gallery2bhk2 from "../../public/images/gallery/gallery2bhk2.jpg";
+import gallery2bhk3 from "../../public/images/gallery/gallery2bhk3.jpg";
+import gallery2bhk4 from "../../public/images/gallery/gallery2bhk4.jpg";
+import gallery3bhk from "../../public/images/gallery/gallery3bhk.jpg";
+import gallery3bhk2 from "../../public/images/gallery/gallery3bhk2.jpg";
+import gallery3bhk3 from "../../public/images/gallery/gallery3bhk3.jpg";
+import gallery3bhk4 from "../../public/images/gallery/gallery3bhk4.jpg";
+import gallery1bhk from "../../public/images/gallery/gallery1bhk.jpg";
+import gallery1bhk2 from "../../public/images/gallery/gallery1bhk2.jpg";
+import gallery1bhk3 from "../../public/images/gallery/gallery1bhk3.jpg";
+import gallery1bhk4 from "../../public/images/gallery/gallery1bhk4.jpg";
+import galleryCustomize from "../../public/images/gallery/galleryCustomize.jpg";
+import galleryCustomize2 from "../../public/images/gallery/galleryCustomize2.jpg";
+import galleryCustomize3 from "../../public/images/gallery/galleryCustomize3.jpg";
+import galleryCustomize4 from "../../public/images/gallery/galleryCustomize4.jpg";
 
 const categories = [
   "All",
@@ -67,8 +104,48 @@ const galleryItems: GalleryItem[] = [
     aspect: "portrait",
   },
   {
+    id: 16,
+    src: galleryKitchen3,
+    category: "Modular Kitchen",
+    title: "Marble White Kitchen",
+    location: "Indiranagar, Bangalore",
+    aspect: "portrait",
+  },
+  {
+    id: 17,
+    src: galleryKitchen4,
+    category: "Modular Kitchen",
+    title: "Marble White Kitchen",
+    location: "Indiranagar, Bangalore",
+    aspect: "portrait",
+  },
+  {
     id: 3,
     src: galleryCustomize,
+    category: "Customize Your Kitchen",
+    title: "Kitchen Transformation",
+    location: "Koramangala, Bangalore",
+    aspect: "portrait",
+  },
+  {
+    id: 18,
+    src: galleryCustomize2,
+    category: "Customize Your Kitchen",
+    title: "Kitchen Transformation",
+    location: "Koramangala, Bangalore",
+    aspect: "portrait",
+  },
+  {
+    id: 19,
+    src: galleryCustomize3,
+    category: "Customize Your Kitchen",
+    title: "Kitchen Transformation",
+    location: "Koramangala, Bangalore",
+    aspect: "portrait",
+  },
+  {
+    id: 20,
+    src: galleryCustomize4,
     category: "Customize Your Kitchen",
     title: "Kitchen Transformation",
     location: "Koramangala, Bangalore",
@@ -83,6 +160,30 @@ const galleryItems: GalleryItem[] = [
     aspect: "landscape",
   },
   {
+    id: 21,
+    src: galleryWardrobe2,
+    category: "Wardrobe Designs",
+    title: "Glass Door Wardrobe",
+    location: "HSR Layout, Bangalore",
+    aspect: "landscape",
+  },
+  {
+    id: 22,
+    src: galleryWardrobe3,
+    category: "Wardrobe Designs",
+    title: "Glass Door Wardrobe",
+    location: "HSR Layout, Bangalore",
+    aspect: "landscape",
+  },
+  {
+    id: 23,
+    src: galleryWardrobe4,
+    category: "Wardrobe Designs",
+    title: "Glass Door Wardrobe",
+    location: "HSR Layout, Bangalore",
+    aspect: "landscape",
+  },
+  {
     id: 5,
     src: galleryBedroom1,
     category: "Bedroom Designs",
@@ -91,8 +192,48 @@ const galleryItems: GalleryItem[] = [
     aspect: "landscape",
   },
   {
+    id: 24,
+    src: galleryBedroom2,
+    category: "Bedroom Designs",
+    title: "Master Suite",
+    location: "Jayanagar, Bangalore",
+    aspect: "landscape",
+  },
+  {
+    id: 25,
+    src: galleryBedroom3,
+    category: "Bedroom Designs",
+    title: "Master Suite",
+    location: "Jayanagar, Bangalore",
+    aspect: "landscape",
+  },
+  {
+    id: 26,
+    src: galleryBedroom4,
+    category: "Bedroom Designs",
+    title: "Master Suite",
+    location: "Jayanagar, Bangalore",
+    aspect: "landscape",
+  },
+  {
     id: 6,
     src: galleryLiving1,
+    category: "Living Room Designs",
+    title: "Grand Living Hall",
+    location: "Sadashivanagar, Bangalore",
+    aspect: "landscape",
+  },
+  {
+    id: 27,
+    src: galleryLiving3,
+    category: "Living Room Designs",
+    title: "Grand Living Hall",
+    location: "Sadashivanagar, Bangalore",
+    aspect: "landscape",
+  },
+  {
+    id: 28,
+    src: galleryLiving4,
     category: "Living Room Designs",
     title: "Grand Living Hall",
     location: "Sadashivanagar, Bangalore",
@@ -115,8 +256,56 @@ const galleryItems: GalleryItem[] = [
     aspect: "landscape",
   },
   {
+    id: 32,
+    src: galleryDining2,
+    category: "Dining Room Designs",
+    title: "Formal Dining Room",
+    location: "Hebbal, Bangalore",
+    aspect: "landscape",
+  },
+  {
+    id: 33,
+    src: galleryDining3,
+    category: "Dining Room Designs",
+    title: "Formal Dining Room",
+    location: "Hebbal, Bangalore",
+    aspect: "landscape",
+  },
+  {
+    id: 34,
+    src: galleryDining4,
+    category: "Dining Room Designs",
+    title: "Formal Dining Room",
+    location: "Hebbal, Bangalore",
+    aspect: "landscape",
+  },
+  {
     id: 9,
     src: galleryOffice1,
+    category: "Home Office Designs",
+    title: "Executive Study",
+    location: "Bannerghatta Road",
+    aspect: "portrait",
+  },
+  {
+    id: 35,
+    src: galleryOffice2,
+    category: "Home Office Designs",
+    title: "Executive Study",
+    location: "Bannerghatta Road",
+    aspect: "portrait",
+  },
+  {
+    id: 36,
+    src: galleryOffice3,
+    category: "Home Office Designs",
+    title: "Executive Study",
+    location: "Bannerghatta Road",
+    aspect: "portrait",
+  },
+  {
+    id: 37,
+    src: galleryOffice4,
     category: "Home Office Designs",
     title: "Executive Study",
     location: "Bannerghatta Road",
@@ -131,8 +320,56 @@ const galleryItems: GalleryItem[] = [
     aspect: "portrait",
   },
   {
+    id: 38,
+    src: galleryKids2,
+    category: "Kids Bedroom Designs",
+    title: "Kids Bunk Room",
+    location: "Electronic City",
+    aspect: "portrait",
+  },
+  {
+    id: 39,
+    src: galleryKids3,
+    category: "Kids Bedroom Designs",
+    title: "Kids Bunk Room",
+    location: "Electronic City",
+    aspect: "portrait",
+  },
+  {
+    id: 40,
+    src: galleryKids4,
+    category: "Kids Bedroom Designs",
+    title: "Kids Bunk Room",
+    location: "Electronic City",
+    aspect: "portrait",
+  },
+  {
     id: 11,
     src: galleryBathroom1,
+    category: "Bathroom Designs",
+    title: "Marble Bathroom",
+    location: "JP Nagar, Bangalore",
+    aspect: "landscape",
+  },
+  {
+    id: 41,
+    src: galleryBathroom2,
+    category: "Bathroom Designs",
+    title: "Marble Bathroom",
+    location: "JP Nagar, Bangalore",
+    aspect: "landscape",
+  },
+  {
+    id: 42,
+    src: galleryBathroom3,
+    category: "Bathroom Designs",
+    title: "Marble Bathroom",
+    location: "JP Nagar, Bangalore",
+    aspect: "landscape",
+  },
+  {
+    id: 43,
+    src: galleryBathroom4,
     category: "Bathroom Designs",
     title: "Marble Bathroom",
     location: "JP Nagar, Bangalore",
@@ -147,8 +384,56 @@ const galleryItems: GalleryItem[] = [
     aspect: "landscape",
   },
   {
+    id: 29,
+    src: gallerySpace2,
+    category: "Space Saving Designs",
+    title: "Compact Bedroom",
+    location: "BTM Layout, Bangalore",
+    aspect: "landscape",
+  },
+  {
+    id: 30,
+    src: gallerySpace3,
+    category: "Space Saving Designs",
+    title: "Compact Bedroom",
+    location: "BTM Layout, Bangalore",
+    aspect: "landscape",
+  },
+  {
+    id: 31,
+    src: gallerySpace4,
+    category: "Space Saving Designs",
+    title: "Compact Bedroom",
+    location: "BTM Layout, Bangalore",
+    aspect: "landscape",
+  },
+  {
     id: 13,
     src: gallery1bhk,
+    category: "1 BHK Interior",
+    title: "Smart 1BHK Living",
+    location: "Yelahanka, Bangalore",
+    aspect: "landscape",
+  },
+  {
+    id: 44,
+    src: gallery1bhk2,
+    category: "1 BHK Interior",
+    title: "Smart 1BHK Living",
+    location: "Yelahanka, Bangalore",
+    aspect: "landscape",
+  },
+  {
+    id: 45,
+    src: gallery1bhk3,
+    category: "1 BHK Interior",
+    title: "Smart 1BHK Living",
+    location: "Yelahanka, Bangalore",
+    aspect: "landscape",
+  },
+  {
+    id: 46,
+    src: gallery1bhk4,
     category: "1 BHK Interior",
     title: "Smart 1BHK Living",
     location: "Yelahanka, Bangalore",
@@ -163,8 +448,56 @@ const galleryItems: GalleryItem[] = [
     aspect: "landscape",
   },
   {
+    id: 47,
+    src: gallery2bhk2,
+    category: "2 BHK Interior",
+    title: "Modern 2BHK Home",
+    location: "Sarjapur Road",
+    aspect: "landscape",
+  },
+  {
+    id: 48,
+    src: gallery2bhk3,
+    category: "2 BHK Interior",
+    title: "Modern 2BHK Home",
+    location: "Sarjapur Road",
+    aspect: "landscape",
+  },
+  {
+    id: 49,
+    src: gallery2bhk4,
+    category: "2 BHK Interior",
+    title: "Modern 2BHK Home",
+    location: "Sarjapur Road",
+    aspect: "landscape",
+  },
+  {
     id: 15,
     src: gallery3bhk,
+    category: "3 BHK Interior",
+    title: "Luxury 3BHK Penthouse",
+    location: "MG Road, Bangalore",
+    aspect: "portrait",
+  },
+  {
+    id: 50,
+    src: gallery3bhk2,
+    category: "3 BHK Interior",
+    title: "Luxury 3BHK Penthouse",
+    location: "MG Road, Bangalore",
+    aspect: "portrait",
+  },
+  {
+    id: 51,
+    src: gallery3bhk3,
+    category: "3 BHK Interior",
+    title: "Luxury 3BHK Penthouse",
+    location: "MG Road, Bangalore",
+    aspect: "portrait",
+  },
+  {
+    id: 52,
+    src: gallery3bhk4,
     category: "3 BHK Interior",
     title: "Luxury 3BHK Penthouse",
     location: "MG Road, Bangalore",

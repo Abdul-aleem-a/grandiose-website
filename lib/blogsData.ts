@@ -44,7 +44,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "How hiring a professional interior designer in Bangalore transforms homes with smart space planning, style, and end-to-end execution.",
     images: [
-      { src: "/sofa.jpg", alt: "Professional interior design consultation" },
+      { src: "/images/blogs/The_Grandiose_ModularKitchen_Modern_Interior_Hebbal_05.png", alt: "Professional interior design consultation" },
       { src: "/sofa.jpg", alt: "Modular kitchen and storage solutions" },
       { src: "/sofa.jpg", alt: "Luxury home interior Bangalore" },
       { src: "/sofa.jpg", alt: "Smart space planning and layouts" },
@@ -74,7 +74,7 @@ export const blogPosts: BlogPost[] = [
   <li><strong style="color: #D4AF37;">Turnkey Interior Solutions</strong> — Turnkey interior design services cover everything from concept to execution. The designer handles planning, material sourcing, carpentry, electrical work, painting, and final installation, offering homeowners a hassle-free experience.</li>
   <li><strong style="color: #D4AF37;">Renovation and Remodeling</strong> — For older homes, interior designers in Bangalore offer renovation services that refresh interiors, improve layouts, and upgrade materials without altering the entire structure.</li>
 </ul>`,
-        imageIndex: 1,
+        imageIndex: 0,
         imageAlt: "Modular kitchen and wardrobe solutions",
       },
       {

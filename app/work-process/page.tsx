@@ -11,13 +11,13 @@ import {
 import workBg from "../../public/sofa.jpg";
 
 // Import step images
-import step1Img from "../../public/sofa.jpg";
-import step2Img from "../../public/sofa.jpg";
-import step3Img from "../../public/sofa.jpg";
-import step4Img from "../../public/sofa.jpg";
-import step5Img from "../../public/sofa.jpg";
-import step6Img from "../../public/sofa.jpg";
-import { link } from "fs";
+import step1Img from "../../public/images/workProcessimgs/step1Img.jpg";
+import step2Img from "../../public/images/workProcessimgs/step2Img.jpg";
+import step3Img from "../../public/images/workProcessimgs/step3Img.jpg";
+import step4Img from "../../public/images/workProcessimgs/step4Img.jpg";
+import step5Img from "../../public/images/workProcessimgs/step5Img.jpg";
+import step6Img from "../../public/images/workProcessimgs/step6Img.jpg";
+// import { link } from "fs";
 
 const processData = [
   {

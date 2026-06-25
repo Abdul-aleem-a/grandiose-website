@@ -119,7 +119,7 @@ export default function ContactPage() {
           {/* Left: Image */}
           <div className="relative min-h-[420px] md:min-h-0">
             <Image
-              src="/contact/consultation.jpg"
+              src="/images/contact.jpg"
               alt="Consultation"
               fill
               className="object-cover object-center"

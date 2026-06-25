@@ -22,27 +22,27 @@ import {
 } from "lucide-react";
 
 // Import images with Next.js Image optimization
-import serviceResidential from "../../public/sofa.jpg";
-import serviceResidential2 from "../../public/sofa.jpg";
-import serviceResidential3 from "../../public/sofa.jpg";
-import serviceResidential4 from "../../public/sofa.jpg";
-import serviceCommercial from "../../public/sofa.jpg";
-import serviceCommercial2 from "../../public/sofa.jpg";
-import serviceCommercial3 from "../../public/sofa.jpg";
-import serviceCommercial4 from "../../public/sofa.jpg";
-import serviceCorporate from "../../public/sofa.jpg";
-import serviceCorporate2 from "../../public/sofa.jpg";
-import serviceCorporate3 from "../../public/sofa.jpg";
-import serviceCorporate4 from "../../public/sofa.jpg";
-import serviceKitchen from "../../public/sofa.jpg";
-import serviceKitchen2 from "../../public/sofa.jpg";
-import serviceKitchen3 from "../../public/sofa.jpg";
-import serviceKitchen4 from "../../public/sofa.jpg";
-import serviceArchitecture from "../../public/sofa.jpg";
-import serviceArchitecture2 from "../../public/sofa.jpg";
-import serviceArchitecture3 from "../../public/sofa.jpg";
-import serviceArchitecture4 from "../../public/sofa.jpg";
-import servicesBg from "../../public/sofa.jpg";
+import serviceResidential from "../../public/images/servicesimgs/serviceResidential.jpg";
+import serviceResidential2 from "../../public/images/servicesimgs/serviceResidential2.jpg";
+import serviceResidential3 from "../../public/images/servicesimgs/serviceResidential3.jpg";
+import serviceResidential4 from "../../public/images/servicesimgs/serviceResidential4.jpg";
+import serviceCommercial from "../../public/images/servicesimgs/serviceCommercial.jpg";
+import serviceCommercial2 from "../../public/images/servicesimgs/serviceCommercial2.jpg";
+import serviceCommercial3 from "../../public/images/servicesimgs/serviceCommercial3.jpg";
+import serviceCommercial4 from "../../public/images/servicesimgs/serviceCommercial4.jpg";
+import serviceCorporate from "../../public/images/servicesimgs/serviceCorporate.jpg";
+import serviceCorporate2 from "../../public/images/servicesimgs/serviceCorporate2.jpg";
+import serviceCorporate3 from "../../public/images/servicesimgs/serviceCorporate3.jpg";
+import serviceCorporate4 from "../../public/images/servicesimgs/serviceCorporate4.jpg";
+import serviceKitchen from "../../public/images/servicesimgs/serviceKitchen.jpg";
+import serviceKitchen2 from "../../public/images/servicesimgs/serviceKitchen2.jpg";
+import serviceKitchen3 from "../../public/images/servicesimgs/serviceKitchen3.jpg";
+import serviceKitchen4 from "../../public/images/servicesimgs/serviceKitchen4.jpg";
+import serviceArchitecture from '../../public/images/servicesimgs/serviceArchitecture.jpg'
+import serviceArchitecture2 from '../../public/images/servicesimgs/serviceArchitecture2.jpg'
+import serviceArchitecture3 from '../../public/images/servicesimgs/serviceArchitecture3.jpg'
+import serviceArchitecture4 from '../../public/images/servicesimgs/serviceArchitecture4.jpg'
+import servicesBg from "../../public/images/servicesimgs/serviceResidential3.jpg";
 
 const serviceData = [
   {
