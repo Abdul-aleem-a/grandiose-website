@@ -1,2569 +1,3255 @@
-export type Category = "ALL" | "Sofas" | "Dining Table" | "Dining Set" | "Dining Chair" | "Bed" | "Study Table" | "Wardrobes" | "Living Room" | "Accessories";
+export type Category =
+  | "ALL"
+  | "Sofas"
+  | "Dining Table"
+  | "Dining Set"
+  | "Dining Chair"
+  | "Bed"
+  | "Study Table"
+  | "Wardrobes"
+  | "Living Room"
+  | "Accessories";
 
 export interface CustomizationOption {
-    label: string;
-    color: string; // hex or tailwind-compatible
-    image: string;
+  label: string;
+  color: string; // hex or tailwind-compatible
+  image: string;
 }
 
 export interface ProductDimension {
-    label: string;
-    value: string;
+  label: string;
+  value: string;
 }
 
 export interface SignatureProduct {
-    id: number;
-    slug: string;
-    name: string;
-    tagline: string;
-    category: Exclude<Category, "ALL">;
-    price: string;
-    rating: number;
-    reviewCount: number;
-    heroImage: string;
-    galleryImages: string[];
-    descriptionImage: string;
-    description: string;
-    keyFeatures: string[];
-    dimensions: ProductDimension[];
-    customizationOptions: CustomizationOption[];
+  id: number;
+  slug: string;
+  name: string;
+  tagline: string;
+  category: Exclude<Category, "ALL">;
+  price: string;
+  rating: number;
+  reviewCount: number;
+  heroImage: string;
+  galleryImages: string[];
+  descriptionImage: string;
+  description: string;
+  keyFeatures: string[];
+  dimensions: ProductDimension[];
+  customizationOptions: CustomizationOption[];
 }
 
 export const signatureProducts: SignatureProduct[] = [
-    {
-        id: 1,
-        slug: "L-shape-sofa",
-        name: "L Shape Sofa",
-        tagline: "Refined Comfort for Sophisticated Spaces",
-        category: "Sofas",
-        price: "₹ 85,000",
-        rating: 4.5,
-        reviewCount: 22,
-        heroImage: "/products/sofa/hero.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Elegant Velvet Armchair is a statement piece that blends classical form with contemporary luxury. Upholstered in premium velvet with brass-tipped legs, it brings a refined grandeur to any living space. Part of The Grandiose Signature Collection, each piece is handcrafted for enduring comfort and aesthetic distinction.",
-        keyFeatures: [
-            "Premium deep-pile velvet upholstery",
-            "Solid hardwood frame with brass-tipped legs",
-            "High-density foam cushioning for lasting comfort",
-            "Available in multiple bespoke colorways",
-        ],
-        dimensions: [
-            { label: "Seat Height", value: '18"' },
-            { label: "Width", value: '32"' },
-            { label: "Depth", value: '30"' },
-        ],
-        customizationOptions: [
-            { label: "Emerald Green", color: "#1B4D3E", image: "/sofa.jpg" },
-            { label: "Royal Navy", color: "#1a2744", image: "/sofa.jpg" },
-            { label: "Champagne Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    },
-    {
-        id: 2,
-        slug: "U-shape-sofa",
-        name: "U shape sofa",
-        tagline: "A Statement Centrepiece for the Living Room",
-        category: "Sofas",
-        price: "₹ 1,20,000",
-        rating: 5,
-        reviewCount: 18,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "Crafted with a book-matched Calacatta marble top resting on a hand-polished solid brass drum base, this coffee table is a conversation piece in itself. Its weight and presence command attention while its clean proportions allow it to complement any interior palette.",
-        keyFeatures: [
-            "Book-matched Calacatta marble top",
-            "Hand-polished solid brass cylindrical base",
-            "Scratch-resistant surface treatment",
-            "Expertly weighted for stability",
-        ],
-        dimensions: [
-            { label: "Diameter", value: '48"' },
-            { label: "Height", value: '16"' },
-        ],
-        customizationOptions: [
-            { label: "White Marble", color: "#e8e0d0", image: "/sofa.jpg" },
-            { label: "Black Marble", color: "#2a2a2a", image: "/sofa.jpg" },
-        ],
-    },
-    {
-        id: 3,
-        slug: "chesterfield-sofa",
-        name: "Chesterfield Sofa",
-        tagline: "Timeless Elegance for Classic Interiors",
-        category: "Sofas",
-        price: "₹ 1,45,000",
-        rating: 4,
-        reviewCount: 11,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Chesterfield Sofa combines traditional craftsmanship with modern comfort. Its distinctive rolled arms and tufted upholstery create a timeless appeal that complements any classic interior.",
-        keyFeatures: [
-            "Hand-stitched tufting with premium fabric",
-            "Solid hardwood frame with brass nailhead trim",
-            "High-density foam cushioning for lasting comfort",
-            "Available in multiple bespoke colorways",
-        ],
-        dimensions: [
-            { label: "Height", value: '34"' },
-            { label: "Width", value: '72"' },
-            { label: "Depth", value: '16"' },
-        ],
-        customizationOptions: [
-            { label: "Dark Walnut", color: "#3b2314", image: "/sofa.jpg", },
-            { label: "Light Oak", color: "#c49a6c", image: "/sofa.jpg" },
-            { label: "Ebony", color: "#1a1a1a", image: "/sofa.jpg" },
-        ],
-    },
-    {
-        id: 4,
-        slug: "lawson-sofa",
-        name: "Lawson sofa",
-        tagline: "Illuminate Your Space with Timeless Drama",
-        category: "Sofas",
-        price: "₹ 2,50,000",
-        rating: 5,
-        reviewCount: 30,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg", "/sofa.jpg", "/sofa.jpg", "/sofa.jpg",
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "A cascading tiered crystal chandelier that transforms any ceiling into a luminous spectacle. Hand-assembled with precision-cut crystal prisms, each piece refracts light into a warm golden cascade. Engineered for grand living rooms, double-height spaces, and luxury hotel lobbies.",
-        keyFeatures: [
-            "Precision-cut K9 crystal prisms",
-            "Tiered brass-frame architecture",
-            "Compatible with dimmable LED systems",
-            "Custom sizing available on request",
-        ],
-        dimensions: [
-            { label: "Diameter", value: '36"' },
-            { label: "Height", value: '48"' },
-            { label: "Weight", value: "18 kg" },
-        ],
-        customizationOptions: [
-            { label: "Gold Frame", color: "#D4AF37", image: "/sofa.jpg", },
-            { label: "Chrome Frame", color: "#c0c0c0", image: "/sofa.jpg" },
-            { label: "Black Frame", color: "#1a1a1a", image: "/sofa.jpg" },
-        ],
-    },
-    {
-        id: 5,
-        slug: "cabriolet-sofa",
-        name: "Cabriolet Sofa",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Sofas",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    },
-    {
-        id: 6,
-        slug: "mid-century-sofa",
-        name: "Mid Century Modern Sofa",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Sofas",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "sofa-chaise",
-        name: "Sofa Chaise",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Sofas",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "rectangular-dining-table",
-        name: "Rectangular Dining Table",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Table",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "square-dining-table",
-        name: "Square Dining Table",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Table",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "round-dining-table",
-        name: "Round Dining Table",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Table",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "oval-dining-table",
-        name: "Oval Dining Table",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Table",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "extendable-dining-table",
-        name: "Extendable Dining Table",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Table",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "drop-leaf-dining-table",
-        name: "Drop Leaf Dining Table",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Table",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "glass-top-dining-table",
-        name: "Glass Top Dining Table",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Table",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "traditional-dining-set",
-        name: "Traditional Dining Set",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Set",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "modern-dining-set",
-        name: "Modern Dining Set",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Set",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "rustic-dining-table",
-        name: "Rustic Dining Table",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Set",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "industrial-dining-table",
-        name: "Industrial Dining Table",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Set",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "contemporary-dining-table",
-        name: "Contemporary Dining Table",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Set",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "farm-house-dining-table",
-        name: "Farm House Dining Table",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Set",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "scandinavian-dining-table",
-        name: "Scandinavian Dining Table",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Set",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "wingback-dining-chair",
-        name: "Wingback Dining Chair",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Chair",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "slat-back-dining-chair",
-        name: "Slat-Back Dining Chair",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Chair",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "ladder-back-dining-chair",
-        name: "Ladder Back Dining Chair",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Chair",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "windsor-chair",
-        name: "Windsor Chair",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Chair",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "parsons-dining-chair",
-        name: "Parsons Dining Chair",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Chair",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "bentwood-dining-chair",
-        name: "Bentwood Dining Chair",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Chair",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "wishbone-dining-chair",
-        name: "Wishbone Dining Chair",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Dining Chair",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "twin-bed",
-        name: "Twin Bed",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Bed",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "double-bed",
-        name: "Double Bed",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Bed",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "queen-bed",
-        name: "Queen Bed",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Bed",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "king-bed",
-        name: "King Bed",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Bed",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "california-king-bed",
-        name: "California King Bed",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Bed",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "bunk-bed",
-        name: "Bunk Bed",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Bed",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "murphy-bed",
-        name: "Murphy Bed",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Bed",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "writing-desk",
-        name: "Writing Desk",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Study Table",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "computer-desk",
-        name: "Computer Desk",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Study Table",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "corner-desk",
-        name: "Corner Desk",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Study Table",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "standing-desk",
-        name: "Standing Desk",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Study Table",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "wall-mounted-desk",
-        name: "Wall-Mounted Desk",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Study Table",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "l-shaped-desk",
-        name: "L-Shaped Desk",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Study Table",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "foldable-desk",
-        name: "Foldable Desk",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Study Table",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "hinged-door-wardrobe",
-        name: "Hinged Door Wardrobe",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Wardrobes",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "sliding-door-wardrobe",
-        name: "Sliding Door Wardrobe",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Wardrobes",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "l-shape-wardrobe",
-        name: "L-Shaped Wardrobe",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Wardrobes",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "mirrored-wardrobe",
-        name: "Mirrored Wardrobe",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Wardrobes",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "free-standing-wardrobe",
-        name: "Free standing Wardrobe",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Wardrobes",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "single-door-wardrobe",
-        name: "Single Door Wardrobe",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Wardrobes",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "Armories",
-        name: " Armories",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Wardrobes",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "book-shelf",
-        name: "Book Shelf",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Living Room",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "cabinet",
-        name: "Cabinet",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Living Room",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "chest-of-drawers",
-        name: "Chest of Drawers",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Living Room",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "coffee-table",
-        name: "Coffee Table",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Living Room",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "sofa-set",
-        name: "Sofa Set",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Living Room",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "side-table",
-        name: "Side Table",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Living Room",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "tv-cabinet",
-        name: "TV Cabinet",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Living Room",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "auto-pullout",
-        name: "Auto Pullout Waste double Waste Bin",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Accessories",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "plastic-basket",
-        name: "Plastic wicker Basket Soft Close",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Accessories",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "premium-wall-bed-system-",
-        name: "Premium Wall Bed System",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Accessories",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "pullout-waste-bin",
-        name: "Pullout Waste Bin 4 - 40 Ltr",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Accessories",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "kitchen-cutlery-tray-2",
-        name: "Kitchen Cutlery Tray 2",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Accessories",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "detergent-caddie",
-        name: "Detergent Caddie",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Accessories",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "pro-motion-drawer-system",
-        name: "Pro Motion Drawer System 203-S3",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Accessories",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "pro-motion-drawer-system-120",
-        name: "Pro Motion Drawer System 120-Slim 2",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Accessories",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "kitchen-drawer-rack",
-        name: "Kitchen Drawer Rack - Thali",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Accessories",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "anti-skid-mat",
-        name: "Anti-Skid Mat",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Accessories",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "lid-Holder",
-        name: "Lid Holder For Pan Hanger",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Accessories",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "magic-corner-double-pullout-glass",
-        name: "Magic Corner Double Pullout - Glass",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Accessories",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "wardrobe-rail-fittings",
-        name: "Wardrobe Rail Fittings – Rectangular With Luminor 16",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Accessories",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "kitchen-drawer-rack-plate-ss304",
-        name: "Kitchen Drawer Rack-Plate-SS304",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Accessories",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "cupboard-pullout-system-50",
-        name: "Cupboard Pullout System - 50",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Accessories",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "mixer-lift-up-stand",
-        name: "Mixer Lift Up Stand",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Accessories",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "swing-out-waste-bin-ss-14-ltr",
-        name: "Swing Out Waste Bin - SS (14 Ltr)",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Accessories",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    }, {
-        id: 6,
-        slug: "pro-lift-bed-fittings",
-        name: "Pro Lift Bed Fittings- Easy Fit- Extended Arm- 40 (w/o Gas Lifts)",
-        tagline: "Elegant Comfort for Modern Bedrooms",
-        category: "Accessories",
-        price: "₹ 1,75,000",
-        rating: 4.5,
-        reviewCount: 15,
-        heroImage: "/sofa.jpg",
-        galleryImages: [
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg",
-            "/sofa.jpg"
-        ],
-        descriptionImage: "/sofa.jpg",
-        description:
-            "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
-        keyFeatures: [
-            "Upholstered headboard with textured fabric",
-            "Luxurious blend of velvet and satin accents",
-            "Elegant two-tone bedding set (sold separately)",
-            "Expertly crafted for enduring comfort",
-        ],
-        dimensions: [
-            { label: "Headboard", value: '60" H' },
-            { label: "Width", value: '78"' },
-            { label: "Length", value: '84"' },
-        ],
-        customizationOptions: [
-            { label: "White", color: "#f0ece4", image: "/sofa.jpg" },
-            { label: "Beige", color: "#c8a97e", image: "/sofa.jpg" },
-        ],
-    },
+  {
+    id: 1,
+    slug: "L-shape-sofa",
+    name: "L Shape Sofa",
+    tagline: "Refined Comfort for Sophisticated Spaces",
+    category: "Sofas",
+    price: "₹ 85,000",
+    rating: 4.5,
+    reviewCount: 22,
+    heroImage: "/images/products/l-shape-sofa.webP",
+    galleryImages: [
+      "/images/products/l-shape-sofa2.webP",
+      "/images/products/l-shape-sofa3.webP",
+      "/images/products/l-shape-sofa4.webP",
+      "/images/products/l-shape-sofa5.webP",
+    ],
+    descriptionImage: "/images/products/l-shape-sofa6.webP",
+    description:
+      "The Elegant Velvet Armchair is a statement piece that blends classical form with contemporary luxury. Upholstered in premium velvet with brass-tipped legs, it brings a refined grandeur to any living space. Part of The Grandiose Signature Collection, each piece is handcrafted for enduring comfort and aesthetic distinction.",
+    keyFeatures: [
+      "Premium deep-pile velvet upholstery",
+      "Solid hardwood frame with brass-tipped legs",
+      "High-density foam cushioning for lasting comfort",
+      "Available in multiple bespoke colorways",
+    ],
+    dimensions: [
+      { label: "Seat Height", value: '18"' },
+      { label: "Width", value: '32"' },
+      { label: "Depth", value: '30"' },
+    ],
+    customizationOptions: [
+      {
+        label: "Emerald Green",
+        color: "#1B4D3E",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Royal Navy",
+        color: "#1a2744",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Champagne Beige",
+        color: "#c8a97e",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+    ],
+  },
+  {
+    id: 2,
+    slug: "U-shape-sofa",
+    name: "U shape sofa",
+    tagline: "A Statement Centrepiece for the Living Room",
+    category: "Sofas",
+    price: "₹ 1,20,000",
+    rating: 5,
+    reviewCount: 18,
+    heroImage: "/images/products/u-shape-sofa2.webP",
+    galleryImages: [
+      "/images/products/u-shape-sofa2.webP",
+      "/images/products/u-shape-sofa3.webP",
+      "/images/products/u-shape-sofa4.webP",
+      "/images/products/u-shape-sofa5.webP",
+    ],
+    descriptionImage: "/images/products/u-shape-sofa4.webP",
+    description:
+      "Crafted with a book-matched Calacatta marble top resting on a hand-polished solid brass drum base, this coffee table is a conversation piece in itself. Its weight and presence command attention while its clean proportions allow it to complement any interior palette.",
+    keyFeatures: [
+      "Book-matched Calacatta marble top",
+      "Hand-polished solid brass cylindrical base",
+      "Scratch-resistant surface treatment",
+      "Expertly weighted for stability",
+    ],
+    dimensions: [
+      { label: "Diameter", value: '48"' },
+      { label: "Height", value: '16"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White Marble",
+        color: "#e8e0d0",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Black Marble",
+        color: "#2a2a2a",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+    ],
+  },
+  {
+    id: 3,
+    slug: "chesterfield-sofa",
+    name: "Chesterfield Sofa",
+    tagline: "Timeless Elegance for Classic Interiors",
+    category: "Sofas",
+    price: "₹ 1,45,000",
+    rating: 4,
+    reviewCount: 11,
+    heroImage: "/images/products/chesterfield-sofa.webP",
+    galleryImages: [
+      "/images/products/chesterfield-sofa2.webP",
+      "/images/products/chesterfield-sofa3.webP",
+      "/images/products/chesterfield-sofa4.webP",
+      "/images/products/chesterfield-sofa5.webP",
+    ],
+    descriptionImage: "/images/products/chesterfield-sofa2.webP",
+    description:
+      "The Chesterfield Sofa combines traditional craftsmanship with modern comfort. Its distinctive rolled arms and tufted upholstery create a timeless appeal that complements any classic interior.",
+    keyFeatures: [
+      "Hand-stitched tufting with premium fabric",
+      "Solid hardwood frame with brass nailhead trim",
+      "High-density foam cushioning for lasting comfort",
+      "Available in multiple bespoke colorways",
+    ],
+    dimensions: [
+      { label: "Height", value: '34"' },
+      { label: "Width", value: '72"' },
+      { label: "Depth", value: '16"' },
+    ],
+    customizationOptions: [
+      {
+        label: "Dark Walnut",
+        color: "#3b2314",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Light Oak",
+        color: "#c49a6c",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Ebony",
+        color: "#1a1a1a",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+    ],
+  },
+  {
+    id: 4,
+    slug: "lawson-sofa",
+    name: "Lawson sofa",
+    tagline: "Illuminate Your Space with Timeless Drama",
+    category: "Sofas",
+    price: "₹ 2,50,000",
+    rating: 5,
+    reviewCount: 30,
+    heroImage: "/images/products/lawson-sofa.webP",
+    galleryImages: [
+      "/images/products/lawson-sofa2.webP",
+      "/images/products/lawson-sofa3.webP",
+      "/images/products/lawson-sofa4.webP",
+      "/images/products/lawson-sofa5.webP",
+    ],
+    descriptionImage: "/images/products/lawson-sofa3.webP",
+    description:
+      "A cascading tiered crystal chandelier that transforms any ceiling into a luminous spectacle. Hand-assembled with precision-cut crystal prisms, each piece refracts light into a warm golden cascade. Engineered for grand living rooms, double-height spaces, and luxury hotel lobbies.",
+    keyFeatures: [
+      "Precision-cut K9 crystal prisms",
+      "Tiered brass-frame architecture",
+      "Compatible with dimmable LED systems",
+      "Custom sizing available on request",
+    ],
+    dimensions: [
+      { label: "Diameter", value: '36"' },
+      { label: "Height", value: '48"' },
+      { label: "Weight", value: "18 kg" },
+    ],
+    customizationOptions: [
+      {
+        label: "Gold Frame",
+        color: "#D4AF37",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Chrome Frame",
+        color: "#c0c0c0",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Black Frame",
+        color: "#1a1a1a",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+    ],
+  },
+  {
+    id: 5,
+    slug: "cabriolet-sofa",
+    name: "Cabriolet Sofa",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Sofas",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/cabriole-sofa.webP",
+    galleryImages: [
+      "/images/products/cabriole-sofa2.webP",
+      "/images/products/cabriole-sofa3.webP",
+      "/images/products/cabriole-sofa4.webP",
+      "/images/products/cabriole-sofa5.webP",
+    ],
+    descriptionImage: "/images/products/cabriole-sofa6.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "mid-century-sofa",
+    name: "Mid Century Modern Sofa",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Sofas",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/mid-century-sofa.webP",
+    galleryImages: [
+      "/images/products/mid-century-sofa2.webP",
+      "/images/products/mid-century-sofa3.webP",
+      "/images/products/mid-century-sofa4.webP",
+      "/images/products/mid-century-sofa5.webP",
+    ],
+    descriptionImage: "/images/products/mid-century-sofa6.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "sofa-chaise",
+    name: "Sofa Chaise",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Sofas",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/sofa-chaise.webP",
+    galleryImages: [
+      "/images/products/sofa-chaise2.webP",
+      "/images/products/sofa-chaise3.webP",
+      "/images/products/sofa-chaise4.webP",
+      "/images/products/sofa-chaise5.webP",
+    ],
+    descriptionImage: "/images/products/sofa-chaise6.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "rectangular-dining-table",
+    name: "Rectangular Dining Table",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Table",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/rectangular-dining-table.webP",
+    galleryImages: [
+      "/images/products/rectangular-dining-table2.webP",
+      "/images/products/rectangular-dining-table3.webP",
+      "/images/products/rectangular-dining-table4.webP",
+      "/images/products/rectangular-dining-table5.webP",
+    ],
+    descriptionImage: "/images/products/rectangular-dining-table6.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "square-dining-table",
+    name: "Square Dining Table",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Table",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/square-dining-table.webP",
+    galleryImages: [
+      "/images/products/square-dining-table2.webP",
+      "/images/products/square-dining-table3.webP",
+      "/images/products/square-dining-table.webP",
+      "/images/products/square-dining-table2.webP",
+    ],
+    descriptionImage: "/images/products/square-dining-table3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "round-dining-table",
+    name: "Round Dining Table",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Table",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/round-dining-table.webP",
+    galleryImages: [
+      "/images/products/round-dining-table2.webP",
+      "/images/products/round-dining-table3.webP",
+      "/images/products/round-dining-table.webP",
+      "/images/products/round-dining-table2.webP",
+    ],
+    descriptionImage: "/images/products/round-dining-table3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "oval-dining-table",
+    name: "Oval Dining Table",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Table",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/oval-dining-table.webP",
+    galleryImages: [
+      "/images/products/oval-dining-table2.webP",
+      "/images/products/oval-dining-table3.webP",
+      "/images/products/oval-dining-table.webP",
+      "/images/products/oval-dining-table2.webP",
+    ],
+    descriptionImage: "/images/products/oval-dining-table3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "extendable-dining-table",
+    name: "Extendable Dining Table",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Table",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/extendable-dining-table.webP",
+    galleryImages: [
+      "/images/products/extendable-dining-table2.webP",
+      "/images/products/extendable-dining-table3.webP",
+      "/images/products/extendable-dining-table.webP",
+      "/images/products/extendable-dining-table2.webP",
+    ],
+    descriptionImage: "/images/products/extendable-dining-table3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "drop-leaf-dining-table",
+    name: "Drop Leaf Dining Table",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Table",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/drop-leaf-dining-table.webP",
+    galleryImages: [
+      "/images/products/drop-leaf-dining-table2.webP",
+      "/images/products/drop-leaf-dining-table3.webP",
+      "/images/products/drop-leaf-dining-table.webP",
+      "/images/products/drop-leaf-dining-table2.webP",
+    ],
+    descriptionImage: "/images/products/drop-leaf-dining-table3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "glass-top-dining-table",
+    name: "Glass Top Dining Table",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Table",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/glass-top-table.webP",
+    galleryImages: [
+      "/images/products/glass-top-table.webP",
+      "/images/products/glass-top-table.webP",
+      "/images/products/glass-top-table.webP",
+      "/images/products/glass-top-table.webP",
+    ],
+    descriptionImage: "/images/products/glass-top-table.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "traditional-dining-set",
+    name: "Traditional Dining Set",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Set",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/traditional-dining-set.webP",
+    galleryImages: [
+      "/images/products/traditional-dining-set2.webP",
+      "/images/products/traditional-dining-set3.webP",
+      "/images/products/traditional-dining-set.webP",
+      "/images/products/traditional-dining-set2.webP",
+    ],
+    descriptionImage: "/images/products/traditional-dining-set3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "modern-dining-set",
+    name: "Modern Dining Set",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Set",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/modern-dining-set.webP",
+    galleryImages: [
+      "/images/products/modern-dining-set2.webP",
+      "/images/products/modern-dining-set3.webP",
+      "/images/products/modern-dining-set.webP",
+      "/images/products/modern-dining-set2.webP",
+    ],
+    descriptionImage: "/images/products/modern-dining-set3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "rustic-dining-table",
+    name: "Rustic Dining Table",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Set",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/rustic-dining-set.webP",
+    galleryImages: [
+      "/images/products/rustic-dining-set2.webP",
+      "/images/products/rustic-dining-set3.webP",
+      "/images/products/rustic-dining-set.webP",
+      "/images/products/rustic-dining-set2.webP",
+    ],
+    descriptionImage: "/images/products/rustic-dining-set3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "industrial-dining-table",
+    name: "Industrial Dining Table",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Set",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/industrial-dining-set.webP",
+    galleryImages: [
+      "/images/products/industrial-dining-set2.webP",
+      "/images/products/industrial-dining-set3.webP",
+      "/images/products/industrial-dining-set.webP",
+      "/images/products/industrial-dining-set2.webP",
+    ],
+    descriptionImage: "/images/products/industrial-dining-set3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/industrial-dining-set3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "contemporary-dining-table",
+    name: "Contemporary Dining Table",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Set",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/contemporary.webP",
+    galleryImages: [
+      "/images/products/contemporary2.webP",
+      "/images/products/contemporary3.webP",
+      "/images/products/contemporary.webP",
+      "/images/products/contemporary2.webP",
+    ],
+    descriptionImage: "/images/products/contemporary3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/contemporary.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/contemporary.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "farm-house-dining-table",
+    name: "Farm House Dining Table",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Set",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/farmhouse.webP",
+    galleryImages: [
+      "/images/products/farmhouse2.webP",
+      "/images/products/farmhouse3.webP",
+      "/images/products/farmhouse.webP",
+      "/images/products/farmhouse2.webP",
+    ],
+    descriptionImage: "/images/products/farmhouse3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/farmhouse3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/farmhouse3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "scandinavian-dining-table",
+    name: "Scandinavian Dining Table",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Set",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/scandinavian.webP",
+    galleryImages: [
+      "/images/products/scandinavian2.webP",
+      "/images/products/scandinavian3.webP",
+      "/images/products/scandinavian.webP",
+      "/images/products/scandinavian2.webP",
+    ],
+    descriptionImage: "/images/products/scandinavian3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/scandinavian3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/scandinavian3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "wingback-dining-chair",
+    name: "Wingback Dining Chair",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Chair",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/wingback.webP",
+    galleryImages: [
+      "/images/products/wingback2.webP",
+      "/images/products/wingback3.webP",
+      "/images/products/wingback.webP",
+      "/images/products/wingback2.webP",
+    ],
+    descriptionImage: "/images/products/wingback3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/wingback3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/wingback3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "slat-back-dining-chair",
+    name: "Slat-Back Dining Chair",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Chair",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/slat-back.webP",
+    galleryImages: [
+      "/images/products/slat-back2.webP",
+      "/images/products/slat-back3.webP",
+      "/images/products/slat-back.webP",
+      "/images/products/slat-back2.webP",
+    ],
+    descriptionImage: "/images/products/slat-back3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/slat-back3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/slat-back3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "ladder-back-dining-chair",
+    name: "Ladder Back Dining Chair",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Chair",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/ladder.webP",
+    galleryImages: [
+      "/images/products/ladder2.webP",
+      "/images/products/ladder3.webP",
+      "/images/products/ladder.webP",
+      "/images/products/ladder2.webP",
+    ],
+    descriptionImage: "/images/products/ladder3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/ladder.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/ladder.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "windsor-chair",
+    name: "Windsor Chair",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Chair",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/windsor.webP",
+    galleryImages: [
+      "/images/products/windsor2.webP",
+      "/images/products/windsor3.webP",
+      "/images/products/windsor.webP",
+      "/images/products/windsor2.webP",
+    ],
+    descriptionImage: "/images/products/windsor3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/windsor.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/windsor.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "parsons-dining-chair",
+    name: "Parsons Dining Chair",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Chair",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Parsons.webP",
+    galleryImages: [
+      "/images/products/Parsons2.webP",
+      "/images/products/Parsons3.webP",
+      "/images/products/Parsons.webP",
+      "/images/products/Parsons2.webP",
+    ],
+    descriptionImage: "/images/products/Parsons3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Parsons3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Parsons3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "bentwood-dining-chair",
+    name: "Bentwood Dining Chair",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Chair",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Bentwood.webP",
+    galleryImages: [
+      "/images/products/Bentwood2.webP",
+      "/images/products/Bentwood3.webP",
+      "/images/products/Bentwood.webP",
+      "/images/products/Bentwood2.webP",
+    ],
+    descriptionImage: "/images/products/Bentwood3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Bentwood3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Bentwood3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "wishbone-dining-chair",
+    name: "Wishbone Dining Chair",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Dining Chair",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Wishbone.webP",
+    galleryImages: [
+      "/images/products/Wishbone2.webP",
+      "/images/products/Wishbone3.webP",
+      "/images/products/Wishbone.webP",
+      "/images/products/Wishbone2.webP",
+    ],
+    descriptionImage: "/images/products/Wishbone3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Wishbone3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Wishbone3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "twin-bed",
+    name: "Twin Bed",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Bed",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Twin.webP",
+    galleryImages: [
+      "/images/products/Twin2.webP",
+      "/images/products/Twin3.webP",
+      "/images/products/Twin.webP",
+      "/images/products/Twin2.webP",
+    ],
+    descriptionImage: "/images/products/Twin3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Twin3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Twin3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "double-bed",
+    name: "Double Bed",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Bed",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Double.webP",
+    galleryImages: [
+      "/images/products/Double2.webP",
+      "/images/products/Double3.webP",
+      "/images/products/Double.webP",
+      "/images/products/Double2.webP",
+    ],
+    descriptionImage: "/images/products/Double3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Double3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Double3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "queen-bed",
+    name: "Queen Bed",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Bed",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Queen.webP",
+    galleryImages: [
+      "/images/products/Queen2.webP",
+      "/images/products/Queen3.webP",
+      "/images/products/Queen.webP",
+      "/images/products/Queen2.webP",
+    ],
+    descriptionImage: "/images/products/Queen3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Queen3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Queen3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "king-bed",
+    name: "King Bed",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Bed",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/king.webP",
+    galleryImages: [
+      "/images/products/king2.webP",
+      "/images/products/king3.webP",
+      "/images/products/king.webP",
+      "/images/products/king2.webP",
+    ],
+    descriptionImage: "/images/products/king3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/king3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/king.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "california-king-bed",
+    name: "California King Bed",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Bed",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/California.webP",
+    galleryImages: [
+      "/images/products/California2.webP",
+      "/images/products/California3.webP",
+      "/images/products/California.webP",
+      "/images/products/California2.webP",
+    ],
+    descriptionImage: "/images/products/California3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/California3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/California2.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "bunk-bed",
+    name: "Bunk Bed",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Bed",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/bunk.webP",
+    galleryImages: [
+      "/images/products/bunk2.webP",
+      "/images/products/bunk3.webP",
+      "/images/products/bunk.webP",
+      "/images/products/bunk2.webP",
+    ],
+    descriptionImage: "/images/products/bunk3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/bunk3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/bunk3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "murphy-bed",
+    name: "Murphy Bed",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Bed",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Murphy.webP",
+    galleryImages: [
+      "/images/products/Murphy2.webP",
+      "/images/products/Murphy3.webP",
+      "/images/products/Murphy.webP",
+      "/images/products/Murphy2.webP",
+    ],
+    descriptionImage: "/images/products/Murphy3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Murphy3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Murphy3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "writing-desk",
+    name: "Writing Desk",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Study Table",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Writing.webP",
+    galleryImages: [
+      "/images/products/Writing2.webP",
+      "/images/products/Writing3.webP",
+      "/images/products/Writing.webP",
+      "/images/products/Writing2.webP",
+    ],
+    descriptionImage: "/images/products/Writing3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Writing3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Writing.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "computer-desk",
+    name: "Computer Desk",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Study Table",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Computer.webP",
+    galleryImages: [
+      "/images/products/Computer2.webP",
+      "/images/products/Computer3.webP",
+      "/images/products/Computer.webP",
+      "/images/products/Computer2.webP",
+    ],
+    descriptionImage: "/images/products/Computer3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Computer3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Computer.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "corner-desk",
+    name: "Corner Desk",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Study Table",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Corner.webP",
+    galleryImages: [
+      "/images/products/Corner2.webP",
+      "/images/products/Corner3.webP",
+      "/images/products/Corner.webP",
+      "/images/products/Corner2.webP",
+    ],
+    descriptionImage: "/images/products/Corner3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Corner3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Corner.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "standing-desk",
+    name: "Standing Desk",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Study Table",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Standing3.webP",
+    galleryImages: [
+      "/images/products/Standing.webP",
+      "/images/products/Standing2.webP",
+      "/images/products/Standing3.webP",
+      "/images/products/Standing.webP",
+    ],
+    descriptionImage: "/images/products/Standing2.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Standing3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Standing2.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "wall-mounted-desk",
+    name: "Wall-Mounted Desk",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Study Table",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/wall-mount.webP",
+    galleryImages: [
+      "/images/products/wall-mount2.webP",
+      "/images/products/wall-mount3.webP",
+      "/images/products/wall-mount.webP",
+      "/images/products/wall-mount2.webP",
+    ],
+    descriptionImage: "/images/products/wall-mount3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/wall-mount3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/wall-mount.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "l-shaped-desk",
+    name: "L-Shaped Desk",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Study Table",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/L-Shaped.webP",
+    galleryImages: [
+      "/images/products/L-Shaped2.webP",
+      "/images/products/L-Shaped3.webP",
+      "/images/products/L-Shaped.webP",
+      "/images/products/L-Shaped2.webP",
+    ],
+    descriptionImage: "/images/products/L-Shaped3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/L-Shaped3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/L-Shaped.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "foldable-desk",
+    name: "Foldable Desk",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Study Table",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Foldable.webP",
+    galleryImages: [
+      "/images/products/Foldable2.webP",
+      "/images/products/Foldable3.webP",
+      "/images/products/Foldable.webP",
+      "/images/products/Foldable2.webP",
+    ],
+    descriptionImage: "/images/products/Foldable3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Foldable3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Foldable2.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "hinged-door-wardrobe",
+    name: "Hinged Door Wardrobe",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Wardrobes",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Hinged.webP",
+    galleryImages: [
+      "/images/products/Hinged2.webP",
+      "/images/products/Hinged3.webP",
+      "/images/products/Hinged.webP",
+      "/images/products/Hinged2.webP",
+    ],
+    descriptionImage: "/images/products/Hinged3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Hinged3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Hinged.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "sliding-door-wardrobe",
+    name: "Sliding Door Wardrobe",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Wardrobes",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Sliding.webP",
+    galleryImages: [
+      "/images/products/Sliding2.webP",
+      "/images/products/Sliding3.webP",
+      "/images/products/Sliding.webP",
+      "/images/products/Sliding2.webP",
+    ],
+    descriptionImage: "/images/products/Sliding3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Sliding3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Sliding2.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "l-shape-wardrobe",
+    name: "L-Shaped Wardrobe",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Wardrobes",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/L-Shaped-Wardrobe.webP",
+    galleryImages: [
+      "/images/products/L-Shaped-Wardrobe2.webP",
+      "/images/products/L-Shaped-Wardrobe3.webP",
+      "/images/products/L-Shaped-Wardrobe.webP",
+      "/images/products/L-Shaped-Wardrobe2.webP",
+    ],
+    descriptionImage: "/images/products/L-Shaped-Wardrobe3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/L-Shaped-Wardrobe3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/L-Shaped-Wardrobe2.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "mirrored-wardrobe",
+    name: "Mirrored Wardrobe",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Wardrobes",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Mirrored.webP",
+    galleryImages: [
+      "/images/products/Mirrored2.webP",
+      "/images/products/Mirrored3.webP",
+      "/images/products/Mirrored.webP",
+      "/images/products/Mirrored2.webP",
+    ],
+    descriptionImage: "/images/products/Mirrored3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Mirrored3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Mirrored.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "free-standing-wardrobe",
+    name: "Free standing Wardrobe",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Wardrobes",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Freestanding3.webP",
+    galleryImages: [
+      "/images/products/Freestanding2.webP",
+      "/images/products/Freestanding.webP",
+      "/images/products/Freestanding3.webP",
+      "/images/products/Freestanding2.webP",
+    ],
+    descriptionImage: "/images/products/Freestanding.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Freestanding3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Freestanding2.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "single-door-wardrobe",
+    name: "Single Door Wardrobe",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Wardrobes",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Single-Door3.webP",
+    galleryImages: [
+      "/images/products/Single-Door2.webP",
+      "/images/products/Single-Door.webP",
+      "/images/products/Single-Door3.webP",
+      "/images/products/Single-Door2.webP",
+    ],
+    descriptionImage: "/images/products/Single-Door3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Single-Door3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Single-Door2.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "Armories",
+    name: " Armories",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Wardrobes",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Armoires3.webP",
+    galleryImages: [
+      "/images/products/Armoires2.webP",
+      "/images/products/Armoires.webP",
+      "/images/products/Armoires3.webP",
+      "/images/products/Armoires2.webP",
+    ],
+    descriptionImage: "/images/products/Armoires3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Armoires3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Armoires.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "book-shelf",
+    name: "Book Shelf",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Living Room",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Book-Shelf.webP",
+    galleryImages: [
+      "/images/products/Book-Shelf2.webP",
+      "/images/products/Book-Shelf3.webP",
+      "/images/products/Book-Shelf.webP",
+      "/images/products/Book-Shelf2.webP",
+    ],
+    descriptionImage: "/images/products/Book-Shelf3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Book-Shelf.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Book-Shelf3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "cabinet",
+    name: "Cabinet",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Living Room",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Cabinet3.webP",
+    galleryImages: [
+      "/images/products/Cabinet2.webP",
+      "/images/products/Cabinet.webP",
+      "/images/products/Cabinet3.webP",
+      "/images/products/Cabinet2.webP",
+    ],
+    descriptionImage: "/images/products/Cabinet.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Cabinet3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Cabinet.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "chest-of-drawers",
+    name: "Chest of Drawers",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Living Room",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Chest3.webP",
+    galleryImages: [
+      "/images/products/Chest2.webP",
+      "/images/products/Chest.webP",
+      "/images/products/Chest3.webP",
+      "/images/products/Chest2.webP",
+    ],
+    descriptionImage: "/images/products/Chest.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Chest.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Chest3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "coffee-table",
+    name: "Coffee Table",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Living Room",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Coffee3.webP",
+    galleryImages: [
+      "/images/products/Coffee2.webP",
+      "/images/products/Coffee.webP",
+      "/images/products/Coffee3.webP",
+      "/images/products/Coffee2.webP",
+    ],
+    descriptionImage: "/images/products/Coffee.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Coffee3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Coffee2.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "sofa-set",
+    name: "Sofa Set",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Living Room",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Sofa-Set3.webP",
+    galleryImages: [
+      "/images/products/Sofa-Set2.webP",
+      "/images/products/Sofa-Set.webP",
+      "/images/products/Sofa-Set3.webP",
+      "/images/products/Sofa-Set2.webP",
+    ],
+    descriptionImage: "/images/products/Sofa-Set.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Sofa-Set.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Sofa-Set3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "side-table",
+    name: "Side Table",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Living Room",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Side3.webP",
+    galleryImages: [
+      "/images/products/Side2.webP",
+      "/images/products/Side.webP",
+      "/images/products/Side3.webP",
+      "/images/products/Side2.webP",
+    ],
+    descriptionImage: "/images/products/Side.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Side3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Side2.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "tv-cabinet",
+    name: "TV Cabinet",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Living Room",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/tv.webP",
+    galleryImages: [
+      "/images/products/tv2.webP",
+      "/images/products/tv3.webP",
+      "/images/products/tv.webP",
+      "/images/products/tv2.webP",
+    ],
+    descriptionImage: "/images/products/tv3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/tv.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/tv3.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "auto-pullout",
+    name: "Auto Pullout Waste double Waste Bin",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Accessories",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Auto-Pull3.webP",
+    galleryImages: [
+      "/images/products/Auto-Pull2.webP",
+      "/images/products/Auto-Pull.webP",
+      "/images/products/Auto-Pull3.webP",
+      "/images/products/Auto-Pull2.webP",
+    ],
+    descriptionImage: "/images/products/Auto-Pull.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Auto-Pull3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Auto-Pull.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "plastic-basket",
+    name: "Plastic wicker Basket Soft Close",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Accessories",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Plastic.webP",
+    galleryImages: [
+      "/images/products/Plastic2.webP",
+      "/images/products/Plastic3.webP",
+      "/images/products/Plastic.webP",
+      "/images/products/Plastic2.webP",
+    ],
+    descriptionImage: "/images/products/Plastic3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Plastic2.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Plastic.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "premium-wall-bed-system-",
+    name: "Premium Wall Bed System",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Accessories",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Premium3.webP",
+    galleryImages: [
+      "/images/products/Premium2.webP",
+      "/images/products/Premium.webP",
+      "/images/products/Premium3.webP",
+      "/images/products/Premium2.webP",
+    ],
+    descriptionImage: "/images/products/Premium3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Premium.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Premium2.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "pullout-waste-bin",
+    name: "Pullout Waste Bin 4 - 40 Ltr",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Accessories",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Pull-Out.webP",
+    galleryImages: [
+      "/images/products/Pull-Out.webP",
+      "/images/products/Pull-Out.webP",
+      "/images/products/Pull-Out.webP",
+      "/images/products/Pull-Out.webP",
+    ],
+    descriptionImage: "/images/products/Pull-Out.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Pull-Out.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Pull-Out.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "kitchen-cutlery-tray-2",
+    name: "Kitchen Cutlery Tray 2",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Accessories",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Kitchen3.webP",
+    galleryImages: [
+      "/images/products/Kitchen2.webP",
+      "/images/products/Kitchen.webP",
+      "/images/products/Kitchen3.webP",
+      "/images/products/Kitchen2.webP",
+    ],
+    descriptionImage: "/images/products/Kitchen.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Kitchen3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Kitchen2.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "detergent-caddie",
+    name: "Detergent Caddie",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Accessories",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Detergent.webP",
+    galleryImages: [
+      "/images/products/Detergent3.webP",
+      "/images/products/Detergent2.webP",
+      "/images/products/Detergent.webP",
+      "/images/products/Detergent3.webP",
+    ],
+    descriptionImage: "/images/products/Detergent.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Detergent3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Detergent.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "pro-motion-drawer-system",
+    name: "Pro Motion Drawer System 203-S3",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Accessories",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Pro-motion3.webP",
+    galleryImages: [
+      "/images/products/Pro-motion2.webP",
+      "/images/products/Pro-motion.webP",
+      "/images/products/Pro-motion3.webP",
+      "/images/products/Pro-motion2.webP",
+    ],
+    descriptionImage: "/images/products/Pro-motion.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Pro-motion.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Pro-motion2.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "pro-motion-drawer-system-120",
+    name: "Pro Motion Drawer System 120-Slim 2",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Accessories",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Pro-motion-Drawer3.webP",
+    galleryImages: [
+      "/images/products/Pro-motion-Drawer2.webP",
+      "/images/products/Pro-motion-Drawer.webP",
+      "/images/products/Pro-motion-Drawer3.webP",
+      "/images/products/Pro-motion-Drawer2.webP",
+    ],
+    descriptionImage: "/images/products/Pro-motion-Drawer.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Pro-motion-Drawer3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Pro-motion-Drawer.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "kitchen-drawer-rack",
+    name: "Kitchen Drawer Rack - Thali",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Accessories",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Kitchen-Drawer3.webP",
+    galleryImages: [
+      "/images/products/Kitchen-Drawer2.webP",
+      "/images/products/Kitchen-Drawer.webP",
+      "/images/products/Kitchen-Drawer3.webP",
+      "/images/products/Kitchen-Drawer2.webP",
+    ],
+    descriptionImage: "/images/products/Kitchen-Drawer.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Kitchen-Drawer3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Kitchen-Drawer2.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "anti-skid-mat",
+    name: "Anti-Skid Mat",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Accessories",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Anti3.webP",
+    galleryImages: [
+      "/images/products/Anti2.webP",
+      "/images/products/Anti.webP",
+      "/images/products/Anti3.webP",
+      "/images/products/Anti2.webP",
+    ],
+    descriptionImage: "/images/products/Anti3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Anti3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Anti.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "lid-Holder",
+    name: "Lid Holder For Pan Hanger",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Accessories",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Lid3.webP",
+    galleryImages: [
+      "/images/products/Lid2.webP",
+      "/images/products/Lid.webP",
+      "/images/products/Lid3.webP",
+      "/images/products/Lid2.webP",
+    ],
+    descriptionImage: "/images/products/Lid.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Lid3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Lid2.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "magic-corner-double-pullout-glass",
+    name: "Magic Corner Double Pullout - Glass",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Accessories",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Magic3.webP",
+    galleryImages: [
+      "/images/products/Magic2.webP",
+      "/images/products/Magic.webP",
+      "/images/products/Magic3.webP",
+      "/images/products/Magic2.webP",
+    ],
+    descriptionImage: "/images/products/Magic.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Magic3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Magic2.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "wardrobe-rail-fittings",
+    name: "Wardrobe Rail Fittings – Rectangular With Luminor 16",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Accessories",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Wardrobe3.webP",
+    galleryImages: [
+      "/images/products/Wardrobe2.webP",
+      "/images/products/Wardrobe.webP",
+      "/images/products/Wardrobe3.webP",
+      "/images/products/Wardrobe2.webP",
+    ],
+    descriptionImage: "/images/products/Wardrobe3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Wardrobe.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Wardrobe2.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "kitchen-drawer-rack-plate-ss304",
+    name: "Kitchen Drawer Rack-Plate-SS304",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Accessories",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Kitchen-Drawer3-rack.webP",
+    galleryImages: [
+      "/images/products/Kitchen-Drawer2-rack.webP",
+      "/images/products/Kitchen-Drawer-rack.webP",
+      "/images/products/Kitchen-Drawer3-rack.webP",
+      "/images/products/Kitchen-Drawer2-rack.webP",
+    ],
+    descriptionImage: "/images/products/Kitchen-Drawer3-rack.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Kitchen-Drawer-rack.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Kitchen-Drawer2-rack.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "cupboard-pullout-system-50",
+    name: "Cupboard Pullout System - 50",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Accessories",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Cupboard.webP",
+    galleryImages: [
+      "/images/products/Cupboard2.webP",
+      "/images/products/Cupboard3.webP",
+      "/images/products/Cupboard.webP",
+      "/images/products/Cupboard2.webP",
+    ],
+    descriptionImage: "/images/products/Cupboard3.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Cupboard3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Cupboard.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "mixer-lift-up-stand",
+    name: "Mixer Lift Up Stand",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Accessories",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Mixer2.webP",
+    galleryImages: [
+      "/images/products/Mixer3.webP",
+      "/images/products/Mixer.webP",
+      "/images/products/Mixer2.webP",
+      "/images/products/Mixer3.webP",
+    ],
+    descriptionImage: "/images/products/Mixer.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Mixer2.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Mixer.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "swing-out-waste-bin-ss-14-ltr",
+    name: "Swing Out Waste Bin - SS (14 Ltr)",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Accessories",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Swing3.webP",
+    galleryImages: [
+      "/images/products/Swing2.webP",
+      "/images/products/Swing.webP",
+      "/images/products/Swing3.webP",
+      "/images/products/Swing2.webP",
+    ],
+    descriptionImage: "/images/products/Swing.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Swing3.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Swing2.webP",
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: "pro-lift-bed-fittings",
+    name: "Pro Lift Bed Fittings- Easy Fit- Extended Arm- 40 (w/o Gas Lifts)",
+    tagline: "Elegant Comfort for Modern Bedrooms",
+    category: "Accessories",
+    price: "₹ 1,75,000",
+    rating: 4.5,
+    reviewCount: 15,
+    heroImage: "/images/products/Pro-Lift.webP",
+    galleryImages: [
+      "/images/products/Pro-Lift2.webP",
+      "/images/products/Pro-Lift3.webP",
+      "/images/products/Pro-Lift.webP",
+      "/images/products/Pro-Lift2.webP",
+    ],
+    descriptionImage: "/images/products/Pro-Lift.webP",
+    description:
+      "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
+    keyFeatures: [
+      "Upholstered headboard with textured fabric",
+      "Luxurious blend of velvet and satin accents",
+      "Elegant two-tone bedding set (sold separately)",
+      "Expertly crafted for enduring comfort",
+    ],
+    dimensions: [
+      { label: "Headboard", value: '60" H' },
+      { label: "Width", value: '78"' },
+      { label: "Length", value: '84"' },
+    ],
+    customizationOptions: [
+      {
+        label: "White",
+        color: "#f0ece4",
+        image: "/images/products/Pro-Lift.webP",
+      },
+      {
+        label: "Beige",
+        color: "#c8a97e",
+        image: "/images/products/Pro-Lift2.webP",
+      },
+    ],
+  },
 ];
 
 export const getProductBySlug = (slug: string): SignatureProduct | undefined =>
-    signatureProducts.find((p) => p.slug === slug);
+  signatureProducts.find((p) => p.slug === slug);
 
 export const CATEGORIES: Category[] = [
-    "ALL",
-    "Sofas",
-    "Dining Table",
-    "Dining Set",
-    "Dining Chair",
-    "Bed", "Study Table",
-    "Wardrobes",
-    "Living Room",
-    "Accessories"
+  "ALL",
+  "Sofas",
+  "Dining Table",
+  "Dining Set",
+  "Dining Chair",
+  "Bed",
+  "Study Table",
+  "Wardrobes",
+  "Living Room",
+  "Accessories",
 ];

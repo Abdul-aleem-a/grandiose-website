@@ -391,12 +391,12 @@ export default function DesignGalleryClient({
               ))}
             </div>
 
-            <Link
+            {/* <Link
               href="/materials"
               className="flex items-center justify-center gap-2 w-full py-2.5 sm:py-3 border border-[#D4AF37]/25 text-[10px] sm:text-[11px] tracking-[0.25em] uppercase text-[#D4AF37]/70 hover:text-[#D4AF37] hover:border-[#D4AF37]/50 transition-all duration-300 mt-2"
             >
               View All Materials <ArrowRight size={11} />
-            </Link>
+            </Link> */}
           </motion.div>
         </div>
 

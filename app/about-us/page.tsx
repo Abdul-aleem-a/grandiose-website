@@ -17,9 +17,19 @@ import {
 import aboutHeroBg from "../../public/images/about-bg.jpg";
 import aboutStudio from "../../public/images/about.jpg";
 import aboutTeam from "../../public/sofa.jpg";
-import aboutProject1 from "../../public/sofa.jpg";
-import aboutProject2 from "../../public/sofa.jpg";
-import aboutProject3 from "../../public/sofa.jpg";
+import aboutProject1 from "../../public/images/logos/logo1.webp";
+import aboutProject2 from "../../public/images/logos/logo2.webp";
+import aboutProject3 from "../../public/images/logos/logo3.webp";
+import aboutProject4 from "../../public/images/logos/logo4.webp";
+import aboutProject5 from "../../public/images/logos/logo5.png";
+import aboutProject6 from "../../public/images/logos/logo6.png";
+import aboutProject7 from "../../public/images/logos/logo7.jpg";
+import aboutProject8 from "../../public/images/logos/logo8.png";
+import aboutProject9 from "../../public/images/logos/logo9.png";
+import aboutProject10 from "../../public/images/logos/logo10.png";
+import aboutProject11 from "../../public/images/logos/logo11.png";
+import aboutProject12 from "../../public/images/logos/logo12.png";
+import noorimg from "../../public/images/DSC02558.jpeg";
 
 const stats = [
   { icon: Calendar, value: "2018", label: "Year of Establishment" },
@@ -33,19 +43,19 @@ const team = [
     name: "Noor Alam",
     role: "Founder",
     initials: "NA",
-    // img: "/images/team/noor-alam.jpg",
+    img: noorimg,
   },
   {
     name: "Asviya Imran",
     role: "Interior Architect",
     initials: "AI",
-    img: "/images/Asviya-img.jpg",
+    img: "/images/Asviya-img.webP",
   },
   {
     name: "Shaikh Sulaiman",
     role: "Site Manager",
     initials: "SS",
-    img: "/images/Sulaiman-img.jpg",
+    img: "/images/Sulaiman-img.webP",
   },
   {
     name: "Nagesh",
@@ -62,15 +72,18 @@ const team = [
 ];
 
 const signatureProjects = [
-  { name: "Prestige Group", img: aboutProject1 },
-  { name: "Sobha Limited", img: aboutProject2 },
-  { name: "Adarsh Palm Retreat", img: aboutProject3 },
-  { name: "Mantri Developers", img: aboutProject1 },
-  { name: "Brigade Group", img: aboutProject2 },
-  { name: "Puravankara", img: aboutProject3 },
-  { name: "Puravankara", img: aboutProject3 },
-  { name: "Puravankara", img: aboutProject3 },
-  { name: "Puravankara", img: aboutProject3 },
+  { name: "", img: aboutProject1 },
+  { name: "", img: aboutProject2 },
+  { name: "", img: aboutProject3 },
+  { name: "", img: aboutProject4 },
+  { name: "", img: aboutProject5 },
+  { name: "", img: aboutProject6 },
+  { name: "", img: aboutProject7 },
+  { name: "", img: aboutProject8 },
+  { name: "", img: aboutProject9 },
+  { name: "", img: aboutProject10 },
+  { name: "", img: aboutProject11 },
+  { name: "", img: aboutProject12 },
 ];
 
 const fadeUp = {
@@ -305,7 +318,7 @@ const About = () => {
                 className="group text-center"
               >
                 {/* Avatar circle */}
-                <div className="relative w-44 h-44 md:w-52 md:h-52 mx-auto mb-7">
+                <div className="relative w-64 h-64 md:w-62 md:h-72 mx-auto mb-7">
                   <div className="absolute inset-0 rounded-full border-2 border-[#D4AF37]/30 group-hover:border-[#D4AF37]/60 transition-colors duration-500 z-10" />
                   <div className="absolute inset-[4px] rounded-full border border-white/10 z-10" />
                   <div className="absolute inset-[4px] rounded-full overflow-hidden bg-white/5">
@@ -315,7 +328,7 @@ const About = () => {
                         alt={member.name}
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-700"
-                        sizes="208px"
+                        sizes="198px"
                         quality={85}
                       />
                     ) : (
@@ -362,8 +375,8 @@ const About = () => {
         {/* Infinite scroll track */}
         <div className="relative w-full">
           {/* Edge fades */}
-          <div className="pointer-events-none absolute left-0 top-0 h-full w-16 md:w-32 bg-gradient-to-r from-[#051711] to-transparent z-10" />
-          <div className="pointer-events-none absolute right-0 top-0 h-full w-16 md:w-32 bg-gradient-to-l from-[#051711] to-transparent z-10" />
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-16 md:w-32 bg-gradient-to-r to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-16 md:w-32 bg-gradient-to-l to-transparent z-10" />
 
           <div className="flex w-max animate-projects-scroll hover:[animation-play-state:paused]">
             {/* Render the projects list twice for a seamless loop */}
@@ -372,15 +385,14 @@ const About = () => {
                 key={`${project.name}-${i}`}
                 className="group flex-shrink-0 w-[180px] md:w-[220px] px-4"
               >
-                <div className="aspect-square rounded-full overflow-hidden border-2 border-[#D4AF37]/20 group-hover:border-[#D4AF37]/60 transition-all duration-500 mx-auto w-36 h-36 md:w-44 md:h-44">
-                  <div className="relative w-full h-full">
+                <div className="rounded-full overflow-hidden shadow-lg w-44 h-44 md:w-48 md:h-48 mx-auto">
+                  <div className="relative w-full h-full flex items-center justify-center">
                     <Image
                       src={project.img}
                       alt={project.name}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-700"
-                      sizes="176px"
-                      quality={85}
+                      width={145}
+                      height={145}
+                      className="object-contain max-w-[80%] max-h-[80%]"
                     />
                   </div>
                 </div>

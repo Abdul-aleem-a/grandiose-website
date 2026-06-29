@@ -61,7 +61,7 @@ export default function Header() {
 
             {/* MORE DROPDOWN */}
             <div className="relative group">
-              <button className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-white/10 hover:text-[#D4AF37] transition-colors duration-300">
+              <button className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-white/10 hover:text-[#D4AF37] transition-colors duration-900">
                 More <ChevronDown size={14} />
               </button>
 

@@ -90,7 +90,7 @@ export const designCategories: DesignCategory[] = [
         title: "Bedroom",
         tagline: "Serene Luxury, Designed for Rest",
         subtitle: "Crafting Serene & Luxurious Bedrooms Nearby",
-        heroImage: "/images/design-gallery/bedroom-design.jpg",
+        heroImage: "/images/design-gallery/bedroom.jpg",
         thumbnailImage: "/design-gallery/bedroom/thumb.jpg",
         stats: [
             { value: "180+", label: "Projects" },
@@ -272,7 +272,7 @@ export const designCategories: DesignCategory[] = [
             { label: "Natural Stone", image: "/design-gallery/materials/stone.jpg" },
         ],
         cta: {
-            heading: "Ready to Elevate Your Bathroom?",
+            heading: "Ready to Elevate Modular Kitchen?",
             subheading: "Book a Free Consultation with Our Design Experts",
             phone: "+91 98765 43210",
         },
@@ -320,7 +320,7 @@ export const designCategories: DesignCategory[] = [
             { label: "Natural Stone", image: "/design-gallery/materials/stone.jpg" },
         ],
         cta: {
-            heading: "Ready to Elevate Your Bathroom?",
+            heading: "Ready to Elevate Your Kitchen?",
             subheading: "Book a Free Consultation with Our Design Experts",
             phone: "+91 98765 43210",
         },
@@ -368,7 +368,7 @@ export const designCategories: DesignCategory[] = [
             { label: "Natural Stone", image: "/design-gallery/materials/stone.jpg" },
         ],
         cta: {
-            heading: "Ready to Elevate Your Bathroom?",
+            heading: "Ready to Elevate Your Home Office?",
             subheading: "Book a Free Consultation with Our Design Experts",
             phone: "+91 98765 43210",
         },
@@ -416,7 +416,7 @@ export const designCategories: DesignCategory[] = [
             { label: "Natural Stone", image: "/design-gallery/materials/stone.jpg" },
         ],
         cta: {
-            heading: "Ready to Elevate Your Bathroom?",
+            heading: "Ready to Elevate Your Space?",
             subheading: "Book a Free Consultation with Our Design Experts",
             phone: "+91 98765 43210",
         },
@@ -464,7 +464,7 @@ export const designCategories: DesignCategory[] = [
             { label: "Natural Stone", image: "/design-gallery/materials/stone.jpg" },
         ],
         cta: {
-            heading: "Ready to Elevate Your Bathroom?",
+            heading: "Ready to Elevate Your Dinning Room?",
             subheading: "Book a Free Consultation with Our Design Experts",
             phone: "+91 98765 43210",
         },
@@ -512,7 +512,7 @@ export const designCategories: DesignCategory[] = [
             { label: "Natural Stone", image: "/design-gallery/materials/stone.jpg" },
         ],
         cta: {
-            heading: "Ready to Elevate Your Bathroom?",
+            heading: "Ready to Elevate Your Kids Bedroom?",
             subheading: "Book a Free Consultation with Our Design Experts",
             phone: "+91 98765 43210",
         },
@@ -560,7 +560,7 @@ export const designCategories: DesignCategory[] = [
             { label: "Natural Stone", image: "/design-gallery/materials/stone.jpg" },
         ],
         cta: {
-            heading: "Ready to Elevate Your Bathroom?",
+            heading: "Ready to Elevate Your 1 BHK Interior?",
             subheading: "Book a Free Consultation with Our Design Experts",
             phone: "+91 98765 43210",
         },
@@ -608,7 +608,7 @@ export const designCategories: DesignCategory[] = [
             { label: "Natural Stone", image: "/design-gallery/materials/stone.jpg" },
         ],
         cta: {
-            heading: "Ready to Elevate Your Bathroom?",
+            heading: "Ready to Elevate Your 2 BHK Interior?",
             subheading: "Book a Free Consultation with Our Design Experts",
             phone: "+91 98765 43210",
         },
@@ -656,7 +656,7 @@ export const designCategories: DesignCategory[] = [
             { label: "Natural Stone", image: "/design-gallery/materials/stone.jpg" },
         ],
         cta: {
-            heading: "Ready to Elevate Your Bathroom?",
+            heading: "Ready to Elevate Your 3 BHK Interior?",
             subheading: "Book a Free Consultation with Our Design Experts",
             phone: "+91 98765 43210",
         },

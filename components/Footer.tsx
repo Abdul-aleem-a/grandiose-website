@@ -21,8 +21,8 @@ export default function Footer() {
               <Image
                 src="/logo.png"
                 alt="The Grandiose"
-                width={220}
-                height={100}
+                width={300}
+                height={200}
                 priority
               />
             </Link>
@@ -69,15 +69,14 @@ export default function Footer() {
 
             <ul className="space-y-3 text-sm">
               <li>
+              <Link href="/about-us">
                 <span className="footer-link cursor-pointer">About Us</span>
+              </Link>
               </li>
               <li>
-                <span className="footer-link cursor-pointer">
-                  Why Grandiose
-                </span>
-              </li>
-              <li>
+                <Link href="/gallery">
                 <span className="footer-link cursor-pointer">Gallery</span>
+                </Link>
               </li>
               <li>
                 <Link href="/blogs">
@@ -98,30 +97,37 @@ export default function Footer() {
 
             <ul className="space-y-3 text-sm text-[#8A8A8A]">
               <li>
-                <Link href="/services/residential">
+                <Link href="/services">
                   <span className="footer-link cursor-pointer">
                     Residential Interiors
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/services/commercial">
+                <Link href="/services">
                   <span className="footer-link cursor-pointer">
                     Commercial Interiors
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/services/corporate">
+                <Link href="/services">
                   <span className="footer-link cursor-pointer">
                     Corporate Interiors
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/services/modular-kitchen">
+                <Link href="/services">
                   <span className="footer-link cursor-pointer">
                     Modular Kitchen
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/services">
+                  <span className="footer-link cursor-pointer">
+                    Architectural Plan & Elevation
                   </span>
                 </Link>
               </li>
