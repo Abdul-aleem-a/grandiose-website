@@ -293,7 +293,7 @@ export default function DesignGalleryClient({
               >
                 {visibleGallery.map((img, i) => (
                   <motion.div
-                    key={img.src}
+                    key={`${img.src}-${i}`}
                     layout
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
