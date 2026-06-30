@@ -45,19 +45,19 @@ export const blogPosts: BlogPost[] = [
       "How hiring a professional interior designer in Bangalore transforms homes with smart space planning, style, and end-to-end execution.",
     images: [
       {
-        src: "/images/blogs/blog1/DSC02513.webP",
+        src: "/images/blogs/blog1/DSC02513.webp",
         alt: "Professional interior design consultation",
       },
       {
-        src: "/images/blogs/blog1/DSC02506.webP",
+        src: "/images/blogs/blog1/DSC02506.webp",
         alt: "Modular kitchen and storage solutions",
       },
       {
-        src: "/images/blogs/blog1/DSC02526.webP",
+        src: "/images/blogs/blog1/DSC02526.webp",
         alt: "Luxury home interior Bangalore",
       },
       {
-        src: "/images/blogs/blog1/DSC02503.webP",
+        src: "/images/blogs/blog1/DSC02503.webp",
         alt: "Smart space planning and layouts",
       },
     ],
@@ -157,23 +157,23 @@ export const blogPosts: BlogPost[] = [
       "Explore smart home interior design in Bangalore for modern homes. The Grandiose offers customized, end-to-end home interior solutions designed for style, comfort, and functionality.",
     images: [
       {
-        src: "/images/blogs/blog2/The_Grandiose_LivingSpace_Premium_Design_Koramangala_03.webP",
+        src: "/images/blogs/blog2/The_Grandiose_LivingSpace_Premium_Design_Koramangala_03.webp",
         alt: "Professional interior design consultation",
       },
       {
-        src: "/images/blogs/blog2/The_Grandiose_LivingSpace_Premium_Design_Koramangala_01.webP",
+        src: "/images/blogs/blog2/The_Grandiose_LivingSpace_Premium_Design_Koramangala_01.webp",
         alt: "Modular kitchen and storage solutions",
       },
       {
-        src: "/images/blogs/blog2/DSC02524.webP",
+        src: "/images/blogs/blog2/DSC02524.webp",
         alt: "Luxury home interior Bangalore",
       },
       {
-        src: "/images/blogs/blog2/TheGrandiose_DiningRoom_Elegant_Interior_Hebbal_04.webP",
+        src: "/images/blogs/blog2/TheGrandiose_DiningRoom_Elegant_Interior_Hebbal_04.webp",
         alt: "Smart space planning and layouts",
       },
       {
-        src: "/images/blogs/blog2/The_Grandiose_PoojaSpace_Premium_WoodFinish_Sarjapur_01.webP",
+        src: "/images/blogs/blog2/The_Grandiose_PoojaSpace_Premium_WoodFinish_Sarjapur_01.webp",
         alt: "Smart space planning and layouts",
       },
     ],
@@ -274,11 +274,11 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Discover modern modular kitchen design in Bangalore. The Grandiose offers customized, end-to-end modular kitchen solutions focused on functionality, durability, and elegant design.",
     images: [
-      { src: "/images/blogs/blog3/DSC02342.webP", alt: "Modern modular kitchen design" },
-      { src: "/images/blogs/blog3/DSC02343.webP", alt: "Smart kitchen storage solutions" },
-      { src: "/images/blogs/blog3/DSC02344.webP", alt: "Luxury modular kitchen Bangalore" },
-      { src: "/images/blogs/blog3/DSC02348.webP", alt: "Kitchen layout and planning" },
-      { src: "/images/blogs/blog3/DSC02354.webP", alt: "Kitchen layout and planning" },
+      { src: "/images/blogs/blog3/DSC02342.webp", alt: "Modern modular kitchen design" },
+      { src: "/images/blogs/blog3/DSC02343.webp", alt: "Smart kitchen storage solutions" },
+      { src: "/images/blogs/blog3/DSC02344.webp", alt: "Luxury modular kitchen Bangalore" },
+      { src: "/images/blogs/blog3/DSC02348.webp", alt: "Kitchen layout and planning" },
+      { src: "/images/blogs/blog3/DSC02354.webp", alt: "Kitchen layout and planning" },
     ],
     introduction: `<div class="intro-text" style="margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
   <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; line-height: 1.6; margin-bottom: 1rem;">Bangalore homes are evolving with modern lifestyles, compact layouts, and a growing need for efficient living spaces. Among all areas of a home, the kitchen plays a crucial role in daily life. Modular kitchen design in Bangalore has become the preferred choice for homeowners who want a perfect balance of functionality, aesthetics, and smart space utilization.</p>
@@ -377,11 +377,11 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Learn the most common mistakes to avoid in home interior design. The Grandiose helps homeowners create functional, stylish, and well-planned interiors with expert design and execution.",
     images: [
-      { src: "/images/blogs/blog4/DSC02372.webP", alt: "Home interior design planning" },
-      { src: "/images/blogs/blog4/DSC02303.webP", alt: "Smart space planning solutions" },
-      { src: "/images/blogs/blog4/DSC02358.webP", alt: "Living room interior design" },
-      { src: "/images/blogs/blog4/DSC02363.webP", alt: "Modern home interior mistakes to avoid" },
-      { src: "/images/blogs/blog4/DSC02370.webP", alt: "Modern home interior mistakes to avoid" },
+      { src: "/images/blogs/blog4/DSC02372.webp", alt: "Home interior design planning" },
+      { src: "/images/blogs/blog4/DSC02303.webp", alt: "Smart space planning solutions" },
+      { src: "/images/blogs/blog4/DSC02358.webp", alt: "Living room interior design" },
+      { src: "/images/blogs/blog4/DSC02363.webp", alt: "Modern home interior mistakes to avoid" },
+      { src: "/images/blogs/blog4/DSC02370.webp", alt: "Modern home interior mistakes to avoid" },
     ],
     introduction: `<div class="intro-text" style="margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
   <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; line-height: 1.6; margin-bottom: 1rem;">Home interior design plays a vital role in shaping how a home looks, feels, and functions. While designing a home is an exciting process, many homeowners unknowingly make mistakes that affect comfort, functionality, and long-term usability. Avoiding common mistakes in home interior design is essential to create spaces that are practical, visually appealing, and timeless.</p>
@@ -482,11 +482,11 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Discover turnkey interiors for modern homes, including benefits, services, costs, trends, and how end-to-end solutions deliver a hassle-free home transformation.",
     images: [
-      { src: "/images/blogs/blog5/DSC02380.webP", alt: "Turnkey interior solutions consultation" },
-      { src: "/images/blogs/blog5/DSC02387.webP", alt: "Complete home interior execution" },
-      { src: "/images/blogs/blog5/DSC02375.webP", alt: "Modern turnkey home interior" },
-      { src: "/images/blogs/blog5/DSC02376.webP", alt: "End-to-end interior project management" },
-      { src: "/images/blogs/blog5/DSC02382.webP", alt: "End-to-end interior project management" },
+      { src: "/images/blogs/blog5/DSC02380.webp", alt: "Turnkey interior solutions consultation" },
+      { src: "/images/blogs/blog5/DSC02387.webp", alt: "Complete home interior execution" },
+      { src: "/images/blogs/blog5/DSC02375.webp", alt: "Modern turnkey home interior" },
+      { src: "/images/blogs/blog5/DSC02376.webp", alt: "End-to-end interior project management" },
+      { src: "/images/blogs/blog5/DSC02382.webp", alt: "End-to-end interior project management" },
     ],
     introduction: `<div class="intro-text" style="margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
   <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; line-height: 1.6; margin-bottom: 1rem;">Modern homeowners today seek convenience, quality, and peace of mind when designing their living spaces. With busy lifestyles and complex construction processes, managing multiple vendors, timelines, and materials can become overwhelming. This is where turnkey interior solutions come in as a smart and efficient choice.</p>
@@ -599,11 +599,11 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Understand what influences interior design cost and how to plan your budget smartly with the right customization and design approach.",
     images: [
-      { src: "/images/blogs/blog6/The_Grandiose_LivingSpace_Premium_Design_Koramangala_01.webP", alt: "Interior design budget planning" },
-      { src: "/images/blogs/blog6/The_Grandiose_LivingSpace_Premium_Design_Koramangala_07.webP", alt: "Home interior cost estimation" },
-      { src: "/images/blogs/blog6/The_Grandiose_LivingSpace_Premium_Design_Koramangala_02.webP", alt: "Smart budget planning for interiors" },
-      { src: "/images/blogs/blog6/The_Grandiose_LivingSpace_Premium_Design_Koramangala_04.webP", alt: "Interior design investment guide" },
-      { src: "/images/blogs/blog6/The_Grandiose_LivingSpace_Premium_Design_Koramangala_06.webP", alt: "Interior design investment guide" },
+      { src: "/images/blogs/blog6/The_Grandiose_LivingSpace_Premium_Design_Koramangala_01.webp", alt: "Interior design budget planning" },
+      { src: "/images/blogs/blog6/The_Grandiose_LivingSpace_Premium_Design_Koramangala_07.webp", alt: "Home interior cost estimation" },
+      { src: "/images/blogs/blog6/The_Grandiose_LivingSpace_Premium_Design_Koramangala_02.webp", alt: "Smart budget planning for interiors" },
+      { src: "/images/blogs/blog6/The_Grandiose_LivingSpace_Premium_Design_Koramangala_04.webp", alt: "Interior design investment guide" },
+      { src: "/images/blogs/blog6/The_Grandiose_LivingSpace_Premium_Design_Koramangala_06.webp", alt: "Interior design investment guide" },
     ],
     introduction: `<div class="intro-text" style="margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
   <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; line-height: 1.6; margin-bottom: 1rem;">Planning your home interiors is an exciting journey, but understanding interior design costs can often feel overwhelming. Every home is unique, and interior design expenses vary based on individual preferences, space requirements, and the level of customization involved. Instead of focusing on fixed pricing, smart budgeting starts with understanding what influences interior design costs and how to plan efficiently.</p>
@@ -683,11 +683,11 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "A complete guide to planning 2BHK and 3BHK interiors. Learn about layouts, design ideas, storage solutions, trends, and end-to-end interior planning.",
     images: [
-      { src: "/images/blogs/blog7/DSC02328.webP", alt: "2BHK home interior design" },
-      { src: "/images/blogs/blog7/DSC02329.webP", alt: "3BHK apartment interior planning" },
-      { src: "/images/blogs/blog7/The_Grandiose_Bedroom_CozyElegance_Hebbal_05.webP", alt: "Compact home storage solutions" },
-      { src: "/images/blogs/blog7/The Grandiose_PrestigeLakeside_Modern_Bedroom_Wooden_Interior_Whitefield_03.webP", alt: "Modern bedroom interior design" },
-      { src: "/images/blogs/blog7/The_Grandiose_Bedroom_CozyElegance_Hebbal_03.webP", alt: "Modern bedroom interior design" },
+      { src: "/images/blogs/blog7/DSC02328.webp", alt: "2BHK home interior design" },
+      { src: "/images/blogs/blog7/DSC02329.webp", alt: "3BHK apartment interior planning" },
+      { src: "/images/blogs/blog7/The_Grandiose_Bedroom_CozyElegance_Hebbal_05.webp", alt: "Compact home storage solutions" },
+      { src: "/images/blogs/blog7/The Grandiose_PrestigeLakeside_Modern_Bedroom_Wooden_Interior_Whitefield_03.webp", alt: "Modern bedroom interior design" },
+      { src: "/images/blogs/blog7/The_Grandiose_Bedroom_CozyElegance_Hebbal_03.webp", alt: "Modern bedroom interior design" },
     ],
     introduction: `<div class="intro-text" style="margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
   <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; line-height: 1.6; margin-bottom: 1rem;">Planning interiors for 2BHK and 3BHK homes requires a thoughtful approach that balances design, functionality, and lifestyle needs. From smart space optimization to customized storage solutions, every element plays a role in creating a comfortable and efficient home.</p>
@@ -821,12 +821,12 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Discover how smart commercial interior design improves productivity, workflow, and employee well-being through efficient layouts and customized solutions.",
     images: [
-      { src: "/images/blogs/blog8/DSC02514.webP", alt: "Modern office interior design" },
-      { src: "/images/blogs/blog8/The_Grandiose_LivingSpace_Premium_Design_Koramangala_04.webP", alt: "Commercial workspace planning" },
-      { src: "/images/blogs/blog8/The_Grandiose_LivingSpace_Premium_Design_Koramangala_07.webP", alt: "Corporate office interior" },
-      { src: "/images/blogs/blog8/DSC02507.webP", alt: "Productivity-focused workspace design" },
-      { src: "/images/blogs/blog8/DSC02511.webP", alt: "Productivity-focused workspace design" },
-      { src: "/images/blogs/blog8/The_Grandiose_LivingSpace_Premium_Design_Koramangala_08.webP", alt: "Productivity-focused workspace design" },
+      { src: "/images/blogs/blog8/DSC02514.webp", alt: "Modern office interior design" },
+      { src: "/images/blogs/blog8/The_Grandiose_LivingSpace_Premium_Design_Koramangala_04.webp", alt: "Commercial workspace planning" },
+      { src: "/images/blogs/blog8/The_Grandiose_LivingSpace_Premium_Design_Koramangala_07.webp", alt: "Corporate office interior" },
+      { src: "/images/blogs/blog8/DSC02507.webp", alt: "Productivity-focused workspace design" },
+      { src: "/images/blogs/blog8/DSC02511.webp", alt: "Productivity-focused workspace design" },
+      { src: "/images/blogs/blog8/The_Grandiose_LivingSpace_Premium_Design_Koramangala_08.webp", alt: "Productivity-focused workspace design" },
     ],
     introduction: `<div class="intro-text" style="margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
   <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; line-height: 1.6; margin-bottom: 1rem;">In today's competitive business environment, workspaces are no longer just places to sit and work. Modern commercial interiors are designed to enhance productivity, collaboration, employee well-being, and brand identity. From offices and retail spaces to coworking hubs and corporate facilities, smart interior design plays a critical role in how efficiently people perform and interact.</p>

@@ -29,7 +29,7 @@ import aboutProject9 from "../../public/images/logos/logo9.png";
 import aboutProject10 from "../../public/images/logos/logo10.png";
 import aboutProject11 from "../../public/images/logos/logo11.png";
 import aboutProject12 from "../../public/images/logos/logo12.png";
-import noorimg from "../../public/images/DSC02558.jpeg";
+import noorimg from "../../public/images/dsc02558.jpeg";
 
 const stats = [
   { icon: Calendar, value: "2018", label: "Year of Establishment" },
@@ -49,13 +49,13 @@ const team = [
     name: "Asviya Imran",
     role: "Interior Architect",
     initials: "AI",
-    img: "/images/Asviya-img.webP",
+    img: "/images/asviya-img.webp",
   },
   {
     name: "Shaikh Sulaiman",
     role: "Site Manager",
     initials: "SS",
-    img: "/images/Sulaiman-img.webP",
+    img: "/images/sulaiman-img.webp",
   },
   {
     name: "Nagesh",
