@@ -53,7 +53,7 @@ const team = [
   },
   {
     name: "Shaikh Sulaiman",
-    role: "Site Manager",
+    role: "Production Manager",
     initials: "SS",
     img: "/images/sulaiman-img.webp",
   },

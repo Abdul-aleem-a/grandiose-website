@@ -77,7 +77,7 @@ export default function CartPage() {
 
   if (!products.length) {
     return (
-      <div className="min-h-screen bg-[#1B4D3E] text-white flex flex-col items-center justify-center px-6 text-center">
+      <div className="min-h-screen bg-[#051711] text-white flex flex-col items-center justify-center px-6 text-center">
         <h1 className="text-4xl md:text-5xl text-[#D4AF37] font-serif mb-4">
           Your Cart is Empty
         </h1>

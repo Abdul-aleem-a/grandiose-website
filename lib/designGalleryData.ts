@@ -443,13 +443,13 @@ export const designCategories: DesignCategory[] = [
             moodboardImages: [
                 { filter: "All", image: "/images/design-gallery/modern_dining1.jpg" },
                 { filter: "Modern", image: "/images/design-gallery/modern_dining2.jpg" },
-                { filter: "Industrial", image: "/images/design-gallery/modern_dining1.jpg" },
+                { filter: "Industrial", image: "/images/design-gallery/industrial_dining1.jpg" },
                 { filter: "Luxury", image: "/images/design-gallery/luxury_dining1.jpg" },
                 { filter: "Compact Spaces", image: "/images/design-gallery/luxury_dining2.jpg" },
             ],
         },
         gallery: [
-            { src: "/images/design-gallery/Modern_dining1.jpg", filter: "Modern", alt: "Modern Bathroom 1" },
+            { src: "/images/design-gallery/industrial_dining2.jpg", filter: "Modern", alt: "Modern Bathroom 1" },
             { src: "/images/design-gallery/modern_dining2.jpg", filter: "Modern", alt: "Modern Bathroom 2" },
             { src: "/images/design-gallery/industrial_dining1.jpg", filter: "Industrial", alt: "Industrial Bathroom 1" },
             { src: "/images/design-gallery/industrial_dining2.jpg", filter: "Industrial", alt: "Industrial Bathroom 2" },
@@ -459,7 +459,7 @@ export const designCategories: DesignCategory[] = [
             { src: "/images/design-gallery/industrial_dining2.jpg", filter: "Compact Spaces", alt: "Compact Bathroom 2" },
         ],
         materials: [
-            { label: "Italian Marble", image: "/images/design-gallery/modern_dining1.jpg" },
+            { label: "Italian Marble", image: "/images/design-gallery/industrial_dining2.jpg" },
             { label: "Porcelain Tiles", image: "/images/design-gallery/industrial_dining1.jpg" },
             { label: "Brass Fixtures", image: "/images/design-gallery/luxury_dining1.jpg" },
             { label: "Natural Stone", image: "/images/design-gallery/industrial_dining1.jpg" },
