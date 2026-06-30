@@ -1267,14 +1267,14 @@ export const signatureProducts: SignatureProduct[] = [
     price: "₹ 1,75,000",
     rating: 4.5,
     reviewCount: 15,
-    heroImage: "/images/products/twin.webp",
+    heroImage: "/images/products/Twin.webp",
     galleryImages: [
-      "/images/products/twin2.webp",
-      "/images/products/twin3.webp",
-      "/images/products/twin.webp",
-      "/images/products/twin2.webp",
+      "/images/products/Twin2.webp",
+      "/images/products/Twin3.webp",
+      "/images/products/Twin.webp",
+      "/images/products/Twin2.webp",
     ],
-    descriptionImage: "/images/products/twin3.webp",
+    descriptionImage: "/images/products/Twin3.webp",
     description:
       "The Verona Bed offers refined elegance with its plush upholstered headboard, designed to bring sophisticated comfort to your bedroom. Part of our Signature Collection, this bed is a perfect seed of contemporary design and timeless luxury.",
     keyFeatures: [
@@ -1292,12 +1292,12 @@ export const signatureProducts: SignatureProduct[] = [
       {
         label: "White",
         color: "#f0ece4",
-        image: "/images/products/twin3.webp",
+        image: "/images/products/Twin3.webp",
       },
       {
         label: "Beige",
         color: "#c8a97e",
-        image: "/images/products/twin3.webp",
+        image: "/images/products/Twin3.webp",
       },
     ],
   },
