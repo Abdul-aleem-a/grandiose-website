@@ -68,7 +68,7 @@ export const designCategories: DesignCategory[] = [
             { src: "/images/design-gallery/g-modern-1.jpg", filter: "Modern", alt: "Modern Living Room 1" },
             { src: "/images/design-gallery/g-modern-2.jpg", filter: "Modern", alt: "Modern Living Room 2" },
             { src: "/images/design-gallery/3bhk.jpg", filter: "Industrial", alt: "Industrial Living Room 2" },
-            { src: "/images/design-gallery/industrial-2.jpg", filter: "Luxury", alt: "Luxury Living Room 1" },
+            { src: "/images/design-gallery/Industrial-2.jpg", filter: "Luxury", alt: "Luxury Living Room 1" },
             { src: "/images/design-gallery/g-modern-1.jpg", filter: "Luxury", alt: "Luxury Living Room 2" },
             { src: "/images/design-gallery/space-saving.jpg", filter: "Compact Spaces", alt: "Compact Living 1" },
             { src: "/images/design-gallery/2bhk.jpg", filter: "Compact Spaces", alt: "Compact Living 2" },
@@ -449,7 +449,7 @@ export const designCategories: DesignCategory[] = [
             ],
         },
         gallery: [
-            { src: "/images/design-gallery/modern_dining1.jpg", filter: "Modern", alt: "Modern Bathroom 1" },
+            { src: "/images/design-gallery/Modern_dining1.jpg", filter: "Modern", alt: "Modern Bathroom 1" },
             { src: "/images/design-gallery/modern_dining2.jpg", filter: "Modern", alt: "Modern Bathroom 2" },
             { src: "/images/design-gallery/industrial_dining1.jpg", filter: "Industrial", alt: "Industrial Bathroom 1" },
             { src: "/images/design-gallery/industrial_dining2.jpg", filter: "Industrial", alt: "Industrial Bathroom 2" },
