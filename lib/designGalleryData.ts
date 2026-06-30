@@ -251,7 +251,7 @@ export const designCategories: DesignCategory[] = [
             moodboardImages: [
                 { filter: "All", image: "/images/design-gallery/modern_kitchen1.jpg" },
                 { filter: "Modern", image: "/images/design-gallery/modern_kitchen2.jpg" },
-                { filter: "Industrial", image: "/images/design-gallery/industrial_kitchen1.png" },
+                { filter: "Industrial", image: "/images/design-gallery/industrial_kitchen1.jpg" },
                 { filter: "Luxury", image: "/images/design-gallery/luxury_kitchen1.jpg" },
                 { filter: "Compact Spaces", image: "/images/design-gallery/compact_kitchen1.jpg" },
             ],
@@ -396,7 +396,7 @@ export const designCategories: DesignCategory[] = [
                 { filter: "All", image: "/images/design-gallery/modern_space.jpg" },
                 { filter: "Modern", image: "/images/design-gallery/modern_space2.jpg" },
                 { filter: "Industrial", image: "/images/design-gallery/modern_space.jpg" },
-                { filter: "Luxury", image: "/images/design-gallery/luxury_space1.jpg" },
+                { filter: "Luxury", image: "/images/design-gallery/luxury_space2.jpg" },
                 { filter: "Compact Spaces", image: "/images/design-gallery/luxury_space2.jpg" },
             ],
         },
