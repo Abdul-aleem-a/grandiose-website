@@ -12,35 +12,24 @@ export default function CartPage() {
     .map((id) => signatureProducts.find((p) => p.slug === id))
     .filter(Boolean);
 
-  const [errors, setErrors] = useState({
-    name: "",
-    email: "",
-    phone: "",
-  });
-
+  const [errors, setErrors] = useState({ name: "", email: "", phone: "" });
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
     address: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const checkout = async () => {
-    let newErrors = {
-      name: "",
-      email: "",
-      phone: "",
-    };
-
+    let newErrors = { name: "", email: "", phone: "" };
     let isValid = true;
 
-    // Name validation
     if (!form.name.trim()) {
       newErrors.name = "Name is required";
       isValid = false;
     }
-
-    // Email validation
     if (!form.email.trim()) {
       newErrors.email = "Email is required";
       isValid = false;
@@ -48,45 +37,40 @@ export default function CartPage() {
       newErrors.email = "Invalid email format";
       isValid = false;
     }
-
-    // Phone validation
     if (!form.phone.trim()) {
       newErrors.phone = "Phone number is required";
       isValid = false;
     }
 
     setErrors(newErrors);
-
     if (!isValid) return;
 
-    // ✅ Proceed only if valid
-    await fetch("/api/checkout", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        ...form,
-        items: products,
-      }),
-    });
-
-    alert("Order submitted!");
-    clearCart();
+    setLoading(true);
+    try {
+      await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, items: products }),
+      });
+      setSubmitted(true);
+      clearCart();
+    } catch (err) {
+      alert("Something went wrong. Please try again or contact us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
-  if (!products.length) {
+  if (!products.length && !submitted) {
     return (
       <div className="min-h-screen bg-[#051711] text-white flex flex-col items-center justify-center px-6 text-center">
         <h1 className="text-4xl md:text-5xl text-[#D4AF37] font-serif mb-4">
           Your Cart is Empty
         </h1>
-
         <p className="text-white/60 mb-6 max-w-md">
-          Looks like you haven’t added anything yet. Explore our premium
+          Looks like you haven't added anything yet. Explore our premium
           collection and find something you love.
         </p>
-
         <a
           href="/products"
           className="bg-[#D4AF37] text-black px-6 py-3 rounded font-medium hover:opacity-90 transition"
@@ -97,8 +81,44 @@ export default function CartPage() {
     );
   }
 
+  // ── Success screen after submission ──
+  if (submitted) {
+    return (
+      <div className="min-h-screen bg-[#051711] text-white flex flex-col items-center justify-center px-6 text-center">
+        <div className="w-16 h-16 rounded-full bg-[#D4AF37]/20 flex items-center justify-center mb-6">
+          <svg
+            className="w-8 h-8 text-[#D4AF37]"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+        </div>
+        <h1 className="text-4xl md:text-5xl text-[#D4AF37] font-serif mb-4">
+          Order Submitted!
+        </h1>
+        <p className="text-white/60 mb-8 max-w-md">
+          Thank you, {form.name}. Our team will reach out to you shortly at{" "}
+          {form.email} or {form.phone}.
+        </p>
+        <a
+          href="/products"
+          className="bg-[#D4AF37] text-black px-6 py-3 rounded font-medium hover:opacity-90 transition"
+        >
+          Continue Browsing
+        </a>
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-[#1B4D3E] text-white px-6 py-16">
+    <div className="min-h-screen bg-[#051711] text-white px-6 py-16">
       <div className="max-w-5xl mx-auto space-y-10">
         <h1 className="text-5xl text-[#D4AF37] font-serif">Your Cart</h1>
 
@@ -115,12 +135,10 @@ export default function CartPage() {
                 className="object-cover rounded"
               />
             </div>
-
             <div className="flex-1">
               <h2 className="text-xl">{item.name}</h2>
               <p className="text-[#D4AF37]">{item.price}</p>
             </div>
-
             <button
               onClick={() => removeFromCart(item.slug)}
               className="text-red-400"
@@ -166,9 +184,35 @@ export default function CartPage() {
 
           <button
             onClick={checkout}
-            className="bg-[#D4AF37] text-black px-8 py-3 rounded"
+            disabled={loading}
+            className="bg-[#D4AF37] text-black px-8 py-3 rounded flex items-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed transition-all duration-200"
           >
-            Checkout
+            {loading ? (
+              <>
+                <svg
+                  className="animate-spin w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  />
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8v8z"
+                  />
+                </svg>
+                Submitting...
+              </>
+            ) : (
+              "Checkout"
+            )}
           </button>
         </div>
       </div>

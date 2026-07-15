@@ -82,7 +82,7 @@ export const designCategories: DesignCategory[] = [
         cta: {
             heading: "Ready to Transform Your Living Room?",
             subheading: "Book a Free Consultation with Our Design Experts",
-            phone: "+91 98765 43210",
+            phone: "+91 9113054788",
         },
     },
 
@@ -131,7 +131,7 @@ export const designCategories: DesignCategory[] = [
         cta: {
             heading: "Ready to Transform Your Bedroom?",
             subheading: "Book a Free Consultation with Our Design Experts",
-            phone: "+91 98765 43210",
+            phone: "+91 9113054788",
         },
     },
     {
@@ -179,7 +179,7 @@ export const designCategories: DesignCategory[] = [
         cta: {
             heading: "Ready to Design Your Dream Wardrobe?",
             subheading: "Book a Free Consultation with Our Design Experts",
-            phone: "+91 98765 43210",
+            phone: "+91 9113054788",
         },
     },
     {
@@ -227,7 +227,7 @@ export const designCategories: DesignCategory[] = [
         cta: {
             heading: "Ready to Elevate Your Bathroom?",
             subheading: "Book a Free Consultation with Our Design Experts",
-            phone: "+91 98765 43210",
+            phone: "+91 9113054788",
         },
     },
     {
@@ -275,7 +275,7 @@ export const designCategories: DesignCategory[] = [
         cta: {
             heading: "Ready to Elevate Modular Kitchen?",
             subheading: "Book a Free Consultation with Our Design Experts",
-            phone: "+91 98765 43210",
+            phone: "+91 9113054788",
         },
     },
     {
@@ -323,7 +323,7 @@ export const designCategories: DesignCategory[] = [
         cta: {
             heading: "Ready to Elevate Your Kitchen?",
             subheading: "Book a Free Consultation with Our Design Experts",
-            phone: "+91 98765 43210",
+            phone: "+91 9113054788",
         },
     },
     {
@@ -371,7 +371,7 @@ export const designCategories: DesignCategory[] = [
         cta: {
             heading: "Ready to Elevate Your Home Office?",
             subheading: "Book a Free Consultation with Our Design Experts",
-            phone: "+91 98765 43210",
+            phone: "+91 9113054788",
         },
     },
     {
@@ -419,7 +419,7 @@ export const designCategories: DesignCategory[] = [
         cta: {
             heading: "Ready to Elevate Your Space?",
             subheading: "Book a Free Consultation with Our Design Experts",
-            phone: "+91 98765 43210",
+            phone: "+91 9113054788",
         },
     },
     {
@@ -467,7 +467,7 @@ export const designCategories: DesignCategory[] = [
         cta: {
             heading: "Ready to Elevate Your Dinning Room?",
             subheading: "Book a Free Consultation with Our Design Experts",
-            phone: "+91 98765 43210",
+            phone: "+91 9113054788",
         },
     },
     {
@@ -515,7 +515,7 @@ export const designCategories: DesignCategory[] = [
         cta: {
             heading: "Ready to Elevate Your Kids Bedroom?",
             subheading: "Book a Free Consultation with Our Design Experts",
-            phone: "+91 98765 43210",
+            phone: "+91 9113054788",
         },
     },
     {
@@ -563,7 +563,7 @@ export const designCategories: DesignCategory[] = [
         cta: {
             heading: "Ready to Elevate Your 1 BHK Interior?",
             subheading: "Book a Free Consultation with Our Design Experts",
-            phone: "+91 98765 43210",
+            phone: "+91 9113054788",
         },
     },
     {
@@ -611,7 +611,7 @@ export const designCategories: DesignCategory[] = [
         cta: {
             heading: "Ready to Elevate Your 2 BHK Interior?",
             subheading: "Book a Free Consultation with Our Design Experts",
-            phone: "+91 98765 43210",
+            phone: "+91 9113054788",
         },
     },
     {
@@ -659,7 +659,7 @@ export const designCategories: DesignCategory[] = [
         cta: {
             heading: "Ready to Elevate Your 3 BHK Interior?",
             subheading: "Book a Free Consultation with Our Design Experts",
-            phone: "+91 98765 43210",
+            phone: "+91 9113054788",
         },
     }
 ];

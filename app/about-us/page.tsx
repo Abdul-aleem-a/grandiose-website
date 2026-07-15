@@ -24,27 +24,19 @@ import aboutProject4 from "../../public/images/logos/logo4.webp";
 import aboutProject5 from "../../public/images/logos/logo5.png";
 import aboutProject6 from "../../public/images/logos/logo6.png";
 import aboutProject7 from "../../public/images/logos/logo7.jpg";
-import aboutProject8 from "../../public/images/logos/logo8.png";
-import aboutProject9 from "../../public/images/logos/logo9.png";
+import aboutProject8 from "../../public/images/logos/logo8.svg";
 import aboutProject10 from "../../public/images/logos/logo10.png";
-import aboutProject11 from "../../public/images/logos/logo11.png";
-import aboutProject12 from "../../public/images/logos/logo12.png";
-import noorimg from "../../public/images/dsc02558.jpeg";
+// import noorimg from "../../public/images/dsc02558.jpeg";
+import noorimg2 from "../../public/images/founder-noor.webp";
 
 const stats = [
   { icon: Calendar, value: "2018", label: "Year of Establishment" },
   { icon: Users, value: "60+", label: "Skilled Team Members" },
   { icon: Award, value: "150+", label: "Happy Customers" },
-  { icon: Shield, value: "10", label: "Years Warranty" },
+  { icon: Shield, value: "10", label: "Service warantee" },
 ];
 
 const team = [
-  {
-    name: "Noor Alam",
-    role: "Founder",
-    initials: "NA",
-    img: noorimg,
-  },
   {
     name: "Asviya Imran",
     role: "Interior Architect",
@@ -56,6 +48,12 @@ const team = [
     role: "Production Manager",
     initials: "SS",
     img: "/images/sulaiman-img.webp",
+  },
+  {
+    name: "Arpan",
+    role: "interior designer",
+    initials: "A",
+    // img: "/images/sulaiman-img.webp",
   },
   {
     name: "Nagesh",
@@ -80,10 +78,7 @@ const signatureProjects = [
   { name: "", img: aboutProject6 },
   { name: "", img: aboutProject7 },
   { name: "", img: aboutProject8 },
-  { name: "", img: aboutProject9 },
   { name: "", img: aboutProject10 },
-  { name: "", img: aboutProject11 },
-  { name: "", img: aboutProject12 },
 ];
 
 const fadeUp = {
@@ -133,7 +128,7 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="gradient-heading text-5xl md:text-5xl mb-5"
+            className="gradient-heading text-4xl sm:text-5xl mb-5"
           >
             About Us
           </motion.h1>
@@ -160,6 +155,32 @@ const About = () => {
         <div className="absolute top-8 left-8 w-16 h-16 border-t border-l border-[#D4AF37]/25" />
         <div className="absolute bottom-8 right-8 w-16 h-16 border-b border-r border-[#D4AF37]/25" />
       </section>
+
+      {/* ─── FOUNDER SPOTLIGHT ─── */}
+      <section className="relative py-16 md:py-20 px-6 md:px-10 bg-[#051711]">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-6xl mx-auto relative"
+        >
+          <div className="absolute -top-4 -left-4 w-16 h-16 border-t border-l border-[#D4AF37]/30 z-10" />
+          <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b border-r border-[#D4AF37]/30 z-10" />
+          <div className="relative w-full aspect-[3/2] overflow-hidden rounded-sm">
+            <Image
+              src={noorimg2}
+              alt="Noor Alam — Founder & Design Director"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 1152px"
+              quality={90}                                      
+              priority
+            />
+          </div>
+        </motion.div>
+      </section>
+
 
       {/* ─── OUR STORY ─── */}
       <section className="py-24 md:py-36 px-6 md:px-10 bg-[#051711]">
@@ -204,10 +225,10 @@ const About = () => {
               <p className="text-[11px] tracking-[0.45em] uppercase text-[#D4AF37] mb-4 font-sans font-medium">
                 About Our Studio
               </p>
-              <h2 className="gradient-heading text-5xl md:text-5xl mb-5">
+              <h2 className="gradient-heading text-4xl sm:text-5xl mb-5">
                 The Grandiose
                 <br />
-                <span className="italic gradient-heading text-5xl md:text-5xl mb-5">
+                <span className="italic gradient-heading text-4xl md:text-5xl mb-5">
                   Home Interiors
                 </span>
               </h2>
@@ -301,7 +322,7 @@ const About = () => {
               The People Behind
             </p>
             <h2 className="gradient-heading text-3xl md:text-3xl mb-5">
-              Our Team
+              Our Grandiose
             </h2>
             <div className="w-16 h-[2px] bg-[#D4AF37] mx-auto" />
           </motion.div>
@@ -318,7 +339,7 @@ const About = () => {
                 className="group text-center"
               >
                 {/* Avatar circle */}
-                <div className="relative w-64 h-64 md:w-62 md:h-72 mx-auto mb-7">
+                <div className="relative w-64 h-64 md:w-64 md:h-72 mx-auto mb-7">
                   <div className="absolute inset-0 rounded-full border-2 border-[#D4AF37]/30 group-hover:border-[#D4AF37]/60 transition-colors duration-500 z-10" />
                   <div className="absolute inset-[4px] rounded-full border border-white/10 z-10" />
                   <div className="absolute inset-[4px] rounded-full overflow-hidden bg-white/5">

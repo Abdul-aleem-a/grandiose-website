@@ -558,7 +558,7 @@ const Gallery = () => {
               Home
             </Link>
             <span className="text-[#D4AF37]">/</span>
-            <span className="text-[#D4AF37]">Our Gallery</span>
+            <span className="text-[#D4AF37]">Portfolio</span>
           </div>
 
           <motion.div
@@ -570,7 +570,7 @@ const Gallery = () => {
               Interior Design Portfolio
             </span>
             <h1 className="gradient-heading text-5xl md:text-5xl mb-5">
-              Our Gallery
+              Portfolio
             </h1>
             <p className="text-white/60 font-palegoldenrod text-sm md:text-base max-w-xl mx-auto leading-relaxed">
               Explore our curated collection of premium interior designs — from

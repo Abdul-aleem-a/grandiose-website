@@ -155,7 +155,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     placeholder="Name"
-                    className="w-full bg-[#051711] border border-[##051711]/40 text-white/80 placeholder-white/25 text-sm px-4 py-3 rounded-sm focus:border-[#DCEFE8]focus:outline-none transition-colors duration-200"
+                    className="w-full bg-[#C8BAA9] border border-[#D4AF37]/100 text-[#051711] placeholder:text-[#051711]/60 text-sm px-4 py-3 rounded-sm focus:border-[#DCEFE8] focus:outline-none transition-colors duration-200"
                   />
                 </div>
                 <div>
@@ -164,7 +164,7 @@ export default function ContactPage() {
                     value={form.lastName}
                     onChange={handleChange}
                     placeholder="Last Name"
-                    className="w-full bg-[#051711] border border-[##051711]/40 text-white/80 placeholder-white/25 text-sm px-4 py-3 rounded-sm focus:border-[#DCEFE8]focus:outline-none transition-colors duration-200"
+                    className="w-full bg-[#C8BAA9] border border-[#D4AF37]/100 text-[#051711] placeholder:text-[#051711]/60 text-sm px-4 py-3 rounded-sm focus:border-[#DCEFE8] focus:outline-none transition-colors duration-200"
                   />
                 </div>
               </div>
@@ -177,14 +177,14 @@ export default function ContactPage() {
                 onChange={handleChange}
                 required
                 placeholder="Email"
-                className="w-full bg-[#051711] border border-[##051711]/40 text-white/80 placeholder-white/25 text-sm px-4 py-3 rounded-sm focus:border-[#DCEFE8]focus:outline-none transition-colors duration-200"
+                className="w-full bg-[#C8BAA9] border border-[#D4AF37]/100 text-[#051711] placeholder:text-[#051711]/60 text-sm px-4 py-3 rounded-sm focus:border-[#DCEFE8] focus:outline-none transition-colors duration-200"
               />
 
               {/* Phone with flag */}
               <div className="flex gap-2">
-                <div className="flex items-center gap-2 bg-[#051711] border border-[##051711]/40 px-3 rounded-sm shrink-0">
+                <div className="flex items-center gap-2 bg-[#C8BAA9] border border-[#D4AF37]/100 px-3 rounded-sm shrink-0">
                   <span className="text-base leading-none">🇮🇳</span>
-                  <span className="text-white/50 text-sm">+91</span>
+                  <span className="text-base text-sm">+91</span>
                 </div>
                 <input
                   type="tel"
@@ -192,8 +192,8 @@ export default function ContactPage() {
                   value={form.phone}
                   onChange={handleChange}
                   required
-                  placeholder="+971 ..."
-                  className="flex-1 bg-[#051711] border border-[##051711]/40 text-white/80 placeholder-white/25 text-sm px-4 py-3 rounded-sm focus:border-[#DCEFE8]focus:outline-none transition-colors duration-200"
+                  placeholder="+91 ..."
+                  className="w-full bg-[#C8BAA9] border border-[#D4AF37]/100 text-[#051711] placeholder:text-[#051711]/60 text-sm px-4 py-3 rounded-sm focus:border-[#DCEFE8] focus:outline-none transition-colors duration-200"
                 />
               </div>
 
@@ -204,7 +204,7 @@ export default function ContactPage() {
                 onChange={handleChange}
                 rows={4}
                 placeholder="Your Message"
-                className="w-full bg-[#051711] border border-[##051711]/40 text-white/80 placeholder-white/25 text-sm px-4 py-3 rounded-sm focus:border-[#DCEFE8]focus:outline-none transition-colors duration-200 resize-none"
+                className="w-full bg-[#C8BAA9] border border-[#D4AF37]/100 text-[#051711] placeholder:text-[#051711]/60 text-sm px-4 py-3 rounded-sm focus:border-[#DCEFE8] focus:outline-none transition-colors duration-200"
               />
 
               {/* Submit */}
@@ -257,10 +257,11 @@ export default function ContactPage() {
             href="tel:+919113054788"
             className="block text-white/80 text-sm hover:text-[#D4AF37] transition-colors"
           >
-            +91 98765 43210
+            +91 9113054788
           </a>
           <p className="text-white/40 text-[11px]">
-            Available 9 AM – 7 PM, Mon-Sat
+            Available 10 AM – 7 PM <br />
+            Monday - Saturday
           </p>
         </div>
 
@@ -281,7 +282,8 @@ export default function ContactPage() {
           </p>
           <p className="text-white/80 text-sm">Bangalore, India</p>
           <p className="text-white/40 text-[11px]">
-            Schedule your visit to our office for a personalized consultation
+            Bizz Hub, A/7, KHB Colony, 5th Block, Koramangala, Bengaluru,
+            Karnataka 560095
           </p>
         </div>
 

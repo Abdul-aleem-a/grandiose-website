@@ -2,12 +2,11 @@ export type Category =
   | "ALL"
   | "Sofas"
   | "Dining Table"
-  | "Dining Set"
   | "Dining Chair"
   | "Bed"
   | "Study Table"
   | "Wardrobes"
-  | "Living Room"
+  | "Console unit"
   | "Accessories";
 
 export interface CustomizationOption {
@@ -661,7 +660,7 @@ export const signatureProducts: SignatureProduct[] = [
     slug: "traditional-dining-set",
     name: "Traditional Dining Set",
     tagline: "Elegant Comfort for Modern Bedrooms",
-    category: "Dining Set",
+    category: "Dining Table",
     price: "₹ 1,75,000",
     rating: 4.5,
     reviewCount: 15,
@@ -704,7 +703,7 @@ export const signatureProducts: SignatureProduct[] = [
     slug: "modern-dining-set",
     name: "Modern Dining Set",
     tagline: "Elegant Comfort for Modern Bedrooms",
-    category: "Dining Set",
+    category: "Dining Table",
     price: "₹ 1,75,000",
     rating: 4.5,
     reviewCount: 15,
@@ -747,7 +746,7 @@ export const signatureProducts: SignatureProduct[] = [
     slug: "rustic-dining-table",
     name: "Rustic Dining Table",
     tagline: "Elegant Comfort for Modern Bedrooms",
-    category: "Dining Set",
+    category: "Dining Table",
     price: "₹ 1,75,000",
     rating: 4.5,
     reviewCount: 15,
@@ -790,7 +789,7 @@ export const signatureProducts: SignatureProduct[] = [
     slug: "industrial-dining-table",
     name: "Industrial Dining Table",
     tagline: "Elegant Comfort for Modern Bedrooms",
-    category: "Dining Set",
+    category: "Dining Table",
     price: "₹ 1,75,000",
     rating: 4.5,
     reviewCount: 15,
@@ -833,7 +832,7 @@ export const signatureProducts: SignatureProduct[] = [
     slug: "contemporary-dining-table",
     name: "Contemporary Dining Table",
     tagline: "Elegant Comfort for Modern Bedrooms",
-    category: "Dining Set",
+    category: "Dining Table",
     price: "₹ 1,75,000",
     rating: 4.5,
     reviewCount: 15,
@@ -876,7 +875,7 @@ export const signatureProducts: SignatureProduct[] = [
     slug: "farm-house-dining-table",
     name: "Farm House Dining Table",
     tagline: "Elegant Comfort for Modern Bedrooms",
-    category: "Dining Set",
+    category: "Dining Table",
     price: "₹ 1,75,000",
     rating: 4.5,
     reviewCount: 15,
@@ -919,7 +918,7 @@ export const signatureProducts: SignatureProduct[] = [
     slug: "scandinavian-dining-table",
     name: "Scandinavian Dining Table",
     tagline: "Elegant Comfort for Modern Bedrooms",
-    category: "Dining Set",
+    category: "Dining Table",
     price: "₹ 1,75,000",
     rating: 4.5,
     reviewCount: 15,
@@ -2166,7 +2165,7 @@ export const signatureProducts: SignatureProduct[] = [
     slug: "book-shelf",
     name: "Book Shelf",
     tagline: "Elegant Comfort for Modern Bedrooms",
-    category: "Living Room",
+    category: "Console unit",
     price: "₹ 1,75,000",
     rating: 4.5,
     reviewCount: 15,
@@ -2209,7 +2208,7 @@ export const signatureProducts: SignatureProduct[] = [
     slug: "cabinet",
     name: "Cabinet",
     tagline: "Elegant Comfort for Modern Bedrooms",
-    category: "Living Room",
+    category: "Console unit",
     price: "₹ 1,75,000",
     rating: 4.5,
     reviewCount: 15,
@@ -2252,7 +2251,7 @@ export const signatureProducts: SignatureProduct[] = [
     slug: "chest-of-drawers",
     name: "Chest of Drawers",
     tagline: "Elegant Comfort for Modern Bedrooms",
-    category: "Living Room",
+    category: "Console unit",
     price: "₹ 1,75,000",
     rating: 4.5,
     reviewCount: 15,
@@ -2295,7 +2294,7 @@ export const signatureProducts: SignatureProduct[] = [
     slug: "coffee-table",
     name: "Coffee Table",
     tagline: "Elegant Comfort for Modern Bedrooms",
-    category: "Living Room",
+    category: "Console unit",
     price: "₹ 1,75,000",
     rating: 4.5,
     reviewCount: 15,
@@ -2338,7 +2337,7 @@ export const signatureProducts: SignatureProduct[] = [
     slug: "sofa-set",
     name: "Sofa Set",
     tagline: "Elegant Comfort for Modern Bedrooms",
-    category: "Living Room",
+    category: "Console unit",
     price: "₹ 1,75,000",
     rating: 4.5,
     reviewCount: 15,
@@ -2381,7 +2380,7 @@ export const signatureProducts: SignatureProduct[] = [
     slug: "side-table",
     name: "Side Table",
     tagline: "Elegant Comfort for Modern Bedrooms",
-    category: "Living Room",
+    category: "Console unit",
     price: "₹ 1,75,000",
     rating: 4.5,
     reviewCount: 15,
@@ -2424,7 +2423,7 @@ export const signatureProducts: SignatureProduct[] = [
     slug: "tv-cabinet",
     name: "TV Cabinet",
     tagline: "Elegant Comfort for Modern Bedrooms",
-    category: "Living Room",
+    category: "Console unit",
     price: "₹ 1,75,000",
     rating: 4.5,
     reviewCount: 15,
@@ -3245,11 +3244,10 @@ export const CATEGORIES: Category[] = [
   "ALL",
   "Sofas",
   "Dining Table",
-  "Dining Set",
   "Dining Chair",
   "Bed",
   "Study Table",
   "Wardrobes",
-  "Living Room",
+  "Console unit",
   "Accessories",
 ];

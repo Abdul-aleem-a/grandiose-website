@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,14 +10,10 @@ import {
   Building2,
   Utensils,
   PenTool,
-  Lightbulb,
-  Ruler,
   Briefcase,
   ChevronRight,
   Check,
   ArrowRight,
-  Phone,
-  MessageCircle,
   X,
   ChevronLeft,
 } from "lucide-react";
@@ -188,6 +185,33 @@ const Services = () => {
     }
   };
 
+  useEffect(() => {
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY + 180; // Adjust for sticky navbar
+
+    for (const service of serviceData) {
+      const element = sectionRefs.current[service.id];
+
+      if (!element) continue;
+
+      const top = element.offsetTop;
+      const bottom = top + element.offsetHeight;
+
+      if (scrollPosition >= top && scrollPosition < bottom) {
+        setActive(service.id);
+        break;
+      }
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  // Run once on page load
+  handleScroll();
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
   const openLightbox = (
     img: any,
     alt: string,
@@ -235,6 +259,8 @@ const Services = () => {
     if (e.key === "ArrowRight") nextImage();
     if (e.key === "Escape") closeLightbox();
   };
+
+  
 
   return (
     <div className="min-h-screen bg-[#051711] font-sans">
@@ -417,7 +443,7 @@ const Services = () => {
                         strokeWidth={1.4}
                       />
                     </motion.div>
-                    <p className="text-[10px] tracking-[0.4em] uppercase text-[#D4AF37] font-medium font-sans">
+                    <p className="text-[17px] tracking-[0.4em] uppercase text-[#D4AF37] font-medium font-sans">
                       {service.label}
                     </p>
                   </div>

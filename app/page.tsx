@@ -6,19 +6,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { PenTool, Star, Quote, Sofa, Settings, Award } from "lucide-react";
 import ctabannerimg from "../public/images/cta-banner.jpg";
-
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import slide1img from "../public/images/slide1.webp";
 import slide2img from "../public/images/slide2.webp";
 import slide3img from "../public/images/slide3.webp";
 import slide4img from "../public/images/slide4.webp";
 import slide5img from "../public/images/slide5.webp";
+import noorimg from "../public/images/noor.webp";
 
 export default function Home() {
   const slides = [
     {
       image: slide1img,
       tagline: "Bangalore",
-      heading: "Elevating Luxuary Living",
+      heading: "Elevating Luxury Living",
       italic: "in Bangalore",
       sub: "Delivering bespoke luxury interiors that blend elegance, comfort, and functionality for discerning homeowners across Whitefield, Koramangala, Indiranagar, HSR Layout, and Bangalore's premier locations.",
     },
@@ -57,22 +58,26 @@ export default function Home() {
       icon: PenTool,
       value: "Bespoke Interiors",
       label: "Refined designs customized to your lifestyle and preferences.",
+      link: "/gallery",
     },
     {
       icon: Sofa,
       value: "Signature Collection",
       label:
         "Exclusive luxury furniture and decor items available for immediate.",
+      link: "/products",
     },
     {
       icon: Settings,
       value: "Turnkey Solutions",
       label: "End-to-end execution, transparent BOQ, and site supervision.",
+      link: "/design-gallery",
     },
     {
       icon: Award,
       value: "Trusted Expertise",
       label: "100+ elite homes crafted in Bangalore by our experienced team.",
+      link: "/reviews",
     },
   ];
 
@@ -81,16 +86,19 @@ export default function Home() {
       title: "Living Spaces",
       image: "/images/living-space.webp",
       alt: "Bare living room shell with natural light",
+      link: "/design-gallery",
     },
     {
       title: "Modular Kitchens",
       image: "/images/moduler-kitchen.webp",
       alt: "Modern modular kitchen with marble island",
+      link: "/design-gallery",
     },
     {
       title: "Bedroom Designs",
       image: "/images/bedroom-design.webp",
       alt: "Luxury bedroom with emerald velvet bed",
+      link: "/design-gallery",
     },
   ];
 
@@ -99,26 +107,31 @@ export default function Home() {
       title: "Residential Interiors",
       image: "/images/residential.jpg",
       alt: "Bare living room shell with natural light",
+      link: "/services",
     },
     {
       title: "Commercial Interiors",
       image: "/images/commercial.jpg",
       alt: "Modern modular kitchen with marble island",
+      link: "/services",
     },
     {
       title: "Corporate Interiors",
       image: "/images/corporate.jpg",
       alt: "Modern modular kitchen with marble island",
+      link: "/services",
     },
     {
       title: "Modular Kitchen",
       image: "/images/modular.jpg",
       alt: "Luxury bedroom with emerald velvet bed",
+      link: "/services",
     },
     {
       title: "Architectural Planning",
       image: "/images/architectural.jpg",
       alt: "Luxury bedroom with emerald velvet bed",
+      link: "/services",
     },
   ];
 
@@ -127,31 +140,37 @@ export default function Home() {
       title: "Customer Contacts Us",
       image: "/images/work-process.jpg",
       alt: "Bare living room shell with natural light",
+      link: "/work-process",
     },
     {
       title: "Requirement & Estimate",
       image: "/images/rough.jpg",
       alt: "Modern modular kitchen with marble island",
+      link: "/work-process",
     },
     {
       title: "Token & Measurement",
       image: "/images/token-payment.jpg",
       alt: "Luxury bedroom with emerald velvet bed",
+      link: "/work-process",
     },
     {
       title: "Personalised 3D Designs",
       image: "/images/3d-design.jpg",
       alt: "Luxury bedroom with emerald velvet bed",
+      link: "/work-process",
     },
     {
       title: "Installation & Handover",
       image: "/images/installation.jpg",
       alt: "Luxury bedroom with emerald velvet bed",
+      link: "/work-process",
     },
     {
       title: "After-Sales Service",
       image: "/images/sale-services.jpg",
       alt: "Luxury bedroom with emerald velvet bed",
+      link: "/work-process",
     },
   ];
 
@@ -188,10 +207,48 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 6000);
+    }, 9000);
 
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const team = [
+    {
+      name: "Noor Alam",
+      role: "Founder",
+      initials: "NA",
+      img: noorimg,
+    },
+    {
+      name: "Asviya Imran",
+      role: "Interior Architect",
+      initials: "AI",
+      img: "/images/asviya-img.webp",
+    },
+    {
+      name: "Shaikh Sulaiman",
+      role: "Production Manager",
+      initials: "SS",
+      img: "/images/sulaiman-img.webp",
+    },
+  ];
+
+  const fadeUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, delay: i * 0.1, ease: "easeOut" as const },
+    }),
+  };
 
   return (
     <>
@@ -291,19 +348,51 @@ export default function Home() {
             </a>
           </motion.div>
 
-          <div className="flex items-center justify-center gap-2 mt-10">
-            {slides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                className={`transition-all duration-500 rounded-full ${
-                  i === current ? "w-8 h-2 bg-[#D4AF37]" : "w-2 h-2 bg-white/30"
-                }`}
-              />
-            ))}
+          <div className="flex items-center justify-center gap-5 mt-10">
+            {/* Previous */}
+            <button
+              onClick={prevSlide}
+              aria-label="Previous Slide"
+              className="w-10 h-10 rounded-full border border-white/30
+               flex items-center justify-center
+               text-white hover:bg-[#D4AF37]
+               hover:text-black hover:border-[#D4AF37]
+               transition-all duration-300"
+            >
+              <FiChevronLeft size={20} />
+            </button>
+
+            {/* Dots */}
+            <div className="flex items-center gap-2">
+              {slides.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrent(i)}
+                  className={`rounded-full transition-all duration-500 ${
+                    i === current
+                      ? "w-8 h-2 bg-[#D4AF37]"
+                      : "w-2 h-2 bg-white/40 hover:bg-white"
+                  }`}
+                />
+              ))}
+            </div>
+
+            {/* Next */}
+            <button
+              onClick={nextSlide}
+              aria-label="Next Slide"
+              className="w-10 h-10 rounded-full border border-white/30
+               flex items-center justify-center
+               text-white hover:bg-[#D4AF37]
+               hover:text-black hover:border-[#D4AF37]
+               transition-all duration-300"
+            >
+              <FiChevronRight size={20} />
+            </button>
           </div>
         </div>
       </section>
+
       {/* USP BANNER */}
       <section className="relative -mt-14 z-20 w-full">
         <div className="w-full">
@@ -312,12 +401,13 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="grid grid-cols-2 lg:grid-cols-4 bg-[#051711] shadow-2xl overflow-hidden border-y border-[#D4AF37]/20 w-full"
+            className="grid grid-cols-2 lg:grid-cols-4 bg-[#051711] shadow-2xl overflow-hidden border-y border-[#D4AF37]/20 w-full mt-10"
           >
             {usps.map((usp, i) => (
-              <div
+              <Link
                 key={usp.label}
-                className={`group flex flex-col items-center text-center gap-3 p-7 md:p-9 hover:bg-[#0A1C17] transition-colors duration-400 ${
+                href={usp.link}
+                className={`group flex flex-col items-center text-center gap-3 p-7 md:p-9 hover:bg-[#0A1C17] transition-all duration-400 ${
                   i < usps.length - 1 ? "border-r border-[#D4AF37]/15" : ""
                 }`}
               >
@@ -336,7 +426,7 @@ export default function Home() {
                     {usp.label}
                   </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </motion.div>
         </div>
@@ -374,44 +464,42 @@ export default function Home() {
           {/* Expertise Grid */}
           <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto px-4">
             {expertiseItems.map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="group relative rounded-sm overflow-hidden transition-all duration-500"
-              >
-                {/* Gold Top Line */}
-                <div className="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-[#D4AF37] to-[#C9A227] group-hover:w-full transition-all duration-500 z-10" />
+              <Link key={item.title} href={item.link} className="block">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                  className="group relative rounded-sm overflow-hidden transition-all duration-500 cursor-pointer"
+                >
+                  {/* Gold Top Line */}
+                  <div className="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-[#D4AF37] to-[#C9A227] group-hover:w-full transition-all duration-500 z-10" />
 
-                {/* Image */}
-                <div className="relative w-full h-[260px] overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt={item.alt}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#051711]/40 via-transparent to-transparent" />
-                </div>
-
-                {/* Content */}
-                <div className="p-6 md:p-7 bg-[#051711]">
-                  <h3 className="font-serif text-[25px] font-semibold text-white mb-4 text-center">
-                    {item.title}
-                  </h3>
-
-                  <div className="flex justify-center">
-                    <a
-                      href="/services"
-                      className="inline-flex items-center justify-center px-6 py-2.5 text-[10px] tracking-[0.2em] uppercase text-[#D4AF37] font-medium border border-[#D4AF37]/40 rounded-sm hover:bg-[#D4AF37] hover:text-black transition-all duration-300"
-                    >
-                      Enquire Now
-                    </a>
+                  {/* Image */}
+                  <div className="relative w-full h-[260px] overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.alt}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#051711]/40 via-transparent to-transparent" />
                   </div>
-                </div>
-              </motion.div>
+
+                  {/* Content */}
+                  <div className="p-6 md:p-7 bg-[#051711]">
+                    <h3 className="font-serif text-[25px] font-semibold text-white mb-4 text-center">
+                      {item.title}
+                    </h3>
+
+                    <div className="flex justify-center">
+                      <span className="inline-flex items-center justify-center px-6 py-2.5 text-[10px] tracking-[0.2em] uppercase text-[#D4AF37] font-medium border border-[#D4AF37]/40 rounded-sm group-hover:bg-[#D4AF37] group-hover:text-black transition-all duration-300">
+                        Know more
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>
@@ -439,44 +527,42 @@ export default function Home() {
           {/* Expertise Grid */}
           <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto px-4">
             {ouServices.map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="group relative rounded-sm overflow-hidden transition-all duration-500"
-              >
-                {/* Gold Top Line */}
-                <div className="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-[#D4AF37] to-[#C9A227] group-hover:w-full transition-all duration-500 z-10" />
+              <Link key={item.title} href={item.link} className="block">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                  className="group relative rounded-sm overflow-hidden transition-all duration-500 cursor-pointer"
+                >
+                  {/* Gold Top Line */}
+                  <div className="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-[#D4AF37] to-[#C9A227] group-hover:w-full transition-all duration-500 z-10" />
 
-                {/* Image */}
-                <div className="relative w-full h-[260px] overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt={item.alt}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#051711]/40 via-transparent to-transparent" />
-                </div>
-
-                {/* Content */}
-                <div className="p-6 md:p-7 bg-[#051711]">
-                  <h3 className="font-serif text-[25px] font-semibold text-white mb-4 text-center">
-                    {item.title}
-                  </h3>
-
-                  <div className="flex justify-center">
-                    <a
-                      href="/services"
-                      className="inline-flex items-center justify-center px-6 py-2.5 text-[10px] tracking-[0.2em] uppercase text-[#D4AF37] font-medium border border-[#D4AF37]/40 rounded-sm hover:bg-[#D4AF37] hover:text-black transition-all duration-300"
-                    >
-                      Enquire Now
-                    </a>
+                  {/* Image */}
+                  <div className="relative w-full h-[260px] overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.alt}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#051711]/40 via-transparent to-transparent" />
                   </div>
-                </div>
-              </motion.div>
+
+                  {/* Content */}
+                  <div className="p-6 md:p-7 bg-[#051711]">
+                    <h3 className="font-serif text-[25px] font-semibold text-white mb-4 text-center">
+                      {item.title}
+                    </h3>
+
+                    <div className="flex justify-center">
+                      <span className="inline-flex items-center justify-center px-6 py-2.5 text-[10px] tracking-[0.2em] uppercase text-[#D4AF37] font-medium border border-[#D4AF37]/40 rounded-sm group-hover:bg-[#D4AF37] group-hover:text-black transition-all duration-300">
+                        Enquire Now
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>
@@ -507,44 +593,42 @@ export default function Home() {
           {/* Expertise Grid */}
           <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto px-4">
             {workProcess.map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="group relative rounded-sm overflow-hidden transition-all duration-500"
-              >
-                {/* Gold Top Line */}
-                <div className="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-[#D4AF37] to-[#C9A227] group-hover:w-full transition-all duration-500 z-10" />
+              <Link key={item.title} href={item.link} className="block">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                  className="group relative rounded-sm overflow-hidden transition-all duration-500 cursor-pointer"
+                >
+                  {/* Gold Top Line */}
+                  <div className="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-[#D4AF37] to-[#C9A227] group-hover:w-full transition-all duration-500 z-10" />
 
-                {/* Image */}
-                <div className="relative w-full h-[260px] overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt={item.alt}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#051711]/40 via-transparent to-transparent" />
-                </div>
-
-                {/* Content */}
-                <div className="p-6 md:p-7 bg-[#051711]">
-                  <h3 className="font-serif text-[25px] font-semibold text-white mb-4 text-center">
-                    {item.title}
-                  </h3>
-
-                  <div className="flex justify-center">
-                    <a
-                      href="/work-process"
-                      className="inline-flex items-center justify-center px-6 py-2.5 text-[10px] tracking-[0.2em] uppercase text-[#D4AF37] font-medium border border-[#D4AF37]/40 rounded-sm hover:bg-[#D4AF37] hover:text-black transition-all duration-300"
-                    >
-                      Enquire Now
-                    </a>
+                  {/* Image */}
+                  <div className="relative w-full h-[260px] overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.alt}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#051711]/40 via-transparent to-transparent" />
                   </div>
-                </div>
-              </motion.div>
+
+                  {/* Content */}
+                  <div className="p-6 md:p-7 bg-[#051711]">
+                    <h3 className="font-serif text-[25px] font-semibold text-white mb-4 text-center">
+                      {item.title}
+                    </h3>
+
+                    <div className="flex justify-center">
+                      <span className="inline-flex items-center justify-center px-6 py-2.5 text-[10px] tracking-[0.2em] uppercase text-[#D4AF37] font-medium border border-[#D4AF37]/40 rounded-sm group-hover:bg-[#D4AF37] group-hover:text-black transition-all duration-300">
+                        Enquire Now
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>
@@ -618,7 +702,7 @@ export default function Home() {
               <div className="relative border border-[#D4AF37]/40 overflow-hidden">
                 <iframe
                   className="w-full h-[360px]"
-                  src="https://www.youtube.com/embed/8l0UUevU75I?autoplay=1&mute=1&loop=1&playlist=8l0UUevU75I"
+                  src="https://www.youtube.com/embed/TWJQkNpra_A"
                   title="The Grandiose Interior Design"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -636,6 +720,79 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* ─── OUR TEAM ─── */}
+      <section className="py-24 md:py-32 px-6 md:px-10 bg-[#051711]">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="text-center mb-16"
+          >
+            <p className="text-[11px] tracking-[0.45em] uppercase text-[#D4AF37] mb-4 font-sans font-medium">
+              The People Behind
+            </p>
+            <h2 className="gradient-heading text-3xl md:text-3xl mb-5">
+              Our Grandiose
+            </h2>
+            <div className="w-16 h-[2px] bg-[#D4AF37] mx-auto" />
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 md:gap-16">
+            {team.map((member, i) => (
+              <motion.div
+                key={member.name}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className="group text-center"
+              >
+                {/* Avatar circle */}
+                <div className="relative w-64 h-64 md:w-62 md:h-72 mx-auto mb-7">
+                  <div className="absolute inset-0 rounded-full border-2 border-[#D4AF37]/30 group-hover:border-[#D4AF37]/60 transition-colors duration-500 z-10" />
+                  <div className="absolute inset-[4px] rounded-full border border-white/10 z-10" />
+                  <div className="absolute inset-[4px] rounded-full overflow-hidden bg-white/5">
+                    {member.img ? (
+                      <Image
+                        src={member.img}
+                        alt={member.name}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-700"
+                        sizes="198px"
+                        quality={85}
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <span className="font-serif text-5xl md:text-6xl font-bold text-[#D4AF37]">
+                          {member.initials}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                <h3 className="font-serif text-2xl md:text-3xl font-semibold text-white mb-2">
+                  {member.name}
+                </h3>
+                <p className="text-[13px] tracking-[0.15em] uppercase text-white/50 font-sans">
+                  {member.role}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+        <div className="mt-16 flex justify-center">
+          <Link
+            href="/about-us"
+            className="px-12 py-3 text-xs tracking-[0.25em] uppercase bg-[#D4AF37] text-black hover:bg-[#C9A227] transition-all duration-300 rounded-sm shadow-lg"
+          >
+            Explore Our Team
+          </Link>
         </div>
       </section>
 
@@ -790,16 +947,14 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://wa.me/919876543210"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/contact-us"
               className="w-full sm:w-auto px-10 py-4 text-[11px] tracking-[0.25em] uppercase bg-[#D4AF37] text-black font-medium hover:bg-[#C9A227] transition-all duration-300 rounded-sm shadow-lg"
             >
               Book Free Consultation
             </a>
 
             <a
-              href="tel:+919876543210"
+              href="tel:+9113054788"
               className="w-full sm:w-auto px-10 py-4 text-[11px] tracking-[0.25em] uppercase border border-white/35 text-white hover:bg-white/10 transition-all duration-300 rounded-sm"
             >
               Call Us Now

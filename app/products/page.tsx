@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { ChevronRight } from "lucide-react";
 import {
   signatureProducts,
   CATEGORIES,
@@ -62,7 +63,7 @@ export default function ProductsPage() {
           className="gradient-heading text-3xl md:text-4xl leading-[1.1] mt-5"
           style={{ letterSpacing: "0.1em" }}
         >
-          Signature Collections
+          Signature Collection
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 10 }}
@@ -72,6 +73,23 @@ export default function ProductsPage() {
         >
           Exquisite Pieces for Luxurious Living
         </motion.p>
+
+        {/* Breadcrumb */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.65 }}
+          className="flex items-center justify-center gap-2 mt-6 text-[11px] tracking-[0.15em] uppercase mb-15"
+        >
+          <Link
+            href="/"
+            className="text-white/40 hover:text-[#D4AF37] transition-colors duration-300"
+          >
+            Home
+          </Link>
+          <ChevronRight size={12} className="text-[#D4AF37]/50" />
+          <span className="text-[#D4AF37]">Signature Collection</span>
+        </motion.div>
 
         {/* Category Filter - responsive scrollable on mobile */}
         <motion.div

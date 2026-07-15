@@ -30,7 +30,7 @@ export default function BlogsPage() {
   return (
     <div className="min-h-screen bg-[#051711]">
       {/* Hero Section */}
-      <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[40vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-[#051711]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px]  border-golden/10" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px]  border-golden/5" />
@@ -44,14 +44,27 @@ export default function BlogsPage() {
               Insights & Inspiration
             </span>
             <h1 className="gradient-heading text-5xl md:text-5xl mb-5">
-              Our Blogs
+              Design Journal
             </h1>
+
+            <div className="max-w-3xl mx-auto text-center mb-8">
+              <p className="text-lg md:text-xl font-medium text-white mb-3">
+                Luxury Interior Design Tips, Trends & Updates
+              </p>
+
+              <p className="text-white/60 text-sm md:text-base leading-relaxed">
+                Stay inspired with our insights and tips. Explore the latest
+                trends in luxury interiors and learn how to elevate your living
+                spaces with expert advice.
+              </p>
+            </div>
+
             <nav className="flex items-center justify-center gap-2 text-[11px] tracking-[0.15em] uppercase text-white/50 font-sans">
               <Link href="/" className="hover:text-golden transition-colors">
                 Home
               </Link>
               <ChevronRight size={12} className="text-golden/50" />
-              <span className="text-golden">Blog</span>
+              <span className="text-golden">Design Journal</span>
             </nav>
           </motion.div>
         </div>
@@ -62,18 +75,26 @@ export default function BlogsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col gap-6">
             {/* Search */}
-            <div className="relative w-full md:w-80">
-              <Search
-                size={16}
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40"
-              />
-              <input
-                type="text"
-                placeholder="Search articles..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-11 pr-4 py-3 rounded-lg border border-white/10 bg-white/5 text-white text-sm font-sans placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/30 transition-all"
-              />
+            {/* Search */}
+            <div className="flex flex-col md:flex-row gap-3 w-full">
+              <div className="relative flex-1">
+                <Search
+                  size={18}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40"
+                />
+
+                <input
+                  type="text"
+                  placeholder="Search articles..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-4 py-3.5 rounded-lg border border-[#D4AF37] bg-white/5 text-white text-sm font-sans placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/30 transition-all"
+                />
+              </div>
+
+              <button className="px-8 py-3.5 rounded-lg bg-[#051711] text-[#D4AF37] border border-[#D4AF37] font-semibold tracking-[0.12em] uppercase text-sm transition-all duration-300">
+                Search
+              </button>
             </div>
 
             {/* Categories — horizontally scrollable on mobile */}

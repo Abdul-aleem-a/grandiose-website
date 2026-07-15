@@ -203,7 +203,7 @@ export default function FAQ() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="https://wa.me/919876543210?text=Hi%2C%20I%20have%20a%20question%20about%20your%20interior%20design%20services."
+                href="https://wa.me/9113054788?text=Hello The Grandiose Team. I am interested to know more about your home interior and renovation services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-[#25D366] text-white text-sm font-medium tracking-wider uppercase rounded-lg hover:bg-[#25D366]/90 transition-all duration-300 font-sans"
@@ -212,8 +212,8 @@ export default function FAQ() {
                 Chat on WhatsApp
               </a>
               <a
-                href="tel:+919876543210"
-                className="inline-flex items-center gap-2 px-8 py-3 border border-golden text-golden text-sm font-medium tracking-wider uppercase rounded-lg hover:bg-golden hover:text-[#051711] transition-all duration-300 font-sans"
+                href="tel:+91 9113054788"
+                className="inline-flex items-center gap-2 px-8 py-3 border border-golden text-golden text-sm font-medium tracking-wider uppercase rounded-lg hover:bg-golden bg-[#25D366] text-white hover:bg-[#25D366]/90 transition-all duration-300 font-sans"
               >
                 <Phone size={16} />
                 Call Us

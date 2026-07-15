@@ -8,7 +8,9 @@ import {
   FaPinterestP,
   FaBehance,
   FaYoutube,
+  FaTwitter,
 } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -21,8 +23,8 @@ export default function Footer() {
               <Image
                 src="/logo.png"
                 alt="The Grandiose"
-                width={300}
-                height={200}
+                width={280}
+                height={180}
                 priority
               />
             </Link>
@@ -44,22 +46,79 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">About Us</h3>
 
             <p className="text-[#8A8A8A] text-sm leading-relaxed mb-4">
-              Every client receives personal attention from our team of expert
-              interior designers. From concept to completion, we craft interiors
-              that balance creativity, function, and elegance.
+              Every customer receives personal attention from our team of
+              experts in home interior design. Based on the project value,
+              location of the site, and client specifications, the company
+              assigns a client to an interior designer.
             </p>
 
-            <button className="text-[#051711] font-medium hover:text-[#C9A24D] transition">
-              Read More →
-            </button>
+            <a href="/about-us">
+              <button className="text-[#C9A24D] font-medium hover:text-[#C9A24D] transition">
+                Read More →
+              </button>
+            </a>
 
             {/* Social */}
             <div className="flex gap-4 mt-6 text-lg">
-              <FaYoutube className="hover:text-[#C9A24D] cursor-pointer" />
-              <FaInstagram className="hover:text-[#C9A24D] cursor-pointer" />
-              <FaFacebookF className="hover:text-[#C9A24D] cursor-pointer" />
-              <FaPinterestP className="hover:text-[#C9A24D] cursor-pointer" />
-              <FaBehance className="hover:text-[#C9A24D] cursor-pointer" />
+              <a
+                href="https://www.youtube.com/@thegrandiose"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="hover:text-[#C9A24D] transition-colors"
+              >
+                <FaYoutube />
+              </a>
+
+              <a
+                href="https://www.instagram.com/thegrandiosehomeinteriors/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="hover:text-[#C9A24D] transition-colors"
+              >
+                <FaInstagram />
+              </a>
+
+              <a
+                href="https://x.com/Thegrandiose7"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="hover:text-[#C9A24D] transition-colors"
+              >
+                <FaTwitter />
+              </a>
+
+              <a
+                href="https://www.facebook.com/thegrandiosehomeinteriors"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="hover:text-[#C9A24D] transition-colors"
+              >
+                <FaFacebookF />
+              </a>
+
+              <a
+                href="https://in.pinterest.com/thegrandiosehomeinteriors/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Pinterest"
+                className="hover:text-[#C9A24D] transition-colors"
+              >
+                <FaPinterestP />
+              </a>
+
+              <a
+                href="https://www.behance.net/thegrandiosedesigns"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Behance"
+                className="hover:text-[#C9A24D] transition-colors"
+              >
+                <FaBehance />
+              </a>
             </div>
           </div>
 
@@ -69,13 +128,32 @@ export default function Footer() {
 
             <ul className="space-y-3 text-sm">
               <li>
-              <Link href="/about-us">
-                <span className="footer-link cursor-pointer">About Us</span>
-              </Link>
+                <Link href="/about-us">
+                  <span className="footer-link cursor-pointer">About Us</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/design-gallery">
+                  <span className="footer-link cursor-pointer">
+                    Interior Services
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/work-process">
+                  <span className="footer-link cursor-pointer">
+                    Work Process
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/reviews">
+                  <span className="footer-link cursor-pointer">Reviews</span>
+                </Link>
               </li>
               <li>
                 <Link href="/gallery">
-                <span className="footer-link cursor-pointer">Gallery</span>
+                  <span className="footer-link cursor-pointer">Gallery</span>
                 </Link>
               </li>
               <li>
@@ -139,7 +217,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/products/sofas">
+                <Link href="/products">
                   <span className="footer-link cursor-pointer">Products</span>
                 </Link>
               </li>
@@ -180,7 +258,7 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <div className="mt-16 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-sm text-[#8A8A8A]">
-          <p>© 2024 The Grandiose. All Rights Reserved.</p>
+          <p>© 2026 The Grandiose. All Rights Reserved.</p>
 
           <p>
             Website Design & Developed by{" "}
@@ -188,6 +266,20 @@ export default function Footer() {
           </p>
         </div>
       </div>
+
+      {/* Floating WhatsApp */}
+      <a
+        href="https://wa.me/9113054788?text=Hello The Grandiose Team. I am interested to know more about your home interior and renovation services."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-15 right-6 z-50 group"
+      >
+        <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping"></span>
+
+        <div className="relative flex items-center justify-center w-16 h-16 rounded-full bg-[#25D366] shadow-2xl transition-all duration-300 group-hover:scale-110">
+          <FaWhatsapp size={34} className="text-white" />
+        </div>
+      </a>
     </footer>
   );
 }

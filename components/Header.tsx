@@ -8,13 +8,14 @@ import Image from "next/image";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [moreMenuOpen, setMoreMenuOpen] = useState(false); // NEW
   const { cart } = useCart();
 
   // Main nav links
   const navLinks = [
     { label: "Interior Services", href: "/design-gallery" },
     { label: "Recent Projects", href: "/recent-projects" },
-    { label: "Signature Collections", href: "/products" },
+    { label: "Signature Collection", href: "/products" },
     { label: "Services", href: "/services" },
     { label: "Work Process", href: "/work-process" },
     { label: "Reviews", href: "/reviews" },
@@ -23,8 +24,8 @@ export default function Header() {
 
   // More dropdown links
   const moreLinks = [
-    { label: "Gallery", href: "/gallery" },
-    { label: "Blogs", href: "/blogs" },
+    { label: "Portfolio", href: "/gallery" },
+    { label: "Design Journal", href: "/blogs" },
     { label: "About Us", href: "/about-us" },
     // { label: "Why Us", href: "/why-us" },
     { label: "FAQs", href: "/faq" },
@@ -60,22 +61,33 @@ export default function Header() {
             ))}
 
             {/* MORE DROPDOWN */}
-            <div className="relative group">
-              <button className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-white/10 hover:text-[#D4AF37] transition-colors duration-900">
-                More <ChevronDown size={14} />
+            <div className="relative">
+              <button
+                onClick={() => setMoreMenuOpen((prev) => !prev)}
+                onBlur={() => setTimeout(() => setMoreMenuOpen(false), 150)}
+                className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-white/10 hover:text-[#D4AF37] transition-colors duration-300"
+              >
+                More{" "}
+                <ChevronDown
+                  size={14}
+                  className={`transition-transform duration-300 ${moreMenuOpen ? "rotate-180" : ""}`}
+                />
               </button>
 
-              <div className="absolute hidden group-hover:block top-full left-0 bg-[#051711] text-white shadow-xl rounded-lg mt-1 w-44 py-2">
-                {moreLinks.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="block px-4 py-2 text-sm text-[#ffffff] hover:text-[#D4AF37]"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
+              {moreMenuOpen && (
+                <div className="absolute top-full left-0 bg-[#051711] text-white shadow-xl rounded-lg mt-1 w-44 py-2 border border-[#D4AF37]/10 z-50">
+                  {moreLinks.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setMoreMenuOpen(false)}
+                      className="block px-4 py-2 text-sm text-[#ffffff] hover:text-[#D4AF37]"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
           </nav>
 
