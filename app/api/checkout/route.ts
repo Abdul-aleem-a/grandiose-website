@@ -1,26 +1,15 @@
-import { NextResponse } from "next/server";
-import { sendContactEmail } from "@/lib/sendEmail";
+// app/api/checkout/route.ts
+import { NextRequest, NextResponse } from "next/server"
+import { sendContactEmail } from "@/lib/sendEmail"
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   try {
-    const data = await req.json();
-
-    await sendContactEmail({
-      name: data.name,
-      mobile: data.phone,
-      email: data.email,
-      property: data.address,
-      message: `
-Items:ṭṭ
-
-${data.items
-  .map((item: any) => `${item.name} - ${item.price} - ${item.heroImage}`)
-  .join("<br/>")}
-      `,
-    });
-
-    return NextResponse.json({ success: true });
-  } catch {
-    return NextResponse.json({ success: false }, { status: 500 });
+    const body = await req.json()
+    // body has: name, email, phone, address, items
+    await sendContactEmail(body)
+    return NextResponse.json({ success: true })
+  } catch (error) {
+    console.error("Checkout email error:", error)
+    return NextResponse.json({ error: "Failed to send email" }, { status: 500 })
   }
 }
