@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, ShoppingCart, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { useCart } from "./CartProvider";
@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [moreMenuOpen, setMoreMenuOpen] = useState(false); // NEW
+  const [moreMenuOpen, setMoreMenuOpen] = useState(false);
   const { cart } = useCart();
 
   // Main nav links
@@ -27,7 +27,6 @@ export default function Header() {
     { label: "Portfolio", href: "/gallery" },
     { label: "Design Journal", href: "/blogs" },
     { label: "About Us", href: "/about-us" },
-    // { label: "Why Us", href: "/why-us" },
     { label: "FAQs", href: "/faq" },
   ];
 
@@ -48,7 +47,6 @@ export default function Header() {
               />
             </Link>
 
-            {/* DESKTOP NAV */}
             {/* DESKTOP NAV */}
             <nav className="hidden text-white lg:flex items-center gap-1 text-sm font-medium">
               {navLinks.map((link) => (
@@ -120,9 +118,8 @@ export default function Header() {
         </div>
 
         {/* MOBILE MENU */}
-        {/* MOBILE MENU */}
         {mobileMenuOpen && (
-          <div className="lg:hidden fixed inset-0 bg-[#051711] z-50 overflow-y-auto">
+          <div className="lg:hidden fixed inset-0 bg-[#051711] z-[999] overflow-y-auto">
             <div className="flex justify-between items-center px-6 py-4 border-b border-white/10">
               <p className="font-semibold text-white">Menu</p>
               <button onClick={() => setMobileMenuOpen(false)}>
@@ -130,7 +127,7 @@ export default function Header() {
               </button>
             </div>
 
-            <nav className="px-6 py-4 pb-20 flex flex-col gap-2">
+            <nav className="px-6 py-4 pb-32 flex flex-col gap-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -163,12 +160,11 @@ export default function Header() {
         )}
       </header>
       
-      {/* MOBILE BOTTOM NAV — visible only on mobile */}
-      <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#051711] border-t border-[#D4AF37]/20 shadow-[0_-4px_20px_rgba(0,0,0,0.4)]">
+      {/* MOBILE BOTTOM NAV — FIXED and always visible */}
+      <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-[999] bg-[#051711] border-t border-[#D4AF37]/20 shadow-[0_-4px_20px_rgba(0,0,0,0.4)]">
         <div className="flex items-center justify-around px-2 py-2">
           <Link
             href="/"
-            onClick={() => setMobileMenuOpen(false)}
             className="flex flex-col items-center gap-1 px-3 py-1 group"
           >
             <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
@@ -194,7 +190,6 @@ export default function Header() {
 
           <Link
             href="/recent-projects"
-            onClick={() => setMobileMenuOpen(false)}
             className="flex flex-col items-center gap-1 px-3 py-1 group"
           >
             <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
@@ -222,7 +217,6 @@ export default function Header() {
 
           <Link
             href="/products"
-            onClick={() => setMobileMenuOpen(false)}
             className="flex flex-col items-center gap-1 px-3 py-1 group"
           >
             <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
@@ -249,7 +243,6 @@ export default function Header() {
 
           <Link
             href="/services"
-            onClick={() => setMobileMenuOpen(false)}
             className="flex flex-col items-center gap-1 px-3 py-1 group"
           >
             <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
