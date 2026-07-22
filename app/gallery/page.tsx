@@ -711,9 +711,7 @@ const Gallery = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <motion.a
-              href="https://wa.me/919876543210"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/contact-us"
               className="px-8 py-3.5 bg-[#D4AF37] text-[#051711] rounded-lg text-[12px] tracking-[0.15em] uppercase font-sans font-medium shadow-lg"
               whileHover={{ scale: 1.05, backgroundColor: "#C5A028" }}
               whileTap={{ scale: 0.95 }}

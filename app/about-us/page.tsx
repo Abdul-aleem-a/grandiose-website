@@ -174,13 +174,12 @@ const About = () => {
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 1152px"
-              quality={90}                                      
+              quality={90}
               priority
             />
           </div>
         </motion.div>
       </section>
-
 
       {/* ─── OUR STORY ─── */}
       <section className="py-24 md:py-36 px-6 md:px-10 bg-[#051711]">
@@ -256,7 +255,7 @@ const About = () => {
               </p>
 
               <motion.a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/9113054788"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-3.5 bg-[#D4AF37] text-[#051711] hover:bg-[#D4AF37]/85 text-[11px] tracking-[0.2em] uppercase rounded-sm transition-all duration-300 font-medium font-sans"
@@ -451,7 +450,7 @@ const About = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <motion.a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/9113054788?text=Hello The Grandiose Team. I am interested to know more about your home interior and renovation services."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-3.5 bg-[#D4AF37] text-[#051711] hover:bg-[#D4AF37]/85 text-[11px] tracking-[0.2em] uppercase rounded-sm transition-all duration-300 font-medium font-sans"
@@ -461,7 +460,7 @@ const About = () => {
               WhatsApp Us <ArrowRight size={14} />
             </motion.a>
             <motion.a
-              href="tel:+919876543210"
+              href="tel:+9113054788 "
               className="inline-flex items-center gap-3 px-8 py-3.5 border border-[#D4AF37]/40 text-white hover:border-[#D4AF37] hover:text-[#D4AF37] text-[11px] tracking-[0.2em] uppercase rounded-sm transition-all duration-300 font-medium font-sans"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

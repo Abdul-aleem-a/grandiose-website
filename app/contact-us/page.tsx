@@ -254,7 +254,7 @@ export default function ContactPage() {
             Call Us
           </p>
           <a
-            href="tel:+919113054788"
+            href="tel:9113054788"
             className="block text-white/80 text-sm hover:text-[#D4AF37] transition-colors"
           >
             +91 9113054788

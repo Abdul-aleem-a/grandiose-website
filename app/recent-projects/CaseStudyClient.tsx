@@ -92,7 +92,7 @@ export default function CaseStudyClient({ project }: { project: RecentProject })
                         The Grandiose · Bangalore
                     </motion.p>
                     <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35, type: "spring", stiffness: 60 }}
-                        className="gradient-heading text-4xl md:text-4xl leading-[1.1]">
+                        className="gradient-heading text-2xl md:text-4xl leading-[1.1]">
                         {project.title}{" "}
                         <br />
                         <span className="italic font-palegoldenrod text-[#D4AF37]">{project.subtitle}</span>

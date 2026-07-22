@@ -27,7 +27,7 @@ export default function ContactInfo() {
                     </div>
                     <div>
                         <h4 className="text-sm font-medium text-[#2B2B2B]">Call Us</h4>
-                        <a href="tel:+919113054788" className="text-sm text-[#8A8A8A]">+91 9113054788</a>
+                        <a href="tel:9113054788" className="text-sm text-[#8A8A8A]">+91 9113054788</a>
                     </div>
                 </div>
 

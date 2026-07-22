@@ -209,7 +209,7 @@ export default function BlogPostPage({ params }: PageProps) {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <a
-              href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20a%20free%20consultation"
+              href="https://wa.me/9113054788?text=Hello The Grandiose Team. I am interested to know more about your home interior and renovation services."
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 px-6 py-3.5 border border-golden/30 text-white text-[11px] tracking-[0.15em] uppercase font-sans font-semibold rounded-lg hover:bg-golden/85 transition-all duration-300 shadow-lg text-center"
@@ -217,7 +217,7 @@ export default function BlogPostPage({ params }: PageProps) {
               WhatsApp Us
             </a>
             <a
-              href="tel:+919876543210"
+              href="tel:+9113054788"
               className="flex-1 px-6 py-3.5 border border-golden/30 text-white text-[11px] tracking-[0.15em] uppercase font-sans font-medium rounded-lg hover:bg-golden/10 transition-all duration-300 text-center"
             >
               Call Us

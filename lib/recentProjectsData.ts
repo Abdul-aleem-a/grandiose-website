@@ -126,6 +126,176 @@ export const recentProjects: RecentProject[] = [
   },
 
   {
+    slug: "bda-flats-kommaghatta",
+    title: "BDA Flats Kommaghatta - 2BHK",
+    subtitle: "Luxury 2BHK Interior Design",
+    heroImage: "/images/recent-projects/bda/DSC01592.webp",
+    stats: [
+      { label: "Location", value: "Kommaghatta, Bangalore" },
+      { label: "Property Type", value: "2BHK Flat" },
+      { label: "Project Size", value: "3,200 sq.ft." },
+      { label: "Total Cost", value: "₹ 65 Lakh" },
+      { label: "Duration", value: "4 months" },
+    ],
+    clientBrief: {
+      summary:
+        "The clients envisioned a grand, timeless home that embodied old-world elegance fused with contemporary comfort. Every material was hand-selected to reflect their refined taste.",
+      requirements: [
+        "Grand entrance foyer with statement chandelier and marble flooring.",
+        "Open-concept living and dining with double-height ceilings.",
+        "A chef's modular kitchen with island counter and premium appliances.",
+        "Master suite with walk-in wardrobe and luxury ensuite bathroom.",
+        "Home theatre room with acoustic paneling and tiered seating.",
+        "Landscaped courtyard visible from the living area.",
+        "Smart home integration across lighting, curtains, and security.",
+      ],
+    },
+    beforeImage: "/images/recent-projects/bda/DSC01598.webp",
+    afterImage: "/images/recent-projects/bda/DSC01598.webp",
+    executionSteps: [
+      {
+        label:
+          "Double-height false ceiling with cove lighting and cornice work",
+        image: "/sofa.jpg",
+      },
+      {
+        label: "Italian marble flooring and premium wall cladding",
+        image: "/sofa.jpg",
+      },
+      { label: "Custom solid wood wardrobes and joinery", image: "/sofa.jpg" },
+    ],
+    beforeAfterExecution: {
+      before: "/images/recent-projects/bda/Minimalist-dressing-design-with-D mirror-bangalore-the-grandiose.webp",
+      after: "/images/recent-projects/bda/Minimalist-dressing-design-with-D mirror-bangalore-the-grandiose.webp",
+    },
+    finalTransformation: {
+      description:
+        "A masterpiece of luxury interior design — every room in this villa tells a story of craftsmanship, elegance, and thoughtful design. The Grandiose's signature touch is visible in every corner.",
+      rooms: [
+        {
+          label: "Grand Living Room",
+          image: "/images/recent-projects/bda/DSC01594.webp",
+        },
+        {
+          label: "Chef's Kitchen",
+          image: "/images/recent-projects/bda/DSC01570.webp",
+        },
+        {
+          label: "Master Suite",
+          image:
+            "/images/recent-projects/bda/Bed-design-bangalore-the-grandiose.webp",
+        },
+      ],
+    },
+    projectOverview: {
+      clientBriefImage: "/images/recent-projects/bda/DSC01598.webp",
+      executionImages: [
+        {
+          img: "/images/recent-projects/bda/DSC01561.webp",
+          label: "Double-height false ceiling and cove lighting",
+        },
+        {
+          img: "/images/recent-projects/bda/DSC01564.webp",
+          label: "Italian marble flooring and wall cladding",
+        },
+        {
+          img: "/images/recent-projects/bda/DSC01594.webp",
+          label: "Custom solid wood wardrobes and joinery",
+        },
+        {
+          img: "/images/recent-projects/bda/Minimalist-dressing-design-with-D mirror-bangalore-the-grandiose.webp",
+          label: "Bespoke furniture and decor styling",
+        },
+      ],
+    },
+  },
+
+  {
+    slug: "serenity-highland-villa",
+    title: "Serenity Highland - Villa",
+    subtitle: "Luxury Serenity Highland Design",
+    heroImage: "/images/recent-projects/villa/DSC06807.webp",
+    stats: [
+      { label: "Location", value: "Kommaghatta, Bangalore" },
+      { label: "Property Type", value: "2BHK Flat" },
+      { label: "Project Size", value: "3,200 sq.ft." },
+      { label: "Total Cost", value: "₹ 65 Lakh" },
+      { label: "Duration", value: "4 months" },
+    ],
+    clientBrief: {
+      summary:
+        "The clients envisioned a grand, timeless home that embodied old-world elegance fused with contemporary comfort. Every material was hand-selected to reflect their refined taste.",
+      requirements: [
+        "Grand entrance foyer with statement chandelier and marble flooring.",
+        "Open-concept living and dining with double-height ceilings.",
+        "A chef's modular kitchen with island counter and premium appliances.",
+        "Master suite with walk-in wardrobe and luxury ensuite bathroom.",
+        "Home theatre room with acoustic paneling and tiered seating.",
+        "Landscaped courtyard visible from the living area.",
+        "Smart home integration across lighting, curtains, and security.",
+      ],
+    },
+    beforeImage: "/images/recent-projects/villa/DSC06819.webp",
+    afterImage: "/images/recent-projects/villa/DSC06819.webp",
+    executionSteps: [
+      {
+        label:
+          "Double-height false ceiling with cove lighting and cornice work",
+        image: "/sofa.jpg",
+      },
+      {
+        label: "Italian marble flooring and premium wall cladding",
+        image: "/sofa.jpg",
+      },
+      { label: "Custom solid wood wardrobes and joinery", image: "/sofa.jpg" },
+    ],
+    beforeAfterExecution: {
+      before: "/images/recent-projects/villa/DSC06806.webp",
+      after: "/images/recent-projects/villa/DSC06806.webp",
+    },
+    finalTransformation: {
+      description:
+        "A masterpiece of luxury interior design — every room in this villa tells a story of craftsmanship, elegance, and thoughtful design. The Grandiose's signature touch is visible in every corner.",
+      rooms: [
+        {
+          label: "Grand Living Room",
+          image: "/images/recent-projects/villa/DSC06826.webp",
+        },
+        {
+          label: "Chef's Kitchen",
+          image: "/images/recent-projects/villa/DSC06808.webp",
+        },
+        {
+          label: "Master Suite",
+          image:
+            "/images/recent-projects/villa/DSC06816.webp",
+        },
+      ],
+    },
+    projectOverview: {
+      clientBriefImage: "/images/recent-projects/villa/DSC06806.webp",
+      executionImages: [
+        {
+          img: "/images/recent-projects/villa/DSC06823.webp",
+          label: "Double-height false ceiling and cove lighting",
+        },
+        {
+          img: "/images/recent-projects/villa/DSC06803.webp",
+          label: "Italian marble flooring and wall cladding",
+        },
+        {
+          img: "/images/recent-projects/villa/DSC06821.webp",
+          label: "Custom solid wood wardrobes and joinery",
+        },
+        {
+          img: "/images/recent-projects/villa/DSC06819.webp",
+          label: "Bespoke furniture and decor styling",
+        },
+      ],
+    },
+  },
+
+  {
     slug: "mantri-webcity-3bhk",
     title: "Mantri Webcity",
     subtitle: "3BHK Apartment Transformation",
@@ -289,7 +459,7 @@ export const recentProjects: RecentProject[] = [
       ],
     },
   },
-  
+
   {
     slug: "oceanus-greendale",
     title: "Oceanus Greendale",

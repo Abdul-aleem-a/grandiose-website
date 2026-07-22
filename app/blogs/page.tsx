@@ -208,7 +208,7 @@ export default function BlogsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20receive%20design%20updates"
+              href="https://wa.me/9113054788?text=Hello The Grandiose Team. I am interested to know more about your home interior and renovation services."
               target="_blank"
               rel="noopener noreferrer"
               className="min-w-[200px] px-6 py-4 border-2  text-yellow-500 text-[12px] tracking-[0.15em] uppercase font-sans font-bold rounded-lg hover:bg-golden/90 hover:shadow-lg transition-all duration-300 text-center"
@@ -216,7 +216,7 @@ export default function BlogsPage() {
               Subscribe via WhatsApp
             </a>
             <a
-              href="tel:+919876543210"
+              href="tel:+9113054788"
               className="min-w-[200px] px-6 py-4 border-2  text-yellow-500 text-[12px] tracking-[0.15em] uppercase font-sans font-bold rounded-lg hover:bg-golden/10 transition-all duration-300 text-center"
             >
               Call Us

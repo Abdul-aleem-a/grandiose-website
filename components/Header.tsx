@@ -32,135 +32,137 @@ export default function Header() {
   ];
 
   return (
-    <header className="w-full bg-[#051711] shadow-sm sticky top-0 z-50">
-      {/* TOP HEADER */}
-      <div className="luxury-green py-4">
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          {/* LOGO */}
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/logo.png"
-              alt="The Grandiose"
-              width={180}
-              height={60}
-              priority
-            />
-          </Link>
-
-          {/* DESKTOP NAV */}
-          {/* DESKTOP NAV */}
-          <nav className="hidden text-white lg:flex items-center gap-1 text-sm font-medium">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="px-3 py-2 rounded-lg hover:text-[#D4AF37] transition-colors duration-300"
-              >
-                {link.label}
-              </Link>
-            ))}
-
-            {/* MORE DROPDOWN */}
-            <div className="relative">
-              <button
-                onClick={() => setMoreMenuOpen((prev) => !prev)}
-                onBlur={() => setTimeout(() => setMoreMenuOpen(false), 150)}
-                className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-white/10 hover:text-[#D4AF37] transition-colors duration-300"
-              >
-                More{" "}
-                <ChevronDown
-                  size={14}
-                  className={`transition-transform duration-300 ${moreMenuOpen ? "rotate-180" : ""}`}
-                />
-              </button>
-
-              {moreMenuOpen && (
-                <div className="absolute top-full left-0 bg-[#051711] text-white shadow-xl rounded-lg mt-1 w-44 py-2 border border-[#D4AF37]/10 z-50">
-                  {moreLinks.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setMoreMenuOpen(false)}
-                      className="block px-4 py-2 text-sm text-[#ffffff] hover:text-[#D4AF37]"
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          </nav>
-
-          {/* RIGHT SECTION */}
-          <div className="flex items-center gap-4">
-            {/* CART */}
-            <Link
-              href="/cart"
-              className="relative flex items-center justify-center"
-            >
-              <ShoppingCart size={22} className="text-white" />
-
-              {cart.length > 0 && (
-                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center">
-                  {cart.length}
-                </span>
-              )}
+    <>
+      <header className="w-full bg-[#051711] shadow-sm sticky top-0 z-50">
+        {/* TOP HEADER */}
+        <div className="luxury-green py-4">
+          <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            {/* LOGO */}
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/logo.png"
+                alt="The Grandiose"
+                width={180}
+                height={60}
+                priority
+              />
             </Link>
 
-            {/* MOBILE MENU BUTTON */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden text-white"
-            >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* MOBILE MENU */}
-      {/* MOBILE MENU */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-[#051711] z-50 overflow-y-auto">
-          <div className="flex justify-between items-center px-6 py-4 border-b border-white/10">
-            <p className="font-semibold text-white">Menu</p>
-            <button onClick={() => setMobileMenuOpen(false)}>
-              <X size={24} className="text-white" />
-            </button>
-          </div>
-
-          <nav className="px-6 py-4 pb-20 flex flex-col gap-2">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-4 py-3 text-white hover:text-[#D4AF37] transition-colors duration-300"
-              >
-                {link.label}
-              </Link>
-            ))}
-
-            <div className="mt-3 border-t border-white/10 pt-3">
-              <p className="px-4 py-2 text-sm font-semibold text-white/50">
-                More
-              </p>
-
-              {moreLinks.map((item) => (
+            {/* DESKTOP NAV */}
+            {/* DESKTOP NAV */}
+            <nav className="hidden text-white lg:flex items-center gap-1 text-sm font-medium">
+              {navLinks.map((link) => (
                 <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block px-4 py-3 text-white hover:text-[#D4AF37] transition-colors duration-300"
+                  key={link.href}
+                  href={link.href}
+                  className="px-3 py-2 rounded-lg hover:text-[#D4AF37] transition-colors duration-300"
                 >
-                  {item.label}
+                  {link.label}
                 </Link>
               ))}
-            </div>
-          </nav>
-        </div>
-      )}
 
+              {/* MORE DROPDOWN */}
+              <div className="relative">
+                <button
+                  onClick={() => setMoreMenuOpen((prev) => !prev)}
+                  onBlur={() => setTimeout(() => setMoreMenuOpen(false), 150)}
+                  className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-white/10 hover:text-[#D4AF37] transition-colors duration-300"
+                >
+                  More{" "}
+                  <ChevronDown
+                    size={14}
+                    className={`transition-transform duration-300 ${moreMenuOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+
+                {moreMenuOpen && (
+                  <div className="absolute top-full left-0 bg-[#051711] text-white shadow-xl rounded-lg mt-1 w-44 py-2 border border-[#D4AF37]/10 z-50">
+                    {moreLinks.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setMoreMenuOpen(false)}
+                        className="block px-4 py-2 text-sm text-[#ffffff] hover:text-[#D4AF37]"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </nav>
+
+            {/* RIGHT SECTION */}
+            <div className="flex items-center gap-4">
+              {/* CART */}
+              <Link
+                href="/cart"
+                className="relative flex items-center justify-center"
+              >
+                <ShoppingCart size={22} className="text-white" />
+
+                {cart.length > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center">
+                    {cart.length}
+                  </span>
+                )}
+              </Link>
+
+              {/* MOBILE MENU BUTTON */}
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="lg:hidden text-white"
+              >
+                {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* MOBILE MENU */}
+        {/* MOBILE MENU */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden fixed inset-0 bg-[#051711] z-50 overflow-y-auto">
+            <div className="flex justify-between items-center px-6 py-4 border-b border-white/10">
+              <p className="font-semibold text-white">Menu</p>
+              <button onClick={() => setMobileMenuOpen(false)}>
+                <X size={24} className="text-white" />
+              </button>
+            </div>
+
+            <nav className="px-6 py-4 pb-20 flex flex-col gap-2">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="px-4 py-3 text-white hover:text-[#D4AF37] transition-colors duration-300"
+                >
+                  {link.label}
+                </Link>
+              ))}
+
+              <div className="mt-3 border-t border-white/10 pt-3">
+                <p className="px-4 py-2 text-sm font-semibold text-white/50">
+                  More
+                </p>
+
+                {moreLinks.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-3 text-white hover:text-[#D4AF37] transition-colors duration-300"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </nav>
+          </div>
+        )}
+      </header>
+      
       {/* MOBILE BOTTOM NAV — visible only on mobile */}
       <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#051711] border-t border-[#D4AF37]/20 shadow-[0_-4px_20px_rgba(0,0,0,0.4)]">
         <div className="flex items-center justify-around px-2 py-2">
@@ -272,6 +274,6 @@ export default function Header() {
           </Link>
         </div>
       </nav>
-    </header>
+    </>
   );
 }
