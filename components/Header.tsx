@@ -119,7 +119,7 @@ export default function Header() {
 
         {/* MOBILE MENU */}
         {mobileMenuOpen && (
-          <div className="lg:hidden fixed inset-0 bg-[#051711] z-[999] overflow-y-auto">
+          <div className="lg:hidden fixed inset-0 bg-[#051711] z-[9999] overflow-y-auto">
             <div className="flex justify-between items-center px-6 py-4 border-b border-white/10">
               <p className="font-semibold text-white">Menu</p>
               <button onClick={() => setMobileMenuOpen(false)}>
@@ -127,7 +127,7 @@ export default function Header() {
               </button>
             </div>
 
-            <nav className="px-6 py-4 pb-32 flex flex-col gap-2">
+            <nav className="px-6 py-4 pb-40 flex flex-col gap-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -160,113 +160,116 @@ export default function Header() {
         )}
       </header>
       
-      {/* MOBILE BOTTOM NAV — FIXED and always visible */}
-      <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-[999] bg-[#051711] border-t border-[#D4AF37]/20 shadow-[0_-4px_20px_rgba(0,0,0,0.4)]">
-        <div className="flex items-center justify-around px-2 py-2">
-          <Link
-            href="/"
-            className="flex flex-col items-center gap-1 px-3 py-1 group"
-          >
-            <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#D4AF37"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <polyline points="9 22 9 12 15 12 15 22" />
-              </svg>
-            </div>
-            <span className="text-[9px] tracking-[0.1em] uppercase text-[#D4AF37]/70 group-hover:text-[#D4AF37]">
-              Home
-            </span>
-          </Link>
+      {/* MOBILE BOTTOM NAV — ALWAYS VISIBLE */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-[9999]">
+        {/* Add a safe area spacer for iOS notch devices */}
+        <div className="bg-[#051711] border-t border-[#D4AF37]/20 shadow-[0_-4px_20px_rgba(0,0,0,0.4)] safe-area-bottom">
+          <div className="flex items-center justify-around px-2 py-2">
+            <Link
+              href="/"
+              className="flex flex-col items-center gap-1 px-3 py-1 group min-w-[60px]"
+            >
+              <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#D4AF37"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+              </div>
+              <span className="text-[9px] tracking-[0.1em] uppercase text-[#D4AF37]/70 group-hover:text-[#D4AF37]">
+                Home
+              </span>
+            </Link>
 
-          <Link
-            href="/recent-projects"
-            className="flex flex-col items-center gap-1 px-3 py-1 group"
-          >
-            <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#D4AF37"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <rect x="3" y="3" width="7" height="7" />
-                <rect x="14" y="3" width="7" height="7" />
-                <rect x="3" y="14" width="7" height="7" />
-                <rect x="14" y="14" width="7" height="7" />
-              </svg>
-            </div>
-            <span className="text-[9px] tracking-[0.1em] uppercase text-[#D4AF37]/70 group-hover:text-[#D4AF37]">
-              Projects
-            </span>
-          </Link>
+            <Link
+              href="/recent-projects"
+              className="flex flex-col items-center gap-1 px-3 py-1 group min-w-[60px]"
+            >
+              <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#D4AF37"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect x="3" y="3" width="7" height="7" />
+                  <rect x="14" y="3" width="7" height="7" />
+                  <rect x="3" y="14" width="7" height="7" />
+                  <rect x="14" y="14" width="7" height="7" />
+                </svg>
+              </div>
+              <span className="text-[9px] tracking-[0.1em] uppercase text-[#D4AF37]/70 group-hover:text-[#D4AF37]">
+                Projects
+              </span>
+            </Link>
 
-          <Link
-            href="/products"
-            className="flex flex-col items-center gap-1 px-3 py-1 group"
-          >
-            <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#D4AF37"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <path d="M16 10a4 4 0 0 1-8 0" />
-              </svg>
-            </div>
-            <span className="text-[9px] tracking-[0.1em] uppercase text-[#D4AF37]/70 group-hover:text-[#D4AF37]">
-              Products
-            </span>
-          </Link>
+            <Link
+              href="/products"
+              className="flex flex-col items-center gap-1 px-3 py-1 group min-w-[60px]"
+            >
+              <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#D4AF37"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <path d="M16 10a4 4 0 0 1-8 0" />
+                </svg>
+              </div>
+              <span className="text-[9px] tracking-[0.1em] uppercase text-[#D4AF37]/70 group-hover:text-[#D4AF37]">
+                Products
+              </span>
+            </Link>
 
-          <Link
-            href="/services"
-            className="flex flex-col items-center gap-1 px-3 py-1 group"
-          >
-            <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#D4AF37"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="12" cy="12" r="3" />
-                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14" />
-              </svg>
-            </div>
-            <span className="text-[9px] tracking-[0.1em] uppercase text-[#D4AF37]/70 group-hover:text-[#D4AF37]">
-              Services
-            </span>
-          </Link>
+            <Link
+              href="/services"
+              className="flex flex-col items-center gap-1 px-3 py-1 group min-w-[60px]"
+            >
+              <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#D4AF37"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14" />
+                </svg>
+              </div>
+              <span className="text-[9px] tracking-[0.1em] uppercase text-[#D4AF37]/70 group-hover:text-[#D4AF37]">
+                Services
+              </span>
+            </Link>
+          </div>
         </div>
-      </nav>
+      </div>
     </>
   );
 }

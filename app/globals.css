@@ -314,3 +314,21 @@ html {
 .animate-projects-scroll {
   animation: projects-scroll 35s linear infinite;
 }
+
+
+
+/* Ensure mobile bottom nav is always visible */
+@media (max-width: 1023px) {
+  .fixed.bottom-0 {
+    position: fixed !important;
+    z-index: 9999 !important;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+  
+  /* Ensure no overflow hidden on body */
+  body {
+    overflow-x: hidden;
+    padding-bottom: 70px; /* Matches bottom nav height */
+  }
+}
