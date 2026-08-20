@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -26,7 +25,6 @@ import aboutProject6 from "../../public/images/logos/logo6.png";
 import aboutProject7 from "../../public/images/logos/logo7.jpg";
 import aboutProject8 from "../../public/images/logos/logo8.svg";
 import aboutProject10 from "../../public/images/logos/logo10.png";
-// import noorimg from "../../public/images/dsc02558.jpeg";
 import noorimg2 from "../../public/images/founder-noor.webp";
 
 const stats = [
@@ -48,12 +46,6 @@ const team = [
     role: "Production Manager",
     initials: "SS",
     img: "/images/sulaiman-img.webp",
-  },
-  {
-    name: "Arpan",
-    role: "interior designer",
-    initials: "A",
-    // img: "/images/sulaiman-img.webp",
   },
   {
     name: "Nagesh",
