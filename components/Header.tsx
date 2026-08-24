@@ -159,17 +159,31 @@ export default function Header() {
           </div>
         )}
       </header>
-      
+
       {/* MOBILE BOTTOM NAV — ALWAYS VISIBLE */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-[9999]">
-        {/* Add a safe area spacer for iOS notch devices */}
-        <div className="bg-[#051711] border-t border-[#D4AF37]/20 shadow-[0_-4px_20px_rgba(0,0,0,0.4)] safe-area-bottom">
-          <div className="flex items-center justify-around px-2 py-2">
+      <div
+        className="lg:hidden fixed bottom-0 z-[9999]"
+        style={{
+          left: 0,
+          right: 0,
+          width: "100%",
+          maxWidth: "100vw",
+        }}
+      >
+        {/* Safe area spacer for iOS notch devices */}
+        <div
+          className="bg-[#051711] border-t border-[#D4AF37]/20 shadow-[0_-4px_20px_rgba(0,0,0,0.4)]"
+          style={{
+            paddingBottom: "env(safe-area-inset-bottom, 0px)",
+            width: "100%",
+          }}
+        >
+          <div className="flex items-center justify-around px-1 sm:px-2 py-2">
             <Link
               href="/"
-              className="flex flex-col items-center gap-1 px-3 py-1 group min-w-[60px]"
+              className="flex flex-col items-center gap-1 px-2 sm:px-3 py-1 group flex-1 min-w-0"
             >
-              <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
+              <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300 shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -185,16 +199,16 @@ export default function Header() {
                   <polyline points="9 22 9 12 15 12 15 22" />
                 </svg>
               </div>
-              <span className="text-[9px] tracking-[0.1em] uppercase text-[#D4AF37]/70 group-hover:text-[#D4AF37]">
+              <span className="text-[9px] tracking-[0.1em] uppercase text-[#D4AF37]/70 group-hover:text-[#D4AF37] truncate w-full text-center">
                 Home
               </span>
             </Link>
 
             <Link
               href="/recent-projects"
-              className="flex flex-col items-center gap-1 px-3 py-1 group min-w-[60px]"
+              className="flex flex-col items-center gap-1 px-2 sm:px-3 py-1 group flex-1 min-w-0"
             >
-              <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
+              <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300 shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -212,16 +226,16 @@ export default function Header() {
                   <rect x="14" y="14" width="7" height="7" />
                 </svg>
               </div>
-              <span className="text-[9px] tracking-[0.1em] uppercase text-[#D4AF37]/70 group-hover:text-[#D4AF37]">
+              <span className="text-[9px] tracking-[0.1em] uppercase text-[#D4AF37]/70 group-hover:text-[#D4AF37] truncate w-full text-center">
                 Projects
               </span>
             </Link>
 
             <Link
               href="/products"
-              className="flex flex-col items-center gap-1 px-3 py-1 group min-w-[60px]"
+              className="flex flex-col items-center gap-1 px-2 sm:px-3 py-1 group flex-1 min-w-0"
             >
-              <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
+              <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300 shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -238,16 +252,16 @@ export default function Header() {
                   <path d="M16 10a4 4 0 0 1-8 0" />
                 </svg>
               </div>
-              <span className="text-[9px] tracking-[0.1em] uppercase text-[#D4AF37]/70 group-hover:text-[#D4AF37]">
+              <span className="text-[9px] tracking-[0.1em] uppercase text-[#D4AF37]/70 group-hover:text-[#D4AF37] truncate w-full text-center">
                 Products
               </span>
             </Link>
 
             <Link
               href="/services"
-              className="flex flex-col items-center gap-1 px-3 py-1 group min-w-[60px]"
+              className="flex flex-col items-center gap-1 px-2 sm:px-3 py-1 group flex-1 min-w-0"
             >
-              <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
+              <div className="w-9 h-9 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors duration-300 shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -263,7 +277,7 @@ export default function Header() {
                   <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14" />
                 </svg>
               </div>
-              <span className="text-[9px] tracking-[0.1em] uppercase text-[#D4AF37]/70 group-hover:text-[#D4AF37]">
+              <span className="text-[9px] tracking-[0.1em] uppercase text-[#D4AF37]/70 group-hover:text-[#D4AF37] truncate w-full text-center">
                 Services
               </span>
             </Link>

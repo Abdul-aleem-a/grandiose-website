@@ -272,7 +272,7 @@ export default function Footer() {
         href="https://wa.me/9113054788?text=Hello The Grandiose Team. I am interested to know more about your home interior and renovation services."
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-15 right-6 z-50 group"
+        className="fixed bottom-20 right-6 z-50 group"
       >
         <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping"></span>
 

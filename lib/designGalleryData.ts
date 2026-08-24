@@ -279,8 +279,8 @@ export const designCategories: DesignCategory[] = [
         },
     },
     {
-        slug: "customize-your-kitchen",
-        title: "Customize Your Kitchen",
+        slug: "customize-kitchen",
+        title: "Customize Kitchen",
         tagline: "Elegant and Luxurious Modular Kitchen Interiors",
         subtitle: "Elegant and Luxurious Modular Kitchen Interiors",
         heroImage: "/images/design-gallery/customize.jpg",
@@ -472,7 +472,7 @@ export const designCategories: DesignCategory[] = [
     },
     {
         slug: "kids-bedroom",
-        title: "Kids Bedroom designs",
+        title: "Kids Bedroom",
         tagline: "Elegant and Luxurious Modular Kitchen Interiors",
         subtitle: "Elegant and Luxurious Modular Kitchen Interiors",
         heroImage: "/images/design-gallery/kids.jpg",
@@ -520,7 +520,7 @@ export const designCategories: DesignCategory[] = [
     },
     {
         slug: "1-bhk-interior-designs",
-        title: "1 BHK Interior designs",
+        title: "1 BHK Interior",
         tagline: "Elegant and Luxurious Modular Kitchen Interiors",
         subtitle: "Elegant and Luxurious Modular Kitchen Interiors",
         heroImage: "/images/design-gallery/1bhk.jpg",

@@ -83,7 +83,7 @@ export default function DesignGalleryPage() {
 
                     {/* Text */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-8">
-                      <motion.h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-2 leading-tight drop-shadow-lg">
+                      <motion.h2 className="font-serif text-2xl sm:text-3xl md:text-2xl lg:text-5xl font-semibold text-white mb-2 leading-tight drop-shadow-lg">
                         {category.title}{" "}
                         <span className="italic font-normal text-[#D4AF37]">
                           Designs

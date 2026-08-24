@@ -754,7 +754,7 @@ export default function Home() {
                 className="group text-center"
               >
                 {/* Avatar circle */}
-                <div className="relative w-64 h-64 md:w-62 md:h-72 mx-auto mb-7">
+                <div className="relative w-64 h-64 md:w-56 md:h-72 mx-auto mb-7">
                   <div className="absolute inset-0 rounded-full border-2 border-[#D4AF37]/30 group-hover:border-[#D4AF37]/60 transition-colors duration-500 z-10" />
                   <div className="absolute inset-[4px] rounded-full border border-white/10 z-10" />
                   <div className="absolute inset-[4px] rounded-full overflow-hidden bg-white/5">
@@ -789,7 +789,7 @@ export default function Home() {
         <div className="mt-16 flex justify-center">
           <Link
             href="/about-us"
-            className="px-12 py-3 text-xs tracking-[0.25em] uppercase bg-[#D4AF37] text-black hover:bg-[#C9A227] transition-all duration-300 rounded-sm shadow-lg"
+            className="px-11 py-3 text-xs tracking-[0.25em] uppercase bg-[#D4AF37] text-black hover:bg-[#C9A227] transition-all duration-300 rounded-sm shadow-lg"
           >
             Explore Our Team
           </Link>
