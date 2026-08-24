@@ -124,7 +124,7 @@ export default function ProductDetailClient({ product }: { product: SignaturePro
                         <StarRating rating={product.rating} count={product.reviewCount} />
 
                         <div>
-                            <p className="font-serif text-3xl font-bold text-white tracking-wide">{product.price}</p>
+                            <p className="font-serif text-2xl font-bold text-white tracking-wide">{product.name}</p>
                         </div>
 
                         {/* Key Features */}
