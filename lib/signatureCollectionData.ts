@@ -105,7 +105,7 @@ export const signatureProducts: SignatureProduct[] = [
     ],
     descriptionImage: "/images/products/u-shape-sofa4.webp",
     description:
-      "Crafted with a book-matched Calacatta marble top resting on a hand-polished solid brass drum base, this coffee table is a conversation piece in itself. Its weight and presence command attention while its clean proportions allow it to complement any interior palette.",
+      "Crafted a book-matched Calacatta marble top resting on a hand-polished solid brass drum base, this coffee table is a conversation piece in itself. Its weight and presence command attention while its clean proportions allow it to complement any interior palette.",
     keyFeatures: [
       "Book-matched Calacatta marble top",
       "Hand-polished solid brass cylindrical base",
