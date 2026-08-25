@@ -262,7 +262,7 @@ export default function Footer() {
 
           <p>
             Website Design & Developed by{" "}
-            <span className="text-[#ffffff] font-medium">Ab Aleem</span>
+            <span className="text-[#ffffff] font-medium">Aleem.</span>
           </p>
         </div>
       </div>
