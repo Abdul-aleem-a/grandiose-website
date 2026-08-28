@@ -30,29 +30,26 @@ import project2 from "../../public/images/recent-projects/bda/DSC01592.webp";
 import project3 from "../../public/images/recent-projects/villa/DSC06807.webp";
 import project4 from "../../public/images/recent-projects/metri/metri3bhk.webp";
 import project5 from "../../public/images/recent-projects/metri2/metri2bhk.webp";
+import contactimg from '../../public/images/contact.jpg'
 
 // ─── DUMMY IMAGES ───
 // Using picsum.photos for all dummy images
 const dummyImages = {
   founder: noorimg,
-  video1: "https://picsum.photos/seed/video1/600/400",
-  video2: "https://picsum.photos/seed/video2/600/400",
-  video3: "https://picsum.photos/seed/video3/600/400",
-  video4: "https://picsum.photos/seed/video4/600/400",
-  video5: "https://picsum.photos/seed/video5/600/400",
+  video1: project1,
+  video2: project2,
+  video3: project3,
+  video4: project4,
+  video5: project5,
   project1: project1,
   project2: project2,
   project3: project3,
   project4: project4,
   project5: project5,
-  journal1: "https://picsum.photos/seed/journal1/200/200",
-  journal2: "https://picsum.photos/seed/journal2/200/200",
-  journal3: "https://picsum.photos/seed/journal3/200/200",
-  client1: "https://picsum.photos/seed/client1/100/100",
-  client2: "https://picsum.photos/seed/client2/100/100",
-  client3: "https://picsum.photos/seed/client3/100/100",
-  cta: "https://picsum.photos/seed/cta/400/600",
-  logo: "https://picsum.photos/seed/logo/80/80",
+  journal1: project1,
+  journal2: project2,
+  journal3: project3,
+  cta: contactimg,
 };
 
 /* ------------------------------------------------------------------ */
@@ -225,23 +222,26 @@ const testimonials = [
     location: "Whitefield",
     quote:
       "The Grandiose transformed our empty apartment into a luxurious home. The attention to detail and execution was brilliant!",
-    img: dummyImages.client1,
   },
   {
     name: "Ankita Sharma",
     location: "HSR Layout",
     quote:
       "Professional, transparent and highly creative team. They delivered exactly what was promised, on time.",
-    img: dummyImages.client2,
   },
   {
     name: "Manoj Nair",
     location: "Sarjapur Road",
     quote:
       "From design to handover, everything was seamless. Truly a team you can trust with your dream home.",
-    img: dummyImages.client3,
   },
 ];
+
+const getInitials = (name: string) => {
+  const words = name.split(" ").filter((w) => /^[A-Za-z]/.test(w));
+  if (words.length === 0) return "";
+  return (words[0][0] + words[words.length - 1][0]).toUpperCase();
+};
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -669,14 +669,10 @@ const FounderPage = () => {
                     "{t.quote}"
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="relative w-10 h-10 rounded-full overflow-hidden shrink-0 bg-white/10">
-                      <Image
-                        src={t.img}
-                        alt={t.name}
-                        fill
-                        className="object-cover"
-                        sizes="40px"
-                      />
+                    <div className="relative w-10 h-10 rounded-full overflow-hidden shrink-0 bg-[#D4AF37]/15 flex items-center justify-center">
+                      <span className="text-[#D4AF37] text-[13px] font-sans font-semibold">
+                        {getInitials(t.name)}
+                      </span>
                     </div>
                     <div>
                       <p className="text-white text-[13px] font-sans font-medium">
@@ -801,10 +797,6 @@ const FounderPage = () => {
               sizes="320px"
             />
             <div className="absolute inset-0 bg-[#051711]/30" />
-            <div className="absolute top-6 right-6 flex flex-col items-center gap-1">
-              <Image src={dummyImages.logo} alt="TG" width={40} height={40} />
-              <span className="text-[#D4AF37] font-serif text-lg">TG</span>
-            </div>
           </div>
         </div>
       </section>
