@@ -8,21 +8,88 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqData = [
   {
-    category: "Services & Scope",
+    category: "About The Grandiose",
     faqs: [
       {
-        q: "What is included in core furnishing?",
-        a: "Modular Kitchen, wardrobes, cots, and any other storage units, living-dining partitions, wall paneling, sofas, chairs, etc.",
+        q: "What interior design services does The Grandiose - Home Interiors offer?",
+        a: "End-to-end home interior design services including residential interiors, modular kitchens, wardrobes and storage, living room and bedroom design, false ceiling and lighting, and turnkey execution from concept to handover.",
       },
       {
-        q: "What is included in soft furnishing?",
-        a: "Curtains, blinds, carpets, quilts, wall pictures, wallpapers, etc.",
+        q: "Is The Grandiose a residential interior designer in Bengaluru?",
+        a: "Yes, we are a Bengaluru-based residential interior design studio specializing in apartments, villas, and complete home interiors.",
+      },
+      {
+        q: "Does The Grandiose provide complete home interior design and renovation services?",
+        a: "Yes, we handle both fresh interior projects and full home renovations, from design and material selection to execution and handover.",
+      },
+      {
+        q: "What makes The Grandiose different from other interior designers in Bengaluru?",
+        a: "We combine personalized design with disciplined project execution - every client works with a dedicated designer and project manager from concept through after-sales support.",
+      },
+      {
+        q: "Which areas in Bengaluru does The Grandiose serve?",
+        a: "We serve clients across Bengaluru, including Whitefield, HSR Layout, Indiranagar, Koramangala, Electronic City, and other parts of the city.",
+      },
+    ],
+  },
+  {
+    category: "Design & Specializations",
+    faqs: [
+      {
+        q: "Can The Grandiose design interiors for apartments and villas?",
+        a: "Yes, we design interiors for 2BHK and 3BHK apartments as well as independent villas, tailoring space planning to each layout.",
+      },
+      {
+        q: "Does The Grandiose offer modular kitchen design?",
+        a: "Yes, we design modular kitchens in L-shaped, U-shaped, parallel, straight, and island layouts, using hardware from brands like Hettich, Häfele, and Blum.",
+      },
+      {
+        q: "Does The Grandiose design wardrobes and storage solutions?",
+        a: "Yes, we create customized wardrobes and storage - including floor-to-ceiling units, loft cabinets, and storage beds - designed around each room's layout.",
+      },
+      {
+        q: "Can I get a customized interior design based on my budget and style preference?",
+        a: "Yes, we tailor design style, materials, and scope to each client's budget and personal preferences.",
+      },
+    ],
+  },
+  {
+    category: "Materials & Quality",
+    faqs: [
+      {
+        q: "What materials and hardware brands does The Grandiose use?",
+        a: "We work with trusted plywood brands such as Green Ply, Century Ply, Royale Touche Ply, Endura Ply, and Gurjan Prime Ply (or equivalent), with MR Grade, BWP, and HDHMR used at specific areas and external finishes. For laminates, we use Merino, Century, Advance Lam, Euro Prateek, Virgo, and Design Tree, and for hardware, we work with Häfele, Blum, Hettich, and Ebco. We deal with all the brands mentioned above, and provide a quote based on your selection.",
       },
     ],
   },
   {
     category: "Process & Execution",
     faqs: [
+      {
+        q: "Does The Grandiose provide turnkey interior design services?",
+        a: "Yes, we offer turnkey solutions covering design, material sourcing, and on-site execution under one team, with a dedicated project manager assigned to each home.",
+      },
+      {
+        q: "How does the home interior design process work?",
+        a: "Our process starts with an initial consultation, followed by requirement gathering and estimate, token and measurement, personalized 3D design, installation, and after-sales support.",
+      },
+      {
+        q: "Does The Grandiose provide 3D interior design concepts before execution?",
+        a: "Yes, every project includes 3D design concepts so clients can review the look and layout before work begins.",
+      },
+      {
+        q: "How does the site visit and measurement process work?",
+        a: "After the initial consultation, our team visits your site to take detailed measurements, which form the basis for your 3D design and estimate.",
+      },
+      {
+        q: "Do I need to be present at the site during execution?",
+        a: "No, our project manager oversees on-site execution and keeps you updated regularly, so your presence isn't required throughout the process.",
+      },
+      {
+        q: "Does The Grandiose take up partial or piecemeal interior work?",
+        a: "No, we don't take up partial work such as single-room-only projects, design-only services without execution, or supply-of-labour-only arrangements. We work on complete interior projects — from design to execution — to ensure consistency in quality, materials, and overall finish across the entire home.",
+      },
+      // New FAQs added below
       {
         q: "What is the procedure of getting a work done by the Grandiose?",
         a: "1) Customer Contacts Us\n2) Requirement and Rough Estimate\n3) Token payment and Actual Measurement of Space\n4) Personal Attention for Design\n5) Installation and Handover\n6) After-Sales Services",
@@ -36,6 +103,15 @@ const faqData = [
   {
     category: "Pricing & Payment",
     faqs: [
+      {
+        q: "How much does home interior design cost?",
+        a: "Cost depends on factors like home size, material choices, and scope of work. We recommend a free consultation for a detailed, customized quotation.",
+      },
+      {
+        q: "What payment structure does The Grandiose follow?",
+        a: "We follow a milestone-based payment structure, with payments linked to project stages such as token, design approval, execution, and handover - full details are shared in your project quotation.",
+      },
+      // New FAQs added below
       {
         q: "Do you charge a design fee?",
         a: "Yes, we do have a 10% design and management fee. This fee will be reduced from the final quoted amount.",
@@ -51,11 +127,52 @@ const faqData = [
     ],
   },
   {
-    category: "Warranty & Support",
+    category: "Timeline & Support",
     faqs: [
+      {
+        q: "What happens if my project timeline gets delayed?",
+        a: "We assign a dedicated project manager to track progress and keep clients updated. If delays occur due to site or material factors, we communicate revised timelines proactively.",
+      },
+      {
+        q: "What after-sales support does The Grandiose provide?",
+        a: "We offer after-sales service covering warranty support, minor fixes, and maintenance assistance after project handover.",
+      },
+    ],
+  },
+  {
+    category: "Warranty",
+    faqs: [
+      {
+        q: "What warranty does The Grandiose provide?",
+        a: "We offer a 10-year warranty on structural woodwork and a 5-year warranty on kitchen hardware.",
+      },
+      // New FAQ added below (merged warranty info)
       {
         q: "Do you offer any warranty?",
         a: "When you design your interiors with us, you get a 10-year warranty on our services. And in addition, all accessories, hardware and appliances are covered as per the respective Manufacturer's Warranty Policy.",
+      },
+    ],
+  },
+  {
+    category: "Location & Consultation",
+    faqs: [
+      {
+        q: "How can I get a quote or book a consultation with The Grandiose?",
+        a: "You can book a free consultation via our website contact form or WhatsApp, and our team will get in touch to understand your requirements.",
+      },
+    ],
+  },
+  // New category added
+  {
+    category: "Services & Scope",
+    faqs: [
+      {
+        q: "What is included in core furnishing?",
+        a: "Modular Kitchen, wardrobes, cots, and any other storage units, living-dining partitions, wall paneling, sofas, chairs, etc.",
+      },
+      {
+        q: "What is included in soft furnishing?",
+        a: "Curtains, blinds, carpets, quilts, wall pictures, wallpapers, etc.",
       },
     ],
   },
@@ -95,7 +212,7 @@ const FAQItem = ({
           transition={{ duration: 0.3, ease: "easeInOut" }}
           className="overflow-hidden"
         >
-          <div className="px-6 pb-5 text-sm leading-relaxed text-white/60 font-sans whitespace-pre-line">
+          <div className="px-6 pb-5 text-base md:text-lg leading-7 md:leading-8 text-white/70 font-sans whitespace-pre-line">
             {a}
           </div>
         </motion.div>
@@ -128,10 +245,13 @@ export default function FAQ() {
           >
             <div className="flex items-center justify-center gap-3 mb-6">
               <div className="h-px w-12 caret-amber-400" />
-              <HelpCircle size={50} className="gradient-heading text-2xl md:text-2xl mb-5" />
+              <HelpCircle
+                size={50}
+                className="gradient-heading text-2xl md:text-2xl mb-5"
+              />
               <div className="h-px w-12 bg-golden/40" />
             </div>
-            <h1 className="gradient-heading text-5xl md:text-5xl mb-5">
+            <h1 className="gradient-heading text-4xl md:text-5xl mb-5">
               Frequently Asked Questions
             </h1>
             <nav className="flex items-center justify-center gap-2 text-sm font-sans">
@@ -162,7 +282,7 @@ export default function FAQ() {
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-1 h-6 bg-golden rounded-full" />
-                <h2 className="gradient-heading text-2xl md:text-2xl mb-5">
+                <h2 className="gradient-heading text-1xl md:text-2xl mb-5">
                   {category.category}
                 </h2>
               </div>

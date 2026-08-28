@@ -93,7 +93,7 @@ const About = () => {
             alt="The Grandiose design studio"
             fill
             className="object-cover"
-            priority
+            priority  
             sizes="100vw"
             quality={90}
           />

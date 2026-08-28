@@ -262,7 +262,7 @@ export default function Footer() {
 
           <p>
             Website Design & Developed by{" "}
-            <span className="text-[#ffffff] font-medium">Aleem.</span>
+            <span className="text-[#ffffff] font-medium">Ab Aleem</span>
           </p>
         </div>
       </div>
@@ -272,12 +272,31 @@ export default function Footer() {
         href="https://wa.me/9113054788?text=Hello The Grandiose Team. I am interested to know more about your home interior and renovation services."
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-20 right-6 z-50 group"
+        className="fixed z-50 group
+    bottom-20 right-4 
+    sm:bottom-24 sm:right-6 
+    md:bottom-28 md:right-8 
+    lg:bottom-32 lg:right-10
+  "
       >
         <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping"></span>
 
-        <div className="relative flex items-center justify-center w-16 h-16 rounded-full bg-[#25D366] shadow-2xl transition-all duration-300 group-hover:scale-110">
-          <FaWhatsapp size={34} className="text-white" />
+        <div
+          className="relative flex items-center justify-center 
+    w-12 h-12 
+    sm:w-14 sm:h-14 
+    md:w-16 md:h-16 
+    rounded-full bg-[#25D366] shadow-2xl 
+    transition-all duration-300 group-hover:scale-110
+  "
+        >
+          <FaWhatsapp
+            size={24}
+            className="text-white
+        sm:w-[28px] sm:h-[28px]
+        md:w-[34px] md:h-[34px]
+      "
+          />
         </div>
       </a>
     </footer>
