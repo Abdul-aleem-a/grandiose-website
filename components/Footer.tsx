@@ -279,7 +279,7 @@ export default function Footer() {
     lg:bottom-32 lg:right-10
   "
       >
-        <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping"></span>
+        <span className="absolute inset-0 rounded-full bg-[#25D366] animate-whatsapp-pulse"></span>
 
         <div
           className="relative flex items-center justify-center 

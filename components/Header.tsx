@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X, ShoppingCart, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { useCart } from "./CartProvider";
@@ -9,7 +9,24 @@ import Image from "next/image";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [moreMenuOpen, setMoreMenuOpen] = useState(false);
+  const moreMenuRef = useRef<HTMLDivElement>(null);
   const { cart } = useCart();
+
+  // Close the "More" dropdown on outside click instead of onBlur,
+  // which raced against Link clicks and sometimes closed the menu
+  // before navigation could register.
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        moreMenuRef.current &&
+        !moreMenuRef.current.contains(event.target as Node)
+      ) {
+        setMoreMenuOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   // Main nav links
   const navLinks = [
@@ -60,10 +77,9 @@ export default function Header() {
               ))}
 
               {/* MORE DROPDOWN */}
-              <div className="relative">
+              <div className="relative" ref={moreMenuRef}>
                 <button
                   onClick={() => setMoreMenuOpen((prev) => !prev)}
-                  onBlur={() => setTimeout(() => setMoreMenuOpen(false), 150)}
                   className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-white/10 hover:text-[#D4AF37] transition-colors duration-300"
                 >
                   More{" "}
@@ -162,13 +178,7 @@ export default function Header() {
 
       {/* MOBILE BOTTOM NAV — ALWAYS VISIBLE */}
       <div
-        className="lg:hidden fixed bottom-0 z-[9999]"
-        style={{
-          left: 0,
-          right: 0,
-          width: "100%",
-          maxWidth: "100vw",
-        }}
+        className="lg:hidden fixed bottom-0 left-0 right-0 z-[9999] w-full"
       >
         {/* Safe area spacer for iOS notch devices */}
         <div
